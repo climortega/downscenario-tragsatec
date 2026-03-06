@@ -1,7 +1,26 @@
-body{
-font-family: Arial, Helvetica, sans-serif;
-margin:0;
-background:#f5f7fa;
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fa;
+}
+
+.page-wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-wrapper > .page {
+  flex: 1;
+}
+
+.footer {
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  padding: 10px 0;
+  margin-top: 20px;
 }
 
 .header{
@@ -135,12 +154,4 @@ background:#005b8f;
 
 .page-content{
 grid-column:1/-1;
-}
-
-.footer {
-  text-align: center;       /* Centrado */
-  font-size: 12px;          /* Muy chiquitito */
-  color: #666;              /* Gris suave */
-  padding: 10px 0;          /* Espacio arriba y abajo */
-  margin-top: 40px;         /* Separación del contenido */
 }
