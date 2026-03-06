@@ -27,47 +27,7 @@
 
 <div class="separator"></div>
 
-<div class="breadcrumbs">
-
-<a onclick="showPage('home')">Home</a> >
-<a onclick="showPage('data')">Data</a> >
-<a onclick="showPage('methodology')">Methodology</a> >
-<a onclick="showPage('evaluation')">Evaluation</a> >
-<a onclick="showPage('eval_methods')">Methods</a> >
-<a onclick="showPage('eval_results')">Results</a> >
-<a onclick="showPage('eval_temp')">Temperature</a> >
-<a onclick="showPage('eval_prec')">Precipitation</a> >
-<a onclick="showPage('eval_wind')">Wind Speed</a> >
-<a onclick="showPage('eval_hum')">Relative Humidity</a> >
-<a onclick="showPage('eval_rad')">Short-wave Radiation</a> >
-<a onclick="showPage('downscaling')">Downscaling</a> >
-<a onclick="showPage('down_methods')">Methods</a> >
-<a onclick="showPage('down_results')">Results</a> >
-<a onclick="showPage('down_temp')">Temperature</a> >
-<a onclick="showPage('down_prec')">Precipitation</a> >
-<a onclick="showPage('down_wind')">Wind Speed</a> >
-<a onclick="showPage('down_hum')">Relative Humidity</a> >
-<a onclick="showPage('down_rad')">Short-wave Radiation</a> >
-<a onclick="showPage('applications')">Applications</a> >
-<a onclick="showPage('seasonal')">Seasonal Forecasting</a> >
-<a onclick="showPage('seas_methods')">Methods</a> >
-<a onclick="showPage('seas_results')">Results</a> >
-<a onclick="showPage('seas_temp')">Temperature</a> >
-<a onclick="showPage('seas_prec')">Precipitation</a> >
-<a onclick="showPage('seas_wind')">Wind Speed</a> >
-<a onclick="showPage('seas_hum')">Relative Humidity</a> >
-<a onclick="showPage('seas_rad')">Short-wave Radiation</a> >
-<a onclick="showPage('reservoirs')">Water Reservoirs</a> >
-<a onclick="showPage('reserv_methods')">Methods</a> >
-<a onclick="showPage('reserv_results')">Results</a> >
-<a onclick="showPage('aquacrop')">AquaCrop</a> >
-<a onclick="showPage('aquacrop_methods')">Methods</a> >
-<a onclick="showPage('aquacrop_results')">Results</a> >
-<a onclick="showPage('information')">Information</a> >
-
-Results
-
-</div>
+<div class="breadcrumbs" id="breadcrumbs"></div>
 
 
 <!-- HOME -->
@@ -104,17 +64,23 @@ Results
 
 <div id="evaluation" class="page">
 
-<button class="backbtn" onclick="goBack()">← Back</button>
+<div class="page-content">
 
 <button class="mainbtn" onclick="showPage('eval_methods')">METHODS</button>
 <button class="mainbtn" onclick="showPage('eval_results')">RESULTS</button>
+
+<button class="backbtn" onclick="goBack()">← Back</button>
+
+</div>
 
 </div>
 
 
 <div id="eval_methods" class="page">
-<button class="backbtn" onclick="showPage('evaluation')">← Back</button>
+<div class="page-content">
 <p>XXXXX</p>
+<button class="backbtn" onclick="showPage('evaluation')">← Back</button>
+</div>
 </div>
 
 

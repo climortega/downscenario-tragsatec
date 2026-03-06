@@ -53,6 +53,8 @@ document.getElementById(pageName).style.display="grid";
 
 historyStack.push(pageName);
 
+updateBreadcrumbs(pageName); 
+
 }
 
 function goBack(){
@@ -68,5 +70,41 @@ showPage(previous);
 window.onload=function(){
 
 showPage("home");
+
+}
+
+function updateBreadcrumbs(pageName){
+
+let container = document.getElementById("breadcrumbs");
+
+let path = pageHierarchy[pageName];
+
+if(!path){
+container.innerHTML="";
+return;
+}
+
+let html="";
+
+for(let i=0;i<path.length;i++){
+
+let label = path[i];
+let pageId = Object.keys(pageHierarchy).find(
+key => pageHierarchy[key][pageHierarchy[key].length-1] === label
+);
+
+if(i===0){
+html += `<a onclick="showPage('home')">Home</a>`;
+}
+else if(i < path.length-1){
+html += ` > <span>${label}</span>`;
+}
+else{
+html += ` > <strong>${label}</strong>`;
+}
+
+}
+
+container.innerHTML = html;
 
 }
