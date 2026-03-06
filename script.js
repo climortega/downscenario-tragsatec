@@ -1,19 +1,73 @@
-function showPage(pageName) {
+const pageHierarchy = {
 
-let pages = document.getElementsByClassName("page");
+data:["Home","Data"],
+methodology:["Home","Methodology"],
 
-for (let i = 0; i < pages.length; i++) {
-pages[i].style.display = "none";
+evaluation:["Home","Evaluation"],
+eval_methods:["Home","Evaluation","Methods"],
+eval_results:["Home","Evaluation","Results"],
+eval_temp:["Home","Evaluation","Results","Temperature"],
+eval_prec:["Home","Evaluation","Results","Precipitation"],
+eval_wind:["Home","Evaluation","Results","Wind Speed"],
+eval_hum:["Home","Evaluation","Results","Relative Humidity"],
+eval_rad:["Home","Evaluation","Results","Short-wave Radiation"],
+
+downscaling:["Home","Downscaling"],
+down_methods:["Home","Downscaling","Methods"],
+down_results:["Home","Downscaling","Results"],
+down_temp:["Home","Downscaling","Results","Temperature"],
+down_prec:["Home","Downscaling","Results","Precipitation"],
+down_wind:["Home","Downscaling","Results","Wind Speed"],
+down_hum:["Home","Downscaling","Results","Relative Humidity"],
+down_rad:["Home","Downscaling","Results","Short-wave Radiation"],
+
+applications:["Home","Applications"],
+seasonal:["Home","Applications","Seasonal Forecasting"],
+seas_methods:["Home","Applications","Seasonal Forecasting", "Methods"],
+seas_results:["Home","Applications","Seasonal Forecasting", "Results"],
+seas_temp:["Home","Applications","Seasonal Forecasting", "Results", "Temperature"],
+seas_prec:["Home","Applications","Seasonal Forecasting", "Results", "Precipitation"],
+seas_wind:["Home","Applications","Seasonal Forecasting", "Results", "Wind Speed"],
+seas_hum:["Home","Applications","Seasonal Forecasting", "Results", "Relative Humidity"],
+seas_rad:["Home","Applications","Seasonal Forecasting", "Results", "Short-wave Radiation"],
+reservoirs:["Home","Applications","Water Reservoirs"],
+reserv_methods:["Home","Applications","Water Reservoirs", "Methods"],
+reserv_results:["Home","Applications","Water Reservoirs", "Results"],
+aquacrop:["Home","Applications","AquaCrop"],
+aquacrop_methods:["Home","Applications","AquaCrop", "Methods"],
+aquacrop_results:["Home","Applications","AquaCrop", "Results"]
+
+};
+
+function showPage(pageName){
+
+let pages=document.getElementsByClassName("page");
+
+for(let i=0;i<pages.length;i++){
+pages[i].style.display="none";
 }
 
-document.getElementById(pageName).style.display = "block";
+document.getElementById(pageName).style.display="block";
+
+updateBreadcrumb(pageName);
 
 }
 
-function goHome() {
-showPage("home");
+function updateBreadcrumb(page){
+
+let bc=document.getElementById("breadcrumb");
+
+if(!pageHierarchy[page]){
+bc.innerHTML="";
+return;
 }
 
-window.onload = function() {
+let path=pageHierarchy[page];
+
+bc.innerHTML=path.join(" / ");
+
+}
+
+window.onload=function(){
 showPage("home");
 };

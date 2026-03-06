@@ -38,11 +38,12 @@ margin:0;
 display:none;
 max-width:1200px;
 margin:auto;
-padding:20px;
+padding:30px;
 
-display:flex;
-flex-wrap:wrap;
+display:grid;
+grid-template-columns:repeat(auto-fit,220px);
 justify-content:center;
+gap:25px;
 }
 
 .mainbtn{
@@ -77,4 +78,15 @@ max-width:100%;
 height:auto;
 border-radius:8px;
 box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+.breadcrumb{
+
+max-width:1200px;
+margin:20px auto;
+padding:0 30px;
+
+font-size:14px;
+color:#555;
+
 }
