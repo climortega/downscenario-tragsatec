@@ -39,6 +39,8 @@ aquacrop_results:["Home","Applications","AquaCrop", "Results"]
 
 };
 
+let historyStack = [];
+
 function showPage(pageName){
 
 let pages=document.getElementsByClassName("page");
@@ -47,27 +49,24 @@ for(let i=0;i<pages.length;i++){
 pages[i].style.display="none";
 }
 
-document.getElementById(pageName).style.display="block";
+document.getElementById(pageName).style.display="grid";
 
-updateBreadcrumb(pageName);
+historyStack.push(pageName);
 
 }
 
-function updateBreadcrumb(page){
+function goBack(){
 
-let bc=document.getElementById("breadcrumb");
+historyStack.pop();
 
-if(!pageHierarchy[page]){
-bc.innerHTML="";
-return;
-}
+let previous = historyStack.pop() || "home";
 
-let path=pageHierarchy[page];
-
-bc.innerHTML=path.join(" / ");
+showPage(previous);
 
 }
 
 window.onload=function(){
+
 showPage("home");
-};
+
+}
