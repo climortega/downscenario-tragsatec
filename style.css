@@ -136,3 +136,11 @@ background:#005b8f;
 .page-content{
 grid-column:1/-1;
 }
+
+.footer {
+  text-align: center;       /* Centrado */
+  font-size: 12px;          /* Muy chiquitito */
+  color: #666;              /* Gris suave */
+  padding: 10px 0;          /* Espacio arriba y abajo */
+  margin-top: 40px;         /* Separación del contenido */
+}
