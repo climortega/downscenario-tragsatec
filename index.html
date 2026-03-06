@@ -1,36 +1,364 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>TÍTULO</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+<meta charset="UTF-8">
+<title>Downscaling for Climate Scenarios</title>
 
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+
+</head>
 <body>
 
-<h1>TURURURURU</h1>
+<!-- HEADER -->
+<header class="header">
 
-<div class="tabs">
-    <button onclick="showTab('evaluation')">Evaluación</button>
-    <button onclick="showTab('downscaling')">Regionalización</button>
-    <button onclick="showTab('other')">Aplicaciones</button>
+<div class="logos">
+<img src="assets/tragsatec.jpg">
+<img src="assets/aemet_azul.png">
 </div>
 
-<div id="evaluation" class="tabcontent">
-    <h2>Evaluación</h2>
-    <img src="figures/evaluation/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
+<div class="title">
+<h1>Downscaling for Climate Scenarios</h1>
+<p>Developed by Tragsatec for AEMET</p>
 </div>
 
-<div id="downscaling" class="tabcontent">
-    <h2>Regionalización</h2>
-    <img src="figures/downscaling/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
+</header>
+
+<div class="separator"></div>
+
+
+<!-- HOME -->
+
+<div id="home" class="page">
+
+<button class="mainbtn" onclick="showPage('data')">DATA</button>
+<button class="mainbtn" onclick="showPage('methodology')">METHODOLOGY</button>
+<button class="mainbtn" onclick="showPage('evaluation')">EVALUATION</button>
+<button class="mainbtn" onclick="showPage('downscaling')">DOWNSCALING</button>
+<button class="mainbtn" onclick="showPage('applications')">OTHER APPLICATIONS</button>
+<button class="mainbtn" onclick="showPage('information')">INFORMATION</button>
+
 </div>
 
-<div id="other" class="tabcontent">
-    <h2>Aplicaciones</h2>
-    <img src="figures/other/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
+
+<!-- DATA -->
+
+<div id="data" class="page">
+<button onclick="goHome()">← Back</button>
+<p>XXXXX</p>
 </div>
 
-<script src="script.js"></script>
+
+<!-- METHODOLOGY -->
+
+<div id="methodology" class="page">
+<button onclick="goHome()">← Back</button>
+<p>XXXXX</p>
+</div>
+
+
+<!-- EVALUATION -->
+
+<div id="evaluation" class="page">
+
+<button onclick="goHome()">← Back</button>
+
+<button class="mainbtn" onclick="showPage('eval_methods')">METHODS</button>
+<button class="mainbtn" onclick="showPage('eval_results')">RESULTS</button>
+
+</div>
+
+
+<div id="eval_methods" class="page">
+<button onclick="showPage('evaluation')">← Back</button>
+<p>XXXXX</p>
+</div>
+
+
+
+<div id="eval_results" class="page">
+
+<button onclick="showPage('evaluation')">← Back</button>
+
+<button class="mainbtn" onclick="showPage('eval_temp')">TEMPERATURE</button>
+<button class="mainbtn" onclick="showPage('eval_prec')">PRECIPITATION</button>
+<button class="mainbtn" onclick="showPage('eval_wind')">WIND SPEED</button>
+<button class="mainbtn" onclick="showPage('eval_hum')">RELATIVE HUMIDITY</button>
+<button class="mainbtn" onclick="showPage('eval_rad')">SHORT-WAVE RADIATION</button>
+
+</div>
+
+
+
+<div id="eval_temp" class="page">
+
+<button onclick="showPage('eval_results')">← Back</button>
+
+<img src="figures/evaluation/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
+
+</div>
+
+
+<div id="eval_prec" class="page">
+
+<button onclick="showPage('eval_results')">← Back</button>
+
+<img src="figures/evaluation/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
+
+</div>
+
+
+<div id="eval_wind" class="page">
+
+<button onclick="showPage('eval_results')">← Back</button>
+
+<img src="figures/evaluation/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
+
+</div>
+
+
+<div id="eval_hum" class="page">
+
+<button onclick="showPage('eval_results')">← Back</button>
+
+<img src="figures/evaluation/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
+
+</div>
+
+
+<div id="eval_rad" class="page">
+
+<button onclick="showPage('eval_results')">← Back</button>
+
+<img src="figures/evaluation/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
+
+</div>
+
+
+
+<!-- DOWNSCALING -->
+
+<div id="downscaling" class="page">
+
+<button onclick="goHome()">← Back</button>
+
+<button class="mainbtn" onclick="showPage('down_methods')">METHODS</button>
+<button class="mainbtn" onclick="showPage('down_results')">RESULTS</button>
+
+</div>
+
+
+<div id="down_methods" class="page">
+<button onclick="showPage('downscaling')">← Back</button>
+<p>XXXXX</p>
+</div>
+
+
+
+<div id="down_results" class="page">
+
+<button onclick="showPage('downscaling')">← Back</button>
+
+<button class="mainbtn" onclick="showPage('down_temp')">TEMPERATURE</button>
+<button class="mainbtn" onclick="showPage('down_prec')">PRECIPITATION</button>
+<button class="mainbtn" onclick="showPage('down_wind')">WIND SPEED</button>
+<button class="mainbtn" onclick="showPage('down_hum')">RELATIVE HUMIDITY</button>
+<button class="mainbtn" onclick="showPage('down_rad')">SHORT-WAVE RADIATION</button>
+
+</div>
+
+
+
+<div id="down_temp" class="page">
+
+<button onclick="showPage('down_results')">← Back</button>
+
+<img src="figures/downscaling/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
+
+</div>
+
+
+<div id="down_prec" class="page">
+
+<button onclick="showPage('down_results')">← Back</button>
+
+<img src="figures/downscaling/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
+
+</div>
+
+
+<div id="down_wind" class="page">
+
+<button onclick="showPage('down_results')">← Back</button>
+
+<img src="figures/downscaling/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
+
+</div>
+
+
+<div id="down_hum" class="page">
+
+<button onclick="showPage('down_results')">← Back</button>
+
+<img src="figures/downscaling/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
+
+</div>
+
+
+<div id="down_rad" class="page">
+
+<button onclick="showPage('down_results')">← Back</button>
+
+<img src="figures/downscaling/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
+
+</div>
+
+
+
+<!-- OTHER APPLICATIONS -->
+
+<div id="applications" class="page">
+
+<button onclick="goHome()">← Back</button>
+
+<button class="mainbtn" onclick="showPage('seasonal')">SEASONAL FORECASTING</button>
+<button class="mainbtn" onclick="showPage('reservoirs')">WATER RESERVOIRS</button>
+<button class="mainbtn" onclick="showPage('aquacrop')">CROP-WATER SIMULATIONS</button>
+
+</div>
+
+<!-- seasonal forecasting -->
+
+<div id="seasonal" class="page">
+
+<button onclick="showPage('applications')">← Back</button>
+
+<button class="mainbtn" onclick="showPage('seas_methods')">METHODS</button>
+<button class="mainbtn" onclick="showPage('seas_results')">RESULTS</button>
+
+</div>
+
+
+<div id="seas_methods" class="page">
+<button onclick="showPage('seasonal')">← Back</button>
+<p>XXXXX</p>
+</div>
+
+
+
+<div id="seas_results" class="page">
+
+<button onclick="showPage('seasonal')">← Back</button>
+
+<button class="mainbtn" onclick="showPage('seas_temp')">TEMPERATURE</button>
+<button class="mainbtn" onclick="showPage('seas_prec')">PRECIPITATION</button>
+<button class="mainbtn" onclick="showPage('seas_wind')">WIND SPEED</button>
+<button class="mainbtn" onclick="showPage('seas_hum')">RELATIVE HUMIDITY</button>
+<button class="mainbtn" onclick="showPage('seas_rad')">SHORT-WAVE RADIATION</button>
+
+</div>
+
+
+
+<div id="seas_temp" class="page">
+
+<button onclick="showPage('seas_results')">← Back</button>
+
+<img src="figures/other/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
+
+</div>
+
+
+<div id="seas_prec" class="page">
+
+<button onclick="showPage('seas_results')">← Back</button>
+
+<img src="figures/other/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
+
+</div>
+
+
+<div id="seas_wind" class="page">
+
+<button onclick="showPage('seas_results')">← Back</button>
+
+<img src="figures/other/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
+
+</div>
+
+
+<div id="seas_hum" class="page">
+
+<button onclick="showPage('seas_results')">← Back</button>
+
+<img src="figures/other/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
+
+</div>
+
+
+<div id="seas_rad" class="page">
+
+<button onclick="showPage('seas_results')">← Back</button>
+
+<img src="figures/other/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
+
+</div>
+
+<!-- water reservoirs -->
+
+<div id="reservoirs" class="page">
+
+<button onclick="showPage('applications')">← Back</button>
+
+<button class="mainbtn" onclick="showPage('reserv_methods')">METHODS</button>
+<button class="mainbtn" onclick="showPage('reserv_results')">RESULTS</button>
+
+</div>
+
+
+<div id="reserv_methods" class="page">
+<button onclick="showPage('reservoirs')">← Back</button>
+<p>XXXXX</p>
+</div>
+
+<div id="reserv_results" class="page">
+<button onclick="showPage('reservoirs')">← Back</button>
+<img src="figures/other/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
+</div>
+
+
+<!-- crop-water simulations -->
+
+<div id="aquacrop" class="page">
+
+<button onclick="showPage('applications')">← Back</button>
+
+<button class="mainbtn" onclick="showPage('aquacrop_methods')">METHODS</button>
+<button class="mainbtn" onclick="showPage('aquacrop_results')">RESULTS</button>
+
+</div>
+
+
+<div id="aquacrop_methods" class="page">
+<button onclick="showPage('aquacrop')">← Back</button>
+<p>XXXXX</p>
+</div>
+
+<div id="aquacrop_results" class="page">
+<button onclick="showPage('aquacrop')">← Back</button>
+<img src="figures/other/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
+</div>
+
+
+
+<!-- INFORMATION (FUNDING, AUTHORS, ETC) -->
+
+<div id="information" class="page">
+<button onclick="goHome()">← Back</button>
+<p>XXXXX</p>
+</div>
+
 
 </body>
 </html>

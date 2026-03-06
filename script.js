@@ -1,9 +1,19 @@
-function showTab(tabName) {
+function showPage(pageName) {
 
-    let tabs = document.getElementsByClassName("tabcontent");
-    for (let i = 0; i < tabs.length; i++) {
-        tabs[i].style.display = "none";
-    }
+let pages = document.getElementsByClassName("page");
 
-    document.getElementById(tabName).style.display = "block";
+for (let i = 0; i < pages.length; i++) {
+pages[i].style.display = "none";
 }
+
+document.getElementById(pageName).style.display = "block";
+
+}
+
+function goHome() {
+showPage("home");
+}
+
+window.onload = function() {
+showPage("home");
+};

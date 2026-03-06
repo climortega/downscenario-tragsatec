@@ -1,19 +1,45 @@
-body {
-    font-family: Arial;
-    margin: 40px;
+.header{
+display:flex;
+align-items:center;
+justify-content:space-between;
 }
 
-.tabs button {
-    padding: 10px;
-    margin-right: 10px;
+.logos img{
+height:60px;
+margin-right:20px;
 }
 
-.tabcontent {
-    display: none;
-    margin-top: 20px;
+.title{
+text-align:right;
 }
 
-img {
-    width: 600px;
-    margin: 10px;
+.separator{
+height:6px;
+background:#0072B2;
+margin:20px 0;
+}
+
+.page{
+display:none;
+}
+
+.mainbtn{
+background:#4aa3df;
+color:white;
+border:none;
+padding:20px;
+margin:10px;
+font-size:18px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.mainbtn:hover{
+background:#2b7fbf;
+}
+
+#home{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
 }

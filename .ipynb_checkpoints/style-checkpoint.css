@@ -1,0 +1,19 @@
+body {
+    font-family: Arial;
+    margin: 40px;
+}
+
+.tabs button {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.tabcontent {
+    display: none;
+    margin-top: 20px;
+}
+
+img {
+    width: 600px;
+    margin: 10px;
+}
