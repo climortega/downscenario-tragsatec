@@ -59,7 +59,7 @@ max-width:1200px;
 margin:auto;
 padding:40px;
 
-display:none;
+display:grid;   /* antes era none */
 
 grid-template-columns:repeat(auto-fit,220px);
 justify-content:center;
@@ -104,12 +104,13 @@ box-shadow:0 4px 10px rgba(0,0,0,0.15);
 
 .breadcrumbs{
 
-grid-column:1/-1;
+max-width:1200px;
+margin:20px auto 0 auto;
 
 font-size:14px;
 color:#666;
 
-margin-bottom:10px;
+padding:0 40px;
 
 }
 
