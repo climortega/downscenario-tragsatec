@@ -108,3 +108,12 @@ html += ` > <strong>${label}</strong>`;
 container.innerHTML = html;
 
 }
+
+
+function setBreadcrumbs(path){
+
+let container=document.getElementById("breadcrumbs");
+
+container.innerHTML=path;
+
+}
