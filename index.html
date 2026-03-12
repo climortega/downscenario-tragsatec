@@ -47,7 +47,11 @@ DATA
 METHODOLOGY
 </button>
     
-<button class="mainbtn" onclick="showPage('evaluation')">EVALUATION</button>
+<!-- INFORMATION -->
+<button class="mainbtn" onclick="location.href='pages/evaluation.html'">
+EVALUATION
+</button>
+
 <button class="mainbtn" onclick="showPage('downscaling')">DOWNSCALING</button>
 <button class="mainbtn" onclick="showPage('applications')">OTHER APPLICATIONS</button>
 
@@ -57,91 +61,6 @@ INFORMATION
 </button>
 
 </div>
-
-
-<!-- EVALUATION -->
-
-<div id="evaluation" class="page">
-
-<div class="page-content">
-
-<button class="mainbtn" onclick="showPage('eval_methods')">METHODS</button>
-<button class="mainbtn" onclick="showPage('eval_results')">RESULTS</button>
-
-<button class="backbtn" onclick="goBack()">← Back</button>
-
-</div>
-
-</div>
-
-
-<div id="eval_methods" class="page">
-<div class="page-content">
-<p>XXXXX</p>
-<button class="backbtn" onclick="showPage('evaluation')">← Back</button>
-</div>
-</div>
-
-
-
-<div id="eval_results" class="page">
-
-<button class="backbtn" onclick="showPage('evaluation')">← Back</button>
-
-<button class="mainbtn" onclick="showPage('eval_temp')">TEMPERATURE</button>
-<button class="mainbtn" onclick="showPage('eval_prec')">PRECIPITATION</button>
-<button class="mainbtn" onclick="showPage('eval_wind')">WIND SPEED</button>
-<button class="mainbtn" onclick="showPage('eval_hum')">RELATIVE HUMIDITY</button>
-<button class="mainbtn" onclick="showPage('eval_rad')">SHORT-WAVE RADIATION</button>
-
-</div>
-
-
-
-<div id="eval_temp" class="page">
-
-<button class="backbtn" onclick="showPage('eval_results')">← Back</button>
-
-<img src="figures/evaluation/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
-
-</div>
-
-
-<div id="eval_prec" class="page">
-
-<button class="backbtn" onclick="showPage('eval_results')">← Back</button>
-
-<img src="figures/evaluation/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
-
-</div>
-
-
-<div id="eval_wind" class="page">
-
-<button class="backbtn" onclick="showPage('eval_results')">← Back</button>
-
-<img src="figures/evaluation/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
-
-</div>
-
-
-<div id="eval_hum" class="page">
-
-<button class="backbtn" onclick="showPage('eval_results')">← Back</button>
-
-<img src="figures/evaluation/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
-
-</div>
-
-
-<div id="eval_rad" class="page">
-
-<button class="backbtn" onclick="showPage('eval_results')">← Back</button>
-
-<img src="figures/evaluation/Anomaly_ecmwf-s51_1997-NDJ_si10_3m_DOWNSCALED.png">
-
-</div>
-
 
 
 <!-- DOWNSCALING -->
