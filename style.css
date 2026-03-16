@@ -90,9 +90,11 @@ box-shadow:0 8px 18px rgba(0,0,0,0.15);
 
 #home{
 display:grid;
-grid-template-columns:repeat(auto-fit,220px);
-justify-content:center;
+grid-template-columns:1fr;   /* una sola columna */
+justify-items:center;        /* centra los botones */
 gap:30px;
+max-width:600px;
+margin:auto;
 }
 
 img{
@@ -155,4 +157,46 @@ background:#005b8f;
 
 .page-content{
 grid-column:1/-1;
+}
+
+.img-center{
+text-align:center;
+margin:30px 0;
+}
+
+.homecard{
+width:100%;
+max-width:500px;
+background:white;
+border-radius:14px;
+padding:25px;
+cursor:pointer;
+box-shadow:0 4px 12px rgba(0,0,0,0.12);
+transition:all 0.2s ease;
+display:flex;
+align-items:center;
+gap:20px;
+}
+
+.homecard:hover{
+transform:translateY(-4px);
+box-shadow:0 8px 20px rgba(0,0,0,0.18);
+}
+
+.homecard img{
+width:70px;
+height:70px;
+object-fit:contain;
+box-shadow:none;
+}
+
+.homecard-text h2{
+margin:0;
+font-size:24px;
+}
+
+.homecard-text p{
+margin:5px 0 0 0;
+font-size:14px;
+color:#666;
 }
