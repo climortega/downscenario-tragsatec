@@ -200,3 +200,17 @@ margin:5px 0 0 0;
 font-size:14px;
 color:#666;
 }
+
+.cardpage{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:25px;
+max-width:700px;
+margin:auto;
+padding:40px;
+}
+
+.cardpage .backbtn{
+margin-top:40px;
+}
