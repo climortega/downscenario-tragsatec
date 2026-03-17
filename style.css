@@ -226,7 +226,7 @@ gap:20px;
 background:#0072B2;
 padding:6px 10px;   /* antes 12px → más fina */
 position:sticky;
-top:115px;           /* valor para que quede un cachito azul de separación */
+top:113px;           /* valor para que quede un cachito azul de separación */
 z-index:999;
 }
 
