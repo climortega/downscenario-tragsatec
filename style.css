@@ -218,3 +218,40 @@ margin-top:40px;
 ul{
 line-height:1.6;
 }
+
+.navbar{
+
+display:flex;
+justify-content:center;
+gap:25px;
+
+background:#0072B2;
+
+padding:12px;
+
+position:sticky;
+top:100px; /* debajo del header */
+z-index:999;
+
+}
+
+.navbar a{
+
+color:white;
+text-decoration:none;
+font-size:14px;
+font-weight:bold;
+padding:6px 10px;
+border-radius:6px;
+transition:background 0.2s ease;
+
+}
+
+.navbar a:hover{
+background:rgba(255,255,255,0.2);
+}
+
+.navbar a.active{
+background:white;
+color:#0072B2;
+}
