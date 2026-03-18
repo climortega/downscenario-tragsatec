@@ -60,36 +60,171 @@ setBreadcrumbs(`
 
 <div class="page-content">
 
-<h2>Data</h2>
+<h2 class="center-text">Datasets</h2>
 
-<p>
-Data data data data.
-</p>
+<div class="cardpage">
 
-<p>
-Data data data data.
-</p>
+<div class="homecard" onclick="window.open('https://www.aemet.es/es/datos_abiertos')">
+<img src="../assets/aemet_peque.gif">
+<div class="homecard-text">
+<h2>AEMET OBSERVATIONAL NETWORK</h2>
+<p>All observations were obtained from AEMET's internal observational network. These were used for reanalysis data evaluation and comparison with other datasets. Daily data were procured for all variables.</p>
+</div>
+</div>
 
-<p>
-Data data data data.
-</p>
+<div class="homecard" onclick="window.open('https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=overview')">
+<img src="../assets/copernicus_peque.PNG">
+<div class="homecard-text">
+<h2>ERA5</h2>
+<p>Global reanalysis, covering both land and ocean, developed by ECMWF (Copernicus Climate Change Service). It features a resolution of 0.25° (approx. 31 km), hourly temporal resolution, 137 vertical levels, and assimilation of satellite and in-situ observations from 1950 to the present, with near real-time updates. Daily data were obtained for all variables, and hourly data for precipitation. ERA5 was used for reanalysis evaluation, downscaling of all variables, and application to seasonal forecasting. It can be downloaded from Copernicus Climate Data Store.</p>
+</div>
+</div>
 
-<ul>
-<li>Temperature</li>
-<li>Precipitation</li>
-<li>Wind speed</li>
-<li>Relative humidity</li>
-<li>Short-wave radiation</li>
-</ul>
+<div class="homecard" onclick="window.open('https://cds.climate.copernicus.eu/datasets/reanalysis-era5-land?tab=overview')">
+<img src="../assets/copernicus_peque.PNG">
+<div class="homecard-text">
+<h2>ERA5-LAND</h2>
+<p>Land surface reanalysis forced by ERA5 from ECMWF (Copernicus Climate Change Service). It has a higher resolution than ERA5 (approx. 9 km) and a better representation of land processes, but only includes surface variables (such as hydrology, energy or soil), with continuous updates for 1950–present period. Daily data were obtained for all variables except radiation and used for reanalysis evaluation. It can be downloaded from Copernicus Climate Data Store.</p>
+</div>
+</div>
 
-<p>
-Data data data data.
-</p>
+<div class="homecard" onclick="window.open('https://cds.climate.copernicus.eu/datasets/reanalysis-cerra-single-levels?tab=overview')">
+<img src="../assets/copernicus_peque.PNG">
+<div class="homecard-text">
+<h2>CERRA</h2>
+<p>Acronym for Copernicus European Regional ReAnalysis. Developed by ECMWF (Copernicus Climate Change Service). It has very high resolution (approx. 5 km), is based on a dynamic downscaling of ERA5, and includes regional assimilation of observations from 1985 to the present (with a 2-year lag). Daily data were obtained for all variables, and hourly data for precipitation. These were used for reanalysis evaluation, downscaling of all variables, and application to seasonal forecasting. It can be downloaded from Copernicus Climate Data Store.</p>
+</div>
+</div>
+
+<div class="homecard" onclick="window.open('https://cds.climate.copernicus.eu/datasets/reanalysis-cerra-land?tab=overview')">
+<img src="../assets/copernicus_peque.PNG">
+<div class="homecard-text">
+<h2>CERRA-LAND</h2>
+<p>Terrestrial version of CERRA, provided by ECMWF (Copernicus Climate Change Service). It has a resolution of approx. 5 kilometers and includes hydrological and surface variables. It is forced by atmospheric CERRA, with a similar time period (1950–present, with a lag). Daily data were obtained for all variables and used for reanalysis evaluation. It can be downloaded from Copernicus Climate Data Store.</p>
+</div>
+</div>
+
+<div class="homecard" onclick="window.open('https://reanalysis.meteo.uni-bonn.de/?COSMO-REA6')">
+<img src="../assets/dwd.png">
+<div class="homecard-text">
+<h2>COSMO-REA6</h2>
+<p>European regional reanalysis developed by the Hans-Ertel Centre for Weather Research and Climate Monitoring and Diagnostics (Universities of Bonn and Cologne) and the German Meteorological Service (DWD). It has a resolution of 0.055° (approx. 6 km) and provides data up to 15 minutes. It is derived from the non-hydrostatic COSMO model and intensive assimilation of observations from 1995 to mid-2019. Daily data for all variables, as well as hourly data for precipitation, were obtained and used for reanalysis evaluation. It can be downloaded from the opendata-FTP server at DWD.</p>
+</div>
+</div>
+
+<div class="homecard" onclick="window.open('https://cds.climate.copernicus.eu/datasets/insitu-gridded-observations-europe?tab=overview')">
+<img src="../assets/copernicus_peque.PNG">
+<div class="homecard-text">
+<h2>E-OBS</h2>
+<p>Observational dataset interpolated from meteorological stations and developed via the European Climate Assessment and Dataset (ECA&D). It has a resolution of 0.1° (approximately 10 km) and also 0.25°, and is based on European meteorological stations from 1950 to the present (depending on the variable and version). Daily data were obtained for all variables and used for reanalysis evaluation. It can be downloaded from Copernicus Climate Data Store and ECA&D web.</p>
+</div>
+</div>
+
+<div class="homecard" onclick="window.open('https://cds.climate.copernicus.eu/datasets/satellite-surface-radiation-budget?tab=download')">
+<img src="../assets/copernicus_peque.PNG">
+<div class="homecard-text">
+<h2>CLARA-A3</h2>
+<p>EUMETSAT CM SAF climate satellite dataset. It provided solar radiation, cloud cover, and albedo data with a resolution of approx. 0.25°. It is based on AVHRR sensor data from 1979 to the present. Daily short-wave solar radiation downwards data were obtained to provide further information for radiation reanalysis evaluation. It can be downloaded from Copernicus Climate Data Store and CM SAF web.</p>
+</div>
+</div>
+
+<div class="homecard" onclick="window.open('https://esgf-node.ornl.gov/search')">
+<img src="../assets/esfg.png">
+<div class="homecard-text">
+<h2>CMIP6 CLIMATE MODELS</h2>
+<p>Global climate models (GCMs) from the World Climate Research Programme in their latest version (CMIP6 project). These models have a historical period (1850-2014) and future SSP scenarios (2015-2100) with a resolution of 100-250 km. A multi-model ensemble frequently chosen by AEMET was used. This ensemble contains the following models:</p>
+<ul><li><p>ACCESS-CM2_r1i1p1f1</p></li>
+<li><p>CMCC-CM2-SR5_r1i1p1f1</p></li>
+<li><p>EC-Earth3-Veg_r1i1p1f1</p></li>
+<li><p>IITM-ESM_r1i1p1f1</p></li>
+<li><p>KACE-1-0-G_r1i1p1f1</p></li>
+<li><p>MIROC6_r1i1p1f1</p></li>
+<li><p>MPI-ESM1-2-HR_r1i1p1f1</p></li>
+<li><p>MRI-ESM2-0_r1i1p1f1</p></li>
+<li><p>NorESM2-MM_r1i1p1f1</p></li>
+<li><p>CNRM-ESM2-1_r1i1p1f2</p></li>
+<li><p>UKESM1-0-LL_r2i1p1f2</p></li></ul></p>
+<p>Daily data for all variables were downloaded from all models, preprocessed into common grids and periods, and evaluated. These scenarios were then downscaled, and the downscaled data was used in multiple applications such as seasonal forecasting and studies of reservoirs and extreme events. Models can be downloaded from ESGF nodes.</p>
+</div>
+</div>
+
+<div class="homecard" onclick="window.open('https://climate.copernicus.eu/seasonal-forecasts')">
+<img src="../assets/copernicus_peque.PNG">
+<div class="homecard-text">
+<h2>ECMWF-SEAS5.1 SEASONAL FORECASTS</h2>
+<p>ECMWF seasonal forecasting system, specifically SEAS5.1 model. It has an ensemble of members (25 for hindcast, 51 for forecast) with a horizon of up to 7 months. Hindcast covers the period from 1981 to the present, while forecast is currently operational. Daily data for all variables were obtained to apply the methodology to seasonal forecasting. It can be downloaded from Copernicus Climate Data Store.</p>
+</div>
+</div>
+
+<div class="homecard" onclick="window.open('https://www.adaptecca.es/')">
+<img src="../assets/oficina_cambio_climatico.PNG">
+<div class="homecard-text">
+<h2>CMIP5 ADAPTECCA DATA</h2>
+<p>Climate projections from the CMIP5 (WCRP) project, distributed by AdapteCCa (Spanish Platform for Adaptation to Climate Change), a collaborative digital platform promoted by the Spanish Office for Climate Change which facilitates cooperation among institutions, researchers, and professionals. This platform provides data for the historical period (up to 2005) and RCP scenarios (2006-2100) and includes downscaling for Spain from AEMET. It was decided to use this application to begin a first approach to the AquaCrop model with downscaled data. It can be downloaded from AdapteCCa web.</p>
+</div>
+</div>
+
+<div class="homecard" onclick="window.open('https://embalses.aemet.es/embalses/sclimwareS5.html')">
+<img src="../assets/aemet_peque.gif">
+<div class="homecard-text">
+<h2>S-CLIMWARE DATA</h2>
+<p>Hydrological data (specifically, reservoir data) from S-ClimWaRe project, an initiative focused on integrating climate information into water resource management. S-ClimWaRe provides storage and inflow data series integrated with climate variables over a period that varies depending on the basin (generally recent decades). Reservoir data were used to develop future reservoir projections based on previously calculated downscaled precipitation data. Reservoir data can be downloaded from S-ClimWaRe portal.</p>
+</div>
+</div>
+
+    
+</div>
+
+
+<h2 class="center-text">Variables</h2>
+
+<div class="cardpage">
+
+<div class="homecard static-card">
+<img src="../assets/hot.png">
+<div class="homecard-text">
+<h2>TEMPERATURE</h2>
+<p>Temperature, measurable by a thermometer, is a scalar quantity related to the internal energy of a thermodynamic system. It is defined by the zeroth law of thermodynamics, which states that if an object at a certain temperature is placed in contact with another at a different temperature, they will exchange heat until their temperatures equalize. It is related to the portion of internal energy known as kinetic energy (the energy associated with the movement of the system's particles; the greater the kinetic energy, the higher the system's temperature). Air temperature is the most direct variable for describing the thermal state of the climate and is related to evaporation, ice melt, and energy demand. Along with radiation, it provides the minimum possible information about the Earth's energy balance. In this work, it is measured in degrees Celsius (ºC).</p>
+</div>
+</div>
+
+<div class="homecard static-card">
+<img src="../assets/rain.png">
+<div class="homecard-text">
+<h2>PRECIPITATION</h2>
+<p>In meteorology, precipitation is considered to be any form of hydrometeor that falls from the atmosphere and reaches the Earth's surface. This phenomenon includes rain, drizzle, snow, sleet, and hail, but not virga, fog, or dew, which are modes of condensation. In this work, precipitation is understood as, specifically, forms of rain. Precipitation is an important part of the hydrological cycle, as it carries fresh water to the emerged portion of the Earth's crust and thus favors the emergence of life. It is created when clouds reach a point of saturation, and the water droplets increase in size and fall due to gravity. It is the main input of water into the Earth system and is related to water availability, droughts, floods, resources, and extreme weather events. Along with humidity, it provides the minimum amount of possible information about the hydrological cycle. In this work, rainfall is measured in millimeters (mm), which is the thickness of the water layer that would form due to precipitation on a flat, impermeable surface, and is equivalent to liters of water per square meter of land.</p>
+</div>
+</div>
+
+<div class="homecard static-card">
+<img src="../assets/wind.png">
+<div class="homecard-text">
+<h2>WIND SPEED</h2>
+<p>Wind is the large-scale flow of air in the Earth's atmosphere. It is defined as the horizontal movement of air masses due to differences in atmospheric pressure, or as the equalization of atmospheric pressure differences between two points. In meteorology, winds are distinguished by their strength and the direction from which they blow. Wind speed is considered a fundamental atmospheric quantity caused by the movement of air from an area of high pressure to one of low pressure, generally due to changes in temperature. It is usually measured using an anemometer. Wind speed affects weather forecasting, aviation, maritime operations, and plant growth, and is related to storms, cyclones, and aerosols. This variable provides the minimum possible information about atmospheric dynamics. In this work, it is measured in meters per second (m/s).</p>
+</div>
+</div>
+
+<div class="homecard static-card">
+<img src="../assets/humidity-sensor.png">
+<div class="homecard-text">
+<h2>RELATIVE HUMIDITY</h2>
+<p>Humidity is the amount of water vapor in the air. It refers to the water that permeates a body or the vapor present in the atmosphere, which, through condensation, forms clouds. This work studies relative humidity, which is the ratio between the partial pressure of water vapor and the equilibrium vapor pressure of water at a given temperature. Relative humidity depends on the temperature and pressure of the system. The same amount of water vapor produces higher relative humidity in cold air than in warm air. It is used as a parameter to study the amount of water present in the atmosphere and, therefore, is related to cloud formation, wind chill, energy balance, and convection. Along with precipitation, it provides minimum essential information about the hydrological cycle. In this work, it is measured as percentage (%).</p>
+</div>
+</div>
+
+<div class="homecard static-card">
+<img src="../assets/solar-radiation.png">
+<div class="homecard-text">
+<h2>SHORT-WAVE SOLAR RADIATION DOWNWARDS</h2>
+<p>Solar radiation is the set of electromagnetic radiations emitted by the Sun. The Sun is a star in whose interior nuclear fusion reactions occur, producing a loss of mass, which is transformed into energy. This energy is transmitted outwards through solar radiation. Short-wave radiation is defined as thermal radiation in the optical spectrum. Specifically, short-wave solar radiation downwards is related to solar irradiance and is sensitive to the solar zenith angle and cloud cover. Solar irradiance is the power per unit area received from the Sun in the form of electromagnetic radiation. This affects plant metabolism and animal behavior, and its study includes predicting the energy output of solar power plants, the heating and cooling loads of buildings, climate modeling, and weather forecasting. It is the energy source of the Earth system and is related to the mechanisms that produce global warming. Along with temperature, it provides the minimum possible information about the Earth's energy balance. In this work, it is measured in watts per square meter (W/m²).</p>
+</div>
+</div>
+
+</div>
 
 <button class="backbtn" onclick="history.back()">← Back</button>
 
 </div>
-
 </div>
 
 <!-- FOOTER -->
