@@ -279,3 +279,61 @@ line-height: 1.6;
 .footer p{
 text-align: center;
 }
+
+.homecard.wide{
+  max-width:900px;   /* 800px / 1000px */
+}
+
+.homecard.top-icon{
+  align-items:flex-start;   /* alinea arriba */
+}
+
+.homecard.top-icon img{
+  margin-top:5px;           /* pequeño ajuste visual */
+}
+
+.homecard.top-icon .homecard-text{
+  display:flex;
+  flex-direction:column;
+}
+
+.homecard.top-icon .homecard-text h2{
+  margin-top:0;
+}
+
+.text-card{
+  background:white;
+  border-radius:14px;
+  padding:40px 50px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.12);
+
+  max-width:900px;
+  margin:40px auto;
+}
+
+.text-card h2{
+  margin-top:0;
+  text-align:center;
+}
+
+.text-card p{
+  text-align:justify;
+  line-height:1.7;
+  font-size:14px;
+  color:#666;
+}
+
+.text-card ul{
+  margin-left:20px;
+  line-height:1.7;
+  font-size:14px;
+  color:#666;
+}
+
+.page.text-mode{
+  display:block;
+}
+
+.text-card strong{
+  color:#333;
+}
