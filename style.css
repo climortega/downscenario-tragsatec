@@ -337,3 +337,15 @@ text-align: center;
 .text-card strong{
   color:#333;
 }
+
+.text-card ol{
+  color:#666;
+  font-size:14px;
+  line-height:1.7;
+  padding-left:20px;   /* opcional, ajusta la sangría */
+}
+
+.img-center img{
+  max-width:70%;
+  margin:10px 0;
+}
