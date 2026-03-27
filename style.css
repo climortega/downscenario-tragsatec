@@ -349,3 +349,59 @@ text-align: center;
   max-width:70%;
   margin:10px 0;
 }
+
+/* ===== TARJETITA INVESTIGADORES ===== */
+
+.researcher-card {
+  align-items: center;   /* centrado vertical */
+  gap: 30px;             /* más espacio entre foto y texto */
+}
+
+/* FOTO MÁS GRANDE Y REDONDA */
+.researcher-card > img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+
+  border-radius: 50%;    /* círculo */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  
+  border: 3px solid #0072B2;
+
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+/* TEXTO menos espacio visual */
+.researcher-card .homecard-text {
+  flex: 1;
+}
+
+/* nombres más destacados */
+.researcher-card .homecard-text h2 {
+  font-size: 20px;
+}
+
+/* descripción más compacta */
+.researcher-card .homecard-text p {
+  font-size: 13px;
+}
+
+.research-links img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  box-shadow: none;
+}
+
+.research-links {
+  display: flex;
+  gap: 10px;
+  margin: 6px 0 10px 0;
+}
+
+.research-links a {
+  text-decoration: none;
+  display: inline-flex;   /* evita espacios raros */
+  align-items: center;
+}

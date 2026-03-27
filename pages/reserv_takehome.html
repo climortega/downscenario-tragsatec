@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Water Reservoirs - Take Home Message</title>
+
+<link rel="stylesheet" href="../style.css">
+<script src="../script.js"></script>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+
+<div class="logos">
+<img src="../assets/tragsatec.jpg">
+<img src="../assets/aemet_azul.png">
+</div>
+
+<div class="title">
+<h1>Downscaling for Climate Scenarios</h1>
+<p>Developed by Tragsatec for AEMET</p>
+</div>
+
+</header>
+
+<nav class="navbar">
+
+<a href="../index.html">Home</a>
+<a href="data.html">Data</a>
+<a href="methodology.html">Methodology</a>
+<a href="evaluation.html">Evaluation</a>
+<a href="downscaling.html">Downscaling</a>
+<a href="applications.html" class="active">Applications</a>
+<a href="information.html">Information</a>
+
+</nav>
+
+<div class="separator"></div>
+
+<!-- BREADCRUMBS -->
+
+<div class="breadcrumbs" id="breadcrumbs"></div>
+
+<script>
+window.onload = function(){
+setBreadcrumbs(`
+<a href="../index.html">Home</a> > <a href="../pages/applications.html">Applications</a> > <a href="../pages/reservoirs.html">Water Reservoirs</a> > <strong>Take Home Message</strong>
+`)
+}
+</script>
+
+<!-- PAGE CONTENT -->
+
+<div class="page text-mode">
+
+<div class="page-content text-card">
+
+<h2>TAKE HOME MESSAGE</h2>
+
+<ul>
+<li><p><strong>CERRA-Land</strong> reasonably reproduces inflow reservoir data observed during evaluation period with a <strong>correlation greater than 0.9</strong>. Therefore, it has been chosen as the basis for calibrating the inflow model with PLS (100 predictors), which provides a practical and reproducible method capable of <strong>extrapolating to downscaled climate change scenarios</strong> in order to obtain detailed information.</p></li>
+
+<li><p>Downscaled CMIP6 models show similar means to CERRA-Land and <strong>consistency in mean values when transferring the function</strong> calibrated with reanalysis.</p></li>
+
+<li><p>A <strong>uniform downward trend</strong> in inflow data <strong>does not appear</strong> in the future climate.</p></li>
+
+<li><p>There are some <strong>notable spatial patterns</strong>, such as a decrease in contributions in the southwest of the Iberian Peninsula and a tendency to increase in the northwest (areas near Galicia).</p></li>
+
+<li><p>Overall, <strong>no significant changes in percentiles (extremes)</strong> are observed. There is a slight decrease in the 95th percentile towards the end of the 21st century, which may <strong>indicate a possible reduction in high-inflow events</strong>.</p></li>
+</ul>
+
+<button class="backbtn" onclick="history.back()">← Back</button>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+<p>
+María Ortega, Irene Rodríguez-Muñoz, Jesús Gutiérrez-Fernández (Tragsatec) ●
+Esteban Rodríguez-Guisado (AEMET)
+</p>
+</footer>
+
+</body>
+</html>

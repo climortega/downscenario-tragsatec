@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Downscaling - Take Home Message</title>
+
+<link rel="stylesheet" href="../style.css">
+<script src="../script.js"></script>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+
+<div class="logos">
+<img src="../assets/tragsatec.jpg">
+<img src="../assets/aemet_azul.png">
+</div>
+
+<div class="title">
+<h1>Downscaling for Climate Scenarios</h1>
+<p>Developed by Tragsatec for AEMET</p>
+</div>
+
+</header>
+
+<nav class="navbar">
+
+<a href="../index.html">Home</a>
+<a href="data.html">Data</a>
+<a href="methodology.html">Methodology</a>
+<a href="evaluation.html">Evaluation</a>
+<a href="downscaling.html" class="active">Downscaling</a>
+<a href="applications.html">Applications</a>
+<a href="information.html">Information</a>
+
+</nav>
+
+<div class="separator"></div>
+
+<!-- BREADCRUMBS -->
+
+<div class="breadcrumbs" id="breadcrumbs"></div>
+
+<script>
+window.onload = function(){
+setBreadcrumbs(`
+<a href="../index.html">Home</a> > <a href="../pages/downscaling.html">Downscaling</a> > <strong>Take Home Message</strong>
+`)
+}
+</script>
+
+<!-- PAGE CONTENT -->
+
+<div class="page text-mode">
+
+<div class="page-content text-card">
+
+<h2>TAKE HOME MESSAGE</h2>
+
+<ul>
+<li><p>Of all downscaling methods, <strong>QDM</strong> and <strong>DeepESD</strong> yield the best results for most variables; in some cases, XGB also performs well. DeepESD is particularly interesting due to its deep learning methodology, which is rarely applied to variables such as wind or humidity.</p></li>
+
+<li><p><strong>Model performance</strong> is highly dependent on each variable. Therefore, using a large ensemble of 11 members is advisable to obtain the most comprehensive information possible.</p></li>
+
+<li><p>DeepESD provides good downscaling results for temperature, precipitation, and mean ranges.</p></li>
+
+<li><p>DeepESD also presents some problems for certain variables, mainly in radiation trends and some long-term wind and relative humidity indices.</p></li>
+
+<li><p>Its main <strong>limitation</strong> is the use of a temperature model (DeepESDtas) for humidity, radiation, and wind. Developing a specific model for each variable could improve these results.</p></li>
+
+<li><p>While long-term trends present challenges, short-term trends appear to perform much better. Therefore, this methodology could be applied to other fields, such as <strong>seasonal forecasting</strong> downscaling.</p></li>
+</ul>
+
+<button class="backbtn" onclick="history.back()">← Back</button>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+<p>
+María Ortega, Irene Rodríguez-Muñoz, Jesús Gutiérrez-Fernández (Tragsatec) ●
+Esteban Rodríguez-Guisado (AEMET)
+</p>
+</footer>
+
+</body>
+</html>
