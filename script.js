@@ -120,8 +120,6 @@ container.innerHTML=path;
 
 
 
-<script>
-
 function updateMap(){
 
 let stat = document.getElementById("statSelect").value;
@@ -140,13 +138,3 @@ let path = `../figures/evaluation/wind/wind_speed_${stat}_grids_comparison.png`;
 
 document.getElementById("gridImage").src = path;
 }
-
-document.getElementById("statSelect").onchange = updateMap;
-document.getElementById("datasetSelect").onchange = updateMap;
-document.getElementById("gridStatSelect").onchange = updateGrid;
-
-// inicializar
-updateMap();
-updateGrid();
-
-</script>

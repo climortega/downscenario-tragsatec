@@ -47,7 +47,7 @@
 <div class="breadcrumbs" id="breadcrumbs"></div>
 
 <script>
-window.onload = function(){
+document.addEventListener("DOMContentLoaded", function(){
 setBreadcrumbs(`
 <a href="../index.html">Home</a> > <a href="../pages/evaluation.html">Evaluation</a> > <a href="../pages/eval_results.html">Results</a> > <strong>Wind</strong>
 `)
@@ -153,6 +153,22 @@ María Ortega, Irene Rodríguez-Muñoz, Jesús Gutiérrez-Fernández (Tragsatec)
 Esteban Rodríguez-Guisado (AEMET)
 </p>
 </footer>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+document.getElementById("statSelect").onchange = updateMap;
+document.getElementById("datasetSelect").onchange = updateMap;
+document.getElementById("gridStatSelect").onchange = updateGrid;
+
+// inicializar
+updateMap();
+updateGrid();
+
+});
+
+</script>
 
 </body>
 </html>
