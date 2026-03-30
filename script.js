@@ -123,21 +123,45 @@ container.innerHTML=path;
 
 
 
-function updateMap(){
+function updateMap(config){
 
-let stat = document.getElementById("statSelect").value;
-let dataset = document.getElementById("datasetSelect").value;
-
-let path = `../figures/evaluation/wind/map_${stat}_${dataset}_wind_speed.png`;
-
-document.getElementById("mapImage").src = path;
+// fallback para mantener compatibilidad
+if(!config){
+  config = {
+    statId: "statSelect",
+    datasetId: "datasetSelect",
+    imgId: "mapImage",
+    basePath: "../figures/evaluation/wind",
+    prefix: "map",
+    suffix: "_wind_speed"
+  };
 }
 
-function updateGrid(){
+let stat = document.getElementById(config.statId).value;
+let dataset = document.getElementById(config.datasetId).value;
 
-let stat = document.getElementById("gridStatSelect").value;
+let path = `${config.basePath}/${config.prefix}_${stat}_${dataset}${config.suffix}.png`;
 
-let path = `../figures/evaluation/wind/wind_speed_${stat}_grids_comparison.png`;
+document.getElementById(config.imgId).src = path;
+}
 
-document.getElementById("gridImage").src = path;
+
+
+function updateGrid(config){
+
+if(!config){
+  config = {
+    statId: "gridStatSelect",
+    imgId: "gridImage",
+    basePath: "../figures/evaluation/wind",
+    prefix: "wind_speed",
+    suffix: "_grids_comparison"
+  };
+}
+
+let stat = document.getElementById(config.statId).value;
+
+let path = `${config.basePath}/${config.prefix}_${stat}${config.suffix}.png`;
+
+document.getElementById(config.imgId).src = path;
 }
