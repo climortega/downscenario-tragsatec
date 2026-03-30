@@ -69,7 +69,10 @@ showPage(previous);
 
 window.onload=function(){
 
-showPage("home");
+// SOLO ejecutar en index (SPA)
+if(document.getElementById("home")){
+  showPage("home");
+}
 
 }
 
