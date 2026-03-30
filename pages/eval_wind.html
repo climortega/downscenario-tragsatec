@@ -158,9 +158,9 @@ Esteban Rodríguez-Guisado (AEMET)
 
 document.addEventListener("DOMContentLoaded", function(){
 
-document.getElementById("statSelect").onchange = updateMap;
-document.getElementById("datasetSelect").onchange = updateMap;
-document.getElementById("gridStatSelect").onchange = updateGrid;
+document.getElementById("statSelect").addEventListener("change", () => updateMap());
+document.getElementById("datasetSelect").addEventListener("change", () => updateMap());
+document.getElementById("gridStatSelect").addEventListener("change", () => updateGrid());
 
 // inicializar
 updateMap();
