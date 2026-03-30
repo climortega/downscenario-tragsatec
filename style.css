@@ -405,3 +405,19 @@ text-align: center;
   display: inline-flex;   /* evita espacios raros */
   align-items: center;
 }
+
+
+.viewer{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  margin:20px 0;
+}
+
+.viewer select{
+  padding:8px 12px;
+  border-radius:6px;
+  border:1px solid #ccc;
+  font-size:14px;
+  cursor:pointer;
+}

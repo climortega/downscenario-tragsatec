@@ -117,3 +117,36 @@ let container=document.getElementById("breadcrumbs");
 container.innerHTML=path;
 
 }
+
+
+
+<script>
+
+function updateMap(){
+
+let stat = document.getElementById("statSelect").value;
+let dataset = document.getElementById("datasetSelect").value;
+
+let path = `../figures/evaluation/wind/map_${stat}_${dataset}_wind_speed.png`;
+
+document.getElementById("mapImage").src = path;
+}
+
+function updateGrid(){
+
+let stat = document.getElementById("gridStatSelect").value;
+
+let path = `../figures/evaluation/wind/wind_speed_${stat}_grids_comparison.png`;
+
+document.getElementById("gridImage").src = path;
+}
+
+document.getElementById("statSelect").onchange = updateMap;
+document.getElementById("datasetSelect").onchange = updateMap;
+document.getElementById("gridStatSelect").onchange = updateGrid;
+
+// inicializar
+updateMap();
+updateGrid();
+
+</script>
