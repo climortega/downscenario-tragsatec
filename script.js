@@ -165,3 +165,29 @@ let path = `${config.basePath}/${config.prefix}_${stat}${config.suffix}.png`;
 
 document.getElementById(config.imgId).src = path;
 }
+
+
+
+
+function updateImageMulti(config){
+
+let values = config.selectIds.map(id => document.getElementById(id).value);
+
+let filename = config.prefix;
+
+for(let i=0;i<values.length;i++){
+
+  if(i === 1 && config.insertVar){
+    filename += "_" + config.insertVar;
+  }
+
+  filename += "_" + values[i];
+}
+
+filename += config.suffix + ".png";
+
+let path = `${config.basePath}/${filename}`;
+
+document.getElementById(config.imgId).src = path;
+
+}

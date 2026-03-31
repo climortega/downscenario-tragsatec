@@ -47,11 +47,11 @@
 <div class="breadcrumbs" id="breadcrumbs"></div>
 
 <script>
-window.onload = function(){
+document.addEventListener("DOMContentLoaded", function(){
 setBreadcrumbs(`
 <a href="../index.html">Home</a> > <a href="../pages/downscaling.html">Downscaling</a> > <a href="../pages/down_results.html">Results</a> > <strong>Wind</strong>
 `)
-}
+});
 </script>
 
 <!-- PAGE CONTENT -->
@@ -62,7 +62,168 @@ setBreadcrumbs(`
 
 <h2>DOWNSCALING - WIND SPEED</h2>
 
-<p>Coming soon!</p>
+<h3 style="text-align:center;">Method Evaluation</h3>
+
+<div class="img-center">
+  <img src="../figures/downscaling/wind/evaluation/EVALUATION_annualCycle_sfcWind_None_all_None.png">
+</div>
+
+<div class="img-center">
+  <img src="../figures/downscaling/wind/evaluation/EVALUATION_correlationBoxplot_sfcWind_None_all_ANNUAL.png">
+</div>
+
+<div class="img-center">
+  <img src="../figures/downscaling/wind/evaluation/EVALUATION_rmseBoxplot_sfcWind_None_all_ANNUAL.png">
+</div>
+
+<div class="img-center">
+  <img src="../figures/downscaling/wind/evaluation/EVALUATION_varianceBoxplot_sfcWind_None_all_ANNUAL.png">
+</div>
+
+<h4 style="text-align:center;">Bias Climdex</h4>
+
+<div class="viewer">
+<select id="climdexSelect1">
+<option value="p95">p95</option>
+<option value="p99">p99</option>
+<option value="SFCWINDm">SFCWINDm</option>
+<option value="SFCWINDx">SFCWINDx</option>
+</select>
+</div>
+
+<div class="img-center">
+<img id="imgClimdex"
+src="../figures/downscaling/wind/evaluation/EVALUATION_biasClimdexBoxplot_sfcWind_p95_all_ANNUAL.png">
+</div>
+
+<h4 style="text-align:center;">Maps</h4>
+
+<div class="viewer">
+
+<select id="typeSelect2">
+<option value="biasMap">biasMap</option>
+<option value="estMap">estMap</option>
+</select>
+
+<select id="climdexSelect2">
+<option value="p95">p95</option>
+<option value="p99">p99</option>
+<option value="SFCWINDm">SFCWINDm</option>
+<option value="SFCWINDx">SFCWINDx</option>
+</select>
+
+<select id="methodSelect2">
+<option value="DeepESD">DeepESD</option>
+<option value="MLR">MLR</option>
+<option value="QDM">QDM</option>
+<option value="RAW-BIL">RAW-BIL</option>
+<option value="XGB">XGB</option>
+</select>
+
+</div>
+
+<div class="img-center">
+<img id="imgMaps"
+src="../figures/downscaling/wind/evaluation/EVALUATION_biasMap_sfcWind_p95_DeepESD_ANNUAL.png">
+</div>
+
+<h3 style="text-align:center;">Model Evaluation</h3>
+
+<div class="viewer">
+
+<select id="typeSelect3">
+<option value="biasboxplot">biasboxplot</option>
+<option value="biaskde">biaskde</option>
+<option value="kde">kde</option>
+<option value="maps_bias">maps_bias</option>
+</select>
+
+<select id="climdexSelect3">
+<option value="p95">p95</option>
+<option value="p99">p99</option>
+<option value="SFCWINDm">SFCWINDm</option>
+<option value="SFCWINDx">SFCWINDx</option>
+</select>
+
+<select id="methodSelect3">
+<option value="DeepESD">DeepESD</option>
+<option value="MLR">MLR</option>
+<option value="QDM">QDM</option>
+<option value="RAW-BIL">RAW-BIL</option>
+<option value="XGB">XGB</option>
+</select>
+
+</div>
+
+<div class="img-center">
+<img id="imgModel"
+src="../figures/downscaling/wind/model_evaluation/biasboxplot_sfcWind_p95_DeepESD_ANNUAL.png">
+</div>
+
+<h3 style="text-align:center;">Projections</h3>
+
+<div class="viewer">
+
+<select id="typeSelect4">
+<option value="evolTube">evolTube</option>
+<option value="trendPreservation">trendPreservation</option>
+</select>
+
+<select id="climdexSelect4">
+<option value="p95">p95</option>
+<option value="p99">p99</option>
+<option value="SFCWINDm">SFCWINDm</option>
+<option value="SFCWINDx">SFCWINDx</option>
+</select>
+
+<select id="methodSelect4">
+<option value="DeepESD">DeepESD</option>
+<option value="MLR">MLR</option>
+<option value="QDM">QDM</option>
+<option value="RAW-BIL">RAW-BIL</option>
+<option value="XGB">XGB</option>
+</select>
+
+</div>
+
+<div class="img-center">
+<img id="imgProj1"
+src="../figures/downscaling/wind/projections/PROJECTIONS_evolTube_sfcWind_p95_DeepESD_ANNUAL.png">
+</div>
+
+<div class="viewer">
+
+<select id="typeSelect5">
+<option value="meanChangeMap">meanChangeMap</option>
+<option value="spreadChangeMap">spreadChangeMap</option>
+</select>
+
+<select id="climdexSelect5">
+<option value="p95">p95</option>
+<option value="p99">p99</option>
+<option value="SFCWINDm">SFCWINDm</option>
+<option value="SFCWINDx">SFCWINDx</option>
+</select>
+
+<select id="methodSelect5">
+<option value="DeepESD">DeepESD</option>
+<option value="MLR">MLR</option>
+<option value="QDM">QDM</option>
+<option value="RAW-BIL">RAW-BIL</option>
+<option value="XGB">XGB</option>
+</select>
+
+<select id="periodSelect5">
+<option value="2041-2070">2041-2070</option>
+<option value="2071-2100">2071-2100</option>
+</select>
+
+</div>
+
+<div class="img-center">
+<img id="imgProj2"
+src="../figures/downscaling/wind/projections/PROJECTIONS_meanChangeMap_sfcWind_p95_DeepESD-ssp585-2041-2070_ANNUAL.png">
+</div>
 
 <button class="backbtn" onclick="history.back()">← Back</button>
 
@@ -78,6 +239,75 @@ María Ortega, Irene Rodríguez-Muñoz, Jesús Gutiérrez-Fernández (Tragsatec)
 Esteban Rodríguez-Guisado (AEMET)
 </p>
 </footer>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+// VISOR 1
+document.getElementById("climdexSelect1")
+.addEventListener("change", () =>
+updateImageMulti({
+  selectIds:["climdexSelect1"],
+  imgId:"imgClimdex",
+  basePath:"../figures/downscaling/wind/evaluation",
+  prefix:"EVALUATION_biasClimdexBoxplot_sfcWind",
+  suffix:"_all_ANNUAL"
+})
+);
+
+// VISOR 2
+["typeSelect2","climdexSelect2","methodSelect2"].forEach(id =>
+document.getElementById(id).addEventListener("change", () =>
+updateImageMulti({
+  selectIds:["typeSelect2","climdexSelect2","methodSelect2"],
+  imgId:"imgMaps",
+  basePath:"../figures/downscaling/wind/evaluation",
+  prefix:"EVALUATION",
+  suffix:"_ANNUAL"
+})
+));
+
+// MODEL
+["typeSelect3","climdexSelect3","methodSelect3"].forEach(id =>
+document.getElementById(id).addEventListener("change", () =>
+updateImageMulti({
+  selectIds:["typeSelect3","climdexSelect3","methodSelect3"],
+  imgId:"imgModel",
+  basePath:"../figures/downscaling/wind/model_evaluation",
+  prefix:"",
+  suffix:"_ANNUAL",
+  insertVar:"sfcWind"
+})
+));
+
+// PROJ 1
+["typeSelect4","climdexSelect4","methodSelect4"].forEach(id =>
+document.getElementById(id).addEventListener("change", () =>
+updateImageMulti({
+  selectIds:["typeSelect4","climdexSelect4","methodSelect4"],
+  imgId:"imgProj1",
+  basePath:"../figures/downscaling/wind/projections",
+  prefix:"PROJECTIONS",
+  suffix:"_ANNUAL"
+})
+));
+
+// PROJ 2
+["typeSelect5","climdexSelect5","methodSelect5","periodSelect5"].forEach(id =>
+document.getElementById(id).addEventListener("change", () =>
+updateImageMulti({
+  selectIds:["typeSelect5","climdexSelect5","methodSelect5","periodSelect5"],
+  imgId:"imgProj2",
+  basePath:"../figures/downscaling/wind/projections",
+  prefix:"PROJECTIONS",
+  suffix:"_ANNUAL"
+})
+));
+
+});
+
+</script>
 
 </body>
 </html>
