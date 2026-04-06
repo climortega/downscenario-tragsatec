@@ -201,6 +201,14 @@ src="../figures/other/seasonal/wind/hindcast/AUC_dominant_gradient_si10_3m_NDJ.p
 <h2>FORECAST 2024-2025</h2>
 
 <div class="img-center">
+<img src="../figures/other/seasonal/wind/forecast2024/Forecast_Anomaly_ecmwf-s51_NDJ_si10_3m.png">
+</div>
+
+<div class="img-center">
+<img src="../figures/other/seasonal/wind/forecast2024/ecmwf-s51_FORECAST_NDJ_si10_3m_tercileDominant_2.png">
+</div>
+
+<div class="img-center">
 <img src="../figures/other/seasonal/wind/forecast2024/Forecast_Anomaly_ecmwf-s51_NDJFM_si10_5m.png">
 </div>
 
@@ -233,21 +241,21 @@ const varName = "si10";
 // ANOMALY
 ["anomYear","anomAgg"].forEach(id =>
 document.getElementById(id).addEventListener("change", () =>
-updateAnomaly(wind, si10)
+updateAnomaly(variable, varName)
 )
 );
 
 // PROBABILITY
 ["probYear","probAgg"].forEach(id =>
 document.getElementById(id).addEventListener("change", () =>
-updateProbability(wind, si10)
+updateProbability(variable, varName)
 )
 );
 
 // SCORES
 ["scoreType","scoreAgg"].forEach(id =>
 document.getElementById(id).addEventListener("change", () =>
-updateScores(wind, si10)
+updateScores(variable, varName)
 )
 );
 
