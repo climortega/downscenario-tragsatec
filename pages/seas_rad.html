@@ -231,5 +231,41 @@ Esteban Rodríguez-Guisado (AEMET)
 </p>
 </footer>
 
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+const variable = "radiation";
+const varName = "ssrd";
+
+// ANOMALY
+["anomYear","anomAgg"].forEach(id =>
+document.getElementById(id).addEventListener("change", () =>
+updateAnomaly(variable, varName)
+)
+);
+
+// PROBABILITY
+["probYear","probAgg"].forEach(id =>
+document.getElementById(id).addEventListener("change", () =>
+updateProbability(variable, varName)
+)
+);
+
+// SCORES
+["scoreType","scoreAgg"].forEach(id =>
+document.getElementById(id).addEventListener("change", () =>
+updateScores(variable, varName)
+)
+);
+
+// inicializar
+updateAnomaly(variable, varName);
+updateProbability(variable, varName);
+updateScores(variable, varName);
+
+});
+</script>
+
 </body>
 </html>
