@@ -270,3 +270,58 @@ let path = `../figures/downscaling/wind/projections/${filename}`;
 document.getElementById("imgProj2").src = path;
 
 }
+
+
+
+// =======================
+// ANOMALY
+// =======================
+function updateAnomaly(){
+
+let year = document.getElementById("anomYear").value;
+let agg = document.getElementById("anomAgg").value;
+
+let season = (agg === "5m") ? "NDJFM" : "NDJ";
+
+let filename = `Anomaly_ecmwf-s51_${year}-${season}_si10_${agg}_DOWNSCALED.png`;
+
+let path = `../figures/other/seasonal/wind/hindcast/${filename}`;
+
+document.getElementById("imgAnom").src = path;
+}
+
+
+// =======================
+// PROBABILITY
+// =======================
+function updateProbability(){
+
+let year = document.getElementById("probYear").value;
+let agg = document.getElementById("probAgg").value;
+
+let season = (agg === "5m") ? "NDJFM" : "NDJ";
+
+let filename = `ecmwf-s51_${year}-${season}_si10_${agg}_tercileProbs_DOWNSCALED_LOO.png`;
+
+let path = `../figures/other/seasonal/wind/hindcast/${filename}`;
+
+document.getElementById("imgProb").src = path;
+}
+
+
+// =======================
+// SCORES
+// =======================
+function updateScores(){
+
+let score = document.getElementById("scoreType").value;
+let agg = document.getElementById("scoreAgg").value;
+
+let season = (agg === "5m") ? "NDJFM" : "NDJ";
+
+let filename = `${score}_si10_${agg}_${season}.png`;
+
+let path = `../figures/other/seasonal/wind/hindcast/${filename}`;
+
+document.getElementById("imgScore").src = path;
+}
