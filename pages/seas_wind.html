@@ -227,20 +227,34 @@ Esteban Rodríguez-Guisado (AEMET)
 
 document.addEventListener("DOMContentLoaded", function(){
 
+const variable = "wind";
+const varName = "si10";
+
 // ANOMALY
 ["anomYear","anomAgg"].forEach(id =>
-document.getElementById(id).addEventListener("change", updateAnomaly)
+document.getElementById(id).addEventListener("change", () =>
+updateAnomaly(wind, si10)
+)
 );
 
 // PROBABILITY
 ["probYear","probAgg"].forEach(id =>
-document.getElementById(id).addEventListener("change", updateProbability)
+document.getElementById(id).addEventListener("change", () =>
+updateProbability(wind, si10)
+)
 );
 
 // SCORES
 ["scoreType","scoreAgg"].forEach(id =>
-document.getElementById(id).addEventListener("change", updateScores)
+document.getElementById(id).addEventListener("change", () =>
+updateScores(wind, si10)
+)
 );
+
+// inicializar
+updateAnomaly(variable, varName);
+updateProbability(variable, varName);
+updateScores(variable, varName);
 
 });
 </script>

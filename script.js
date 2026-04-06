@@ -276,16 +276,16 @@ document.getElementById("imgProj2").src = path;
 // =======================
 // ANOMALY
 // =======================
-function updateAnomaly(){
+function updateAnomaly(variable, varName){
 
 let year = document.getElementById("anomYear").value;
 let agg = document.getElementById("anomAgg").value;
 
 let season = (agg === "5m") ? "NDJFM" : "NDJ";
 
-let filename = `Anomaly_ecmwf-s51_${year}-${season}_si10_${agg}_DOWNSCALED.png`;
+let filename = `Anomaly_ecmwf-s51_${year}-${season}_${varName}_${agg}_DOWNSCALED.png`;
 
-let path = `../figures/other/seasonal/wind/hindcast/${filename}`;
+let path = `../figures/other/seasonal/${variable}/hindcast/${filename}`;
 
 document.getElementById("imgAnom").src = path;
 }
@@ -294,16 +294,16 @@ document.getElementById("imgAnom").src = path;
 // =======================
 // PROBABILITY
 // =======================
-function updateProbability(){
+function updateProbability(variable, varName){
 
 let year = document.getElementById("probYear").value;
 let agg = document.getElementById("probAgg").value;
 
 let season = (agg === "5m") ? "NDJFM" : "NDJ";
 
-let filename = `ecmwf-s51_${year}-${season}_si10_${agg}_tercileProbs_DOWNSCALED_LOO.png`;
+let filename = `ecmwf-s51_${year}-${season}_${varName}_${agg}_tercileProbs_DOWNSCALED_LOO.png`;
 
-let path = `../figures/other/seasonal/wind/hindcast/${filename}`;
+let path = `../figures/other/seasonal/${variable}/hindcast/${filename}`;
 
 document.getElementById("imgProb").src = path;
 }
@@ -312,16 +312,16 @@ document.getElementById("imgProb").src = path;
 // =======================
 // SCORES
 // =======================
-function updateScores(){
+function updateScores(variable, varName){
 
 let score = document.getElementById("scoreType").value;
 let agg = document.getElementById("scoreAgg").value;
 
 let season = (agg === "5m") ? "NDJFM" : "NDJ";
 
-let filename = `${score}_si10_${agg}_${season}.png`;
+let filename = `${score}_${varName}_${agg}_${season}.png`;
 
-let path = `../figures/other/seasonal/wind/hindcast/${filename}`;
+let path = `../figures/other/seasonal/${variable}/hindcast/${filename}`;
 
 document.getElementById("imgScore").src = path;
 }
