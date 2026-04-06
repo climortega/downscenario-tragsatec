@@ -196,15 +196,15 @@ document.getElementById(config.imgId).src = path;
 // =======================
 // FIX VISOR MAPS (EVALUATION)
 // =======================
-function updateMaps(){
+function updateMaps(variable, varName){
 
 let type = document.getElementById("typeSelect2").value;
 let climdex = document.getElementById("climdexSelect2").value;
 let method = document.getElementById("methodSelect2").value;
 
-let filename = `EVALUATION_${type}_sfcWind_${climdex}_${method}_ANNUAL.png`;
+let filename = `EVALUATION_${type}_${varName}_${climdex}_${method}_ANNUAL.png`;
 
-let path = `../figures/downscaling/wind/evaluation/${filename}`;
+let path = `../figures/downscaling/${variable}/evaluation/${filename}`;
 
 document.getElementById("imgMaps").src = path;
 
@@ -214,15 +214,15 @@ document.getElementById("imgMaps").src = path;
 // =======================
 // FIX MODEL EVALUATION
 // =======================
-function updateModel(){
+function updateModel(variable, varName){
 
 let type = document.getElementById("typeSelect3").value;
 let climdex = document.getElementById("climdexSelect3").value;
 let method = document.getElementById("methodSelect3").value;
 
-let filename = `${type}_sfcWind_${climdex}_${method}_ANNUAL.png`;
+let filename = `${type}_${varName}_${climdex}_${method}_ANNUAL.png`;
 
-let path = `../figures/downscaling/wind/model_evaluation/${filename}`;
+let path = `../figures/downscaling/${variable}/model_evaluation/${filename}`;
 
 document.getElementById("imgModel").src = path;
 
@@ -232,7 +232,7 @@ document.getElementById("imgModel").src = path;
 // =======================
 // FIX PROJECTIONS 1
 // =======================
-function updateProj1(){
+function updateProj1(variable, varName){
 
 let type = document.getElementById("typeSelect4").value;
 let climdex = document.getElementById("climdexSelect4").value;
@@ -241,12 +241,12 @@ let method = document.getElementById("methodSelect4").value;
 let filename;
 
 if(type === "trendPreservation"){
-  filename = `PROJECTIONS_${type}_sfcWind_${climdex}_${method}-ssp585_ANNUAL.png`;
+  filename = `PROJECTIONS_${type}_${varName}_${climdex}_${method}-ssp585_ANNUAL.png`;
 }else{
-  filename = `PROJECTIONS_${type}_sfcWind_${climdex}_${method}_ANNUAL.png`;
+  filename = `PROJECTIONS_${type}_${varName}_${climdex}_${method}_ANNUAL.png`;
 }
 
-let path = `../figures/downscaling/wind/projections/${filename}`;
+let path = `../figures/downscaling/${variable}/projections/${filename}`;
 
 document.getElementById("imgProj1").src = path;
 
@@ -256,16 +256,16 @@ document.getElementById("imgProj1").src = path;
 // =======================
 // FIX PROJECTIONS 2
 // =======================
-function updateProj2(){
+function updateProj2(variable, varName){
 
 let type = document.getElementById("typeSelect5").value;
 let climdex = document.getElementById("climdexSelect5").value;
 let method = document.getElementById("methodSelect5").value;
 let period = document.getElementById("periodSelect5").value;
 
-let filename = `PROJECTIONS_${type}_sfcWind_${climdex}_${method}-ssp585-${period}_ANNUAL.png`;
+let filename = `PROJECTIONS_${type}_${varName}_${climdex}_${method}-ssp585-${period}_ANNUAL.png`;
 
-let path = `../figures/downscaling/wind/projections/${filename}`;
+let path = `../figures/downscaling/${variable}/projections/${filename}`;
 
 document.getElementById("imgProj2").src = path;
 

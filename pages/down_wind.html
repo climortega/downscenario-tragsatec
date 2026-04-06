@@ -265,7 +265,9 @@ updateImageMulti({
 // VISOR 2 (MAPS)
 // =======================
 ["typeSelect2","climdexSelect2","methodSelect2"].forEach(id =>
-document.getElementById(id).addEventListener("change", updateMaps)
+document.getElementById(id).addEventListener("change", () =>
+  updateMaps("wind","sfcWind")
+)
 );
 
 
@@ -273,7 +275,9 @@ document.getElementById(id).addEventListener("change", updateMaps)
 // MODEL
 // =======================
 ["typeSelect3","climdexSelect3","methodSelect3"].forEach(id =>
-document.getElementById(id).addEventListener("change", updateModel)
+document.getElementById(id).addEventListener("change", () =>
+  updateModel("wind","sfcWind")
+)
 );
 
 
@@ -281,15 +285,19 @@ document.getElementById(id).addEventListener("change", updateModel)
 // PROJ 1
 // =======================
 ["typeSelect4","climdexSelect4","methodSelect4"].forEach(id =>
-document.getElementById(id).addEventListener("change", updateProj1)
+document.getElementById(id).addEventListener("change", () =>
+  updateProj1("wind","sfcWind")
+)
 );
 
 
 // =======================
 // PROJ 2
 // =======================
-["typeSelect5","climdexSelect5","methodSelect5","periodSelect5"].forEach(id =>
-document.getElementById(id).addEventListener("change", updateProj2)
+["typeSelect4","climdexSelect4","methodSelect4"].forEach(id =>
+document.getElementById(id).addEventListener("change", () =>
+  updateProj1("wind","sfcWind")
+)
 );
 
 });
