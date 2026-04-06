@@ -47,11 +47,11 @@
 <div class="breadcrumbs" id="breadcrumbs"></div>
 
 <script>
-window.onload = function(){
+document.addEventListener("DOMContentLoaded", function(){
 setBreadcrumbs(`
 <a href="../index.html">Home</a> > <a href="../pages/evaluation.html">Evaluation</a> > <a href="../pages/eval_results.html">Results</a> > <strong>Radiation</strong>
 `)
-}
+});
 </script>
 
 <!-- PAGE CONTENT -->
@@ -60,9 +60,82 @@ setBreadcrumbs(`
 
 <div class="page-content text-card">
 
-<h2>EVALUATION - RADIATION</h2>
+<h2>EVALUATION - SHORT-WAVE RADIATION</h2>
 
-<p>Coming soon!</p>
+<!-- ===== IMÁGENES FIJAS ===== -->
+
+<div class="img-center">
+  <img src="../figures/evaluation/radiation/stations_completeness_map.png">
+</div>
+
+<div class="img-center">
+  <img src="../figures/evaluation/radiation/radiation_pdf_comparison_stations_vs_datasets.png">
+</div>
+
+<!-- ===== VISOR MAPS ===== -->
+
+<h3 style="text-align:center;">Maps Viewer</h3>
+
+<div class="viewer">
+
+<select id="statSelect">
+<option value="correlation">Correlation</option>
+<option value="ks_test_p">KS test p</option>
+<option value="ks_test_stat">KS test stat</option>
+<option value="kurtosis_bias">Kurtosis bias</option>
+<option value="mean_absolute_error">Mean Absolute Error</option>
+<option value="mean_bias">Mean Bias</option>
+<option value="p10_bias">P10 Bias</option>
+<option value="p90_bias">P90 Bias</option>
+<option value="p95_bias">P95 Bias</option>
+<option value="rmse">RMSE</option>
+<option value="skew_bias">Skew Bias</option>
+<option value="std_bias">Std Bias</option>
+<option value="variance_bias">Variance Bias</option>
+<option value="wasserstein_distance">Wasserstein Distance</option>
+</select>
+
+<select id="datasetSelect">
+<option value="CERRA">CERRA</option>
+<option value="COSMO-REA6">CERRA-LAND</option>
+<option value="EOBS">CLARA-A3</option>
+</select>
+
+</div>
+
+<div class="img-center">
+  <img id="mapImage" src="../figures/evaluation/radiation/map_correlation_CERRA_radiation.png">
+</div>
+
+<!-- ===== VISOR GRIDS ===== -->
+
+<h3 style="text-align:center;">Grids Comparison</h3>
+
+<div class="viewer">
+
+<select id="gridStatSelect">
+<option value="annual_cycle">Annual Cycle</option>
+<option value="Correlation">Correlation</option>
+<option value="KS_test_p">KS test p</option>
+<option value="KS_test_stat">KS test stat</option>
+<option value="Kurtosis_Bias">Kurtosis bias</option>
+<option value="Mean_Absolute_Error">Mean Absolute Error</option>
+<option value="Mean_Bias">Mean Bias</option>
+<option value="P10_Bias">P10 Bias</option>
+<option value="P90_Bias">P90 Bias</option>
+<option value="P95_Bias">P95 Bias</option>
+<option value="RMSE">RMSE</option>
+<option value="Skew_Bias">Skew Bias</option>
+<option value="Std_Bias">Std Bias</option>
+<option value="Variance_Bias">Variance Bias</option>
+<option value="Wasserstein_Distance">Wasserstein Distance</option>
+</select>
+
+</div>
+
+<div class="img-center">
+  <img id="gridImage" src="../figures/evaluation/radiation/radiation_annual_cycle_grids_comparison.png">
+</div>
 
 <button class="backbtn" onclick="history.back()">← Back</button>
 
@@ -79,5 +152,38 @@ Esteban Rodríguez-Guisado (AEMET)
 </p>
 </footer>
 
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+const mapConfig = {
+  statId: "statSelectRad",
+  datasetId: "datasetSelectRad",
+  imgId: "mapImageRad",
+  basePath: "../figures/evaluation/radiation",
+  prefix: "map",
+  suffix: "_radiation"
+};
+
+const gridConfig = {
+  statId: "gridStatSelectRad",
+  imgId: "gridImageRad",
+  basePath: "../figures/evaluation/radiation",
+  prefix: "radiation",
+  suffix: "_grids_comparison"
+};
+
+document.getElementById("statSelectRad").addEventListener("change", () => updateMap(mapConfig));
+document.getElementById("datasetSelectRad").addEventListener("change", () => updateMap(mapConfig));
+document.getElementById("gridStatSelectRad").addEventListener("change", () => updateGrid(gridConfig));
+
+// inicializar
+updateMap(mapConfig);
+updateGrid(gridConfig);
+
+});
+
+</script>
+    
 </body>
 </html>
