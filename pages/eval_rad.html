@@ -97,8 +97,8 @@ setBreadcrumbs(`
 
 <select id="datasetSelect">
 <option value="CERRA">CERRA</option>
-<option value="COSMO-REA6">CERRA-LAND</option>
-<option value="EOBS">CLARA-A3</option>
+<option value="CERRA-LAND">CERRA-LAND</option>
+<option value="CLARA-A3">CLARA-A3</option>
 </select>
 
 </div>
@@ -157,25 +157,25 @@ Esteban Rodríguez-Guisado (AEMET)
 document.addEventListener("DOMContentLoaded", function(){
 
 const mapConfig = {
-  statId: "statSelectRad",
-  datasetId: "datasetSelectRad",
-  imgId: "mapImageRad",
+  statId: "statSelect",
+  datasetId: "datasetSelect",
+  imgId: "mapImage",
   basePath: "../figures/evaluation/radiation",
   prefix: "map",
   suffix: "_radiation"
 };
 
 const gridConfig = {
-  statId: "gridStatSelectRad",
-  imgId: "gridImageRad",
+  statId: "gridStatSelect",
+  imgId: "gridImage",
   basePath: "../figures/evaluation/radiation",
   prefix: "radiation",
   suffix: "_grids_comparison"
 };
 
-document.getElementById("statSelectRad").addEventListener("change", () => updateMap(mapConfig));
-document.getElementById("datasetSelectRad").addEventListener("change", () => updateMap(mapConfig));
-document.getElementById("gridStatSelectRad").addEventListener("change", () => updateGrid(gridConfig));
+document.getElementById("statSelect").addEventListener("change", () => updateMap(mapConfig));
+document.getElementById("datasetSelect").addEventListener("change", () => updateMap(mapConfig));
+document.getElementById("gridStatSelect").addEventListener("change", () => updateGrid(gridConfig));
 
 // inicializar
 updateMap(mapConfig);
