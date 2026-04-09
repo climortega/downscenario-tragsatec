@@ -47,11 +47,11 @@
 <div class="breadcrumbs" id="breadcrumbs"></div>
 
 <script>
-window.onload = function(){
+document.addEventListener("DOMContentLoaded", function(){
 setBreadcrumbs(`
 <a href="../index.html">Home</a> > <a href="../pages/downscaling.html">Downscaling</a> > <a href="../pages/down_results.html">Results</a> > <strong>Precipitation</strong>
 `)
-}
+});
 </script>
 
 <!-- PAGE CONTENT -->
@@ -62,7 +62,7 @@ setBreadcrumbs(`
 
 <h2>DOWNSCALING - PRECIPITATION</h2>
 
-<p>Coming soon!</p>
+<p style="text-align: center;">Coming soon!</p>
 
 <button class="backbtn" onclick="history.back()">← Back</button>
 
