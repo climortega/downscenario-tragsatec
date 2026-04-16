@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Evaluation - Temperature</title>
+
+<link rel="stylesheet" href="../style.css">
+<script src="../script.js"></script>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+
+<div class="logos">
+<img src="../assets/tragsatec.jpg">
+<img src="../assets/aemet_azul.png">
+</div>
+
+<div class="title">
+<h1>Downscaling for Climate Scenarios</h1>
+<p>Developed by Tragsatec for AEMET</p>
+</div>
+
+</header>
+
+<nav class="navbar">
+
+<a href="../index.html">Home</a>
+<a href="data.html">Data</a>
+<a href="methodology.html">Methodology</a>
+<a href="evaluation.html" class="active">Evaluation</a>
+<a href="downscaling.html">Downscaling</a>
+<a href="applications.html">Applications</a>
+<a href="information.html">Information</a>
+
+</nav>
+
+<div class="separator"></div>
+
+<!-- BREADCRUMBS -->
+
+<div class="breadcrumbs" id="breadcrumbs"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+setBreadcrumbs(`
+<a href="../index.html">Home</a> > <a href="../pages/evaluation.html">Evaluation</a> > <a href="../pages/eval_results.html">Results</a> > <strong>Temperature</strong>
+`)
+});
+</script>
+
+<!-- PAGE CONTENT -->
+
+<div class="page text-mode">
+
+<div class="page-content text-card">
+
+<h2>EVALUATION - TEMPERATURE</h2>
+
+<!-- ===== IMÁGENES FIJAS ===== -->
+
+<div class="img-center">
+  <img src="../figures/evaluation/temperature/stations_completeness_map.png">
+</div>
+
+<div class="img-center">
+  <img src="../figures/evaluation/temperature/temperature_pdf_comparison_stations_vs_datasets.png">
+</div>
+
+<!-- ===== VISOR MAPS ===== -->
+
+<h3 style="text-align:center;">Maps Viewer</h3>
+
+<div class="viewer">
+
+<select id="statSelect">
+<option value="correlation">Correlation</option>
+<option value="ks_test_p">KS test p</option>
+<option value="ks_test_stat">KS test stat</option>
+<option value="kurtosis_bias">Kurtosis bias</option>
+<option value="mean_absolute_error">Mean Absolute Error</option>
+<option value="mean_bias">Mean Bias</option>
+<option value="p10_bias">P10 Bias</option>
+<option value="p90_bias">P90 Bias</option>
+<option value="p95_bias">P95 Bias</option>
+<option value="rmse">RMSE</option>
+<option value="skew_bias">Skew Bias</option>
+<option value="std_bias">Std Bias</option>
+<option value="variance_bias">Variance Bias</option>
+<option value="wasserstein_distance">Wasserstein Distance</option>
+</select>
+
+<select id="datasetSelect">
+<option value="CERRA">CERRA</option>
+<option value="COSMO-REA6">COSMO-REA6</option>
+<option value="EOBS_HR">EOBS_HR</option>
+<option value="EOBS_LR">EOBS_LR</option>
+<option value="ERA5">ERA5</option>
+<option value="ERA5-Land">ERA5-Land</option>
+</select>
+
+</div>
+
+<div class="img-center">
+  <img id="mapImage" src="../figures/evaluation/temperature/map_correlation_CERRA_temperature.png">
+</div>
+
+<!-- ===== VISOR GRIDS ===== -->
+
+<h3 style="text-align:center;">Grids Comparison</h3>
+
+<div class="viewer">
+
+<select id="gridStatSelect">
+<option value="annual_cycle">Annual Cycle</option>
+<option value="Correlation">Correlation</option>
+<option value="KS_test_p">KS test p</option>
+<option value="KS_test_stat">KS test stat</option>
+<option value="Kurtosis_Bias">Kurtosis bias</option>
+<option value="Mean_Absolute_Error">Mean Absolute Error</option>
+<option value="Mean_Bias">Mean Bias</option>
+<option value="P10_Bias">P10 Bias</option>
+<option value="P90_Bias">P90 Bias</option>
+<option value="P95_Bias">P95 Bias</option>
+<option value="RMSE">RMSE</option>
+<option value="Skew_Bias">Skew Bias</option>
+<option value="Std_Bias">Std Bias</option>
+<option value="Variance_Bias">Variance Bias</option>
+<option value="Wasserstein_Distance">Wasserstein Distance</option>
+</select>
+
+</div>
+
+<div class="img-center">
+  <img id="gridImage" src="../figures/evaluation/temperature/temperature_annual_cycle_grids_comparison.png">
+</div>
+
+<button class="backbtn" onclick="history.back()">← Back</button>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+<p>
+María Ortega, Irene Rodríguez-Muñoz, Jesús Gutiérrez-Fernández (Tragsatec) ●
+Esteban Rodríguez-Guisado (AEMET)
+</p>
+</footer>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+const mapConfig = {
+  statId: "statSelect",
+  datasetId: "datasetSelect",
+  imgId: "mapImage",
+  basePath: "../figures/evaluation/temperature",
+  prefix: "map",
+  suffix: "_temperature"
+};
+
+const gridConfig = {
+  statId: "gridStatSelect",
+  imgId: "gridImage",
+  basePath: "../figures/evaluation/temperature",
+  prefix: "temperature",
+  suffix: "_grids_comparison"
+};
+
+document.getElementById("statSelect").addEventListener("change", () => updateMap(mapConfig));
+document.getElementById("datasetSelect").addEventListener("change", () => updateMap(mapConfig));
+document.getElementById("gridStatSelect").addEventListener("change", () => updateGrid(gridConfig));
+
+// inicializar
+updateMap(mapConfig);
+updateGrid(gridConfig);
+
+});
+
+</script>
+
+</body>
+</html>

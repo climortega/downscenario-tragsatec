@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Evaluation</title>
+
+<link rel="stylesheet" href="../style.css">
+<script src="../script.js"></script>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+
+<div class="logos">
+<img src="../assets/tragsatec.jpg">
+<img src="../assets/aemet_azul.png">
+</div>
+
+<div class="title">
+<h1>Downscaling for Climate Scenarios</h1>
+<p>Developed by Tragsatec for AEMET</p>
+</div>
+
+</header>
+
+<nav class="navbar">
+
+<a href="../index.html">Home</a>
+<a href="data.html">Data</a>
+<a href="methodology.html">Methodology</a>
+<a href="evaluation.html" class="active">Evaluation</a>
+<a href="downscaling.html">Downscaling</a>
+<a href="applications.html">Applications</a>
+<a href="information.html">Information</a>
+
+</nav>
+
+<div class="separator"></div>
+
+<!-- BREADCRUMBS -->
+
+<div class="breadcrumbs" id="breadcrumbs"></div>
+
+<script>
+window.onload = function(){
+setBreadcrumbs(`
+<a href="../index.html">Home</a> > <strong>Evaluation</strong>
+`)
+}
+</script>
+
+<!-- PAGE CONTENT -->
+
+<div class="cardpage">
+
+<div class="homecard" onclick="location.href='eval_methods.html'">
+<img src="../assets/method.png">
+<div class="homecard-text">
+<h2>METHODS</h2>
+<p>Access evaluation methods</p>
+</div>
+</div>
+
+<div class="homecard" onclick="location.href='eval_results.html'">
+<img src="../assets/market-research.png">
+<div class="homecard-text">
+<h2>RESULTS</h2>
+<p>Access evaluation results</p>
+</div>
+</div>
+
+<div class="homecard" onclick="location.href='eval_takehome.html'">
+<img src="../assets/idea.png">
+<div class="homecard-text">
+<h2>TAKE HOME MESSAGE</h2>
+<p>Access main evaluation conclusions</p>
+</div>
+</div>
+
+<button class="backbtn" onclick="history.back()">← Back</button>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+<p>
+María Ortega, Irene Rodríguez-Muñoz, Jesús Gutiérrez-Fernández (Tragsatec) ●
+Esteban Rodríguez-Guisado (AEMET)
+</p>
+</footer>
+
+</body>
+</html>

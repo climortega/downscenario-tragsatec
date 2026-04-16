@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>AquaCrop - Methods</title>
+
+<link rel="stylesheet" href="../style.css">
+<script src="../script.js"></script>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+
+<div class="logos">
+<img src="../assets/tragsatec.jpg">
+<img src="../assets/aemet_azul.png">
+</div>
+
+<div class="title">
+<h1>Downscaling for Climate Scenarios</h1>
+<p>Developed by Tragsatec for AEMET</p>
+</div>
+
+</header>
+
+<nav class="navbar">
+
+<a href="../index.html">Home</a>
+<a href="data.html">Data</a>
+<a href="methodology.html">Methodology</a>
+<a href="evaluation.html">Evaluation</a>
+<a href="downscaling.html">Downscaling</a>
+<a href="applications.html" class="active">Applications</a>
+<a href="information.html">Information</a>
+
+</nav>
+
+<div class="separator"></div>
+
+<!-- BREADCRUMBS -->
+
+<div class="breadcrumbs" id="breadcrumbs"></div>
+
+<script>
+window.onload = function(){
+setBreadcrumbs(`
+<a href="../index.html">Home</a> > <a href="../pages/applications.html">Applications</a> > <a href="../pages/aquacrop.html">AquaCrop</a> > <strong>Methods</strong>
+`)
+}
+</script>
+
+<!-- PAGE CONTENT -->
+
+<div class="page text-mode">
+
+<div class="page-content text-card">
+
+<h2>METHODS</h2>
+
+<p>Given the potential impact of climate changes on the Iberian Peninsula for crop development and maintenance, the aim was to apply downscaled data to a crop model. AquaCrop (<a href="https://www.fao.org/aquacrop" target="_blank">link</a>) is a model developed by the Food and Agriculture Organization (FAO) to simulate how crops answer to available soil water and estimate their yield (production) under different conditions. It is an agronomic model that relates soil water, crop growth, and final production, based on the idea that crop production depends primarily on how much water the plant transpires (and not just on total rainfall). To this end, AquaCrop models several processes, such as soil water balance, crop development, plant transpiration, water stress (drought), biomass production, and final yield. This allows for an evaluation of future droughts impacts, irrigation optimization, water efficiency study, and agricultural scenarios comparison. Furthermore, it is simpler than other complex agronomic models, requires less data, is designed for water-scarce conditions, and is quite robust for many crops such as wheat and rice. However, it does not model nutrients like nitrogen in detail, simplifies some physiological processes, and may require local calibration.</p>
+
+<p>To improve the detailed modeling of some areas, AquaCrop was intended to be run with downscaled data developed for this project. For a first approximation, however, CMIP5 data from AdapteCCa web (see Data section) were used, along with soil information from the Agrarian Technological Institute of Castile and León (ITACYL) and internal crop data from AEMET for Castile and León. AquaCrop software was run for the historical period (1950-2005) to compare results with a previous run by AEMET using its own seasonal forecast data supplemented with observations. Then, it was also run for future projections of RCP8.5 emissions scenario (2006-2100). This has been carried out for wheat and barley, and perhaps olives, and for Valladolid area.</p>
+
+<button class="backbtn" onclick="history.back()">← Back</button>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+<p>
+María Ortega, Irene Rodríguez-Muñoz, Jesús Gutiérrez-Fernández (Tragsatec) ●
+Esteban Rodríguez-Guisado (AEMET)
+</p>
+</footer>
+
+</body>
+</html>

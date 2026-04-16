@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Evaluation - Take Home Message</title>
+
+<link rel="stylesheet" href="../style.css">
+<script src="../script.js"></script>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+
+<div class="logos">
+<img src="../assets/tragsatec.jpg">
+<img src="../assets/aemet_azul.png">
+</div>
+
+<div class="title">
+<h1>Downscaling for Climate Scenarios</h1>
+<p>Developed by Tragsatec for AEMET</p>
+</div>
+
+</header>
+
+<nav class="navbar">
+
+<a href="../index.html">Home</a>
+<a href="data.html">Data</a>
+<a href="methodology.html">Methodology</a>
+<a href="evaluation.html" class="active">Evaluation</a>
+<a href="downscaling.html">Downscaling</a>
+<a href="applications.html">Applications</a>
+<a href="information.html">Information</a>
+
+</nav>
+
+<div class="separator"></div>
+
+<!-- BREADCRUMBS -->
+
+<div class="breadcrumbs" id="breadcrumbs"></div>
+
+<script>
+window.onload = function(){
+setBreadcrumbs(`
+<a href="../index.html">Home</a> > <a href="../pages/evaluation.html">Evaluation</a> > <strong>Take Home Message</strong>
+`)
+}
+</script>
+
+<!-- PAGE CONTENT -->
+
+<div class="page text-mode">
+
+<div class="page-content text-card">
+
+<h2>TAKE HOME MESSAGE</h2>
+
+<ul>
+<li><p>All datasets accurately simulate <strong>temperature</strong>, although CERRA is usually the closest for most statistical metrics.</p></li>
+
+<li><p>Seasonal <strong>precipitation</strong> cycles are accurately reproduced, with CERRA and CERRA-Land performing best. These reanalyses also accurately reproduce annual monthly precipitation. COSMO-REA6 and E-OBS underestimate precipitation, while ERA5 and ERA5-Land overestimate it.</p></li>
+
+<li><p>There are several problems with <strong>wind</strong> simulation. Most reanalyses show differences in the annual cycle, high bias, and low correlation. CERRA and COSMO-REA6 return low bias, good correlation, and considerable similarity for the cycles, while ERA5 and ERA5-Land show great difficulty simulating wind speed in mountainous and orographically complex areas. E-OBS returns low bias and good correlation, but does not improve the results.</p></li>
+
+<li><p>The annual cycle of relative <strong>humidity</strong> is adequately simulated, with CERRA returning the best results. CERRA produces the best performance across all metrics. ERA5 and ERA5-Land return low error and good correlation with observations, but have worse bias values, as they tend to underestimate humidity in some regions. COSMO-REA6 shows poor performance across all metrics. E-OBS performs well, returning low bias and error and high correlations.</p></li>
+
+<li><p>Both CERRA and CERRA-Land adequately simulate <strong>radiation</strong> observations, as does CLARA-A3 satellite, which is always the closest. However, this variable has very few meteorological stations, which can introduce bias.</p></li>
+
+<li><p><strong>CERRA</strong> (and CERRA-Land, although it is not available for all variables) provides the closest agreement with AEMET observations for the five studied variables and is therefore the reanalysis chosen for statistical downscaling. The only exception is radiation, for which CLARA-A3 is the best dataset; however, since all perform very well, CERRA was chosen for data consistency.</p></li>
+</ul>
+
+<button class="backbtn" onclick="history.back()">← Back</button>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+<p>
+María Ortega, Irene Rodríguez-Muñoz, Jesús Gutiérrez-Fernández (Tragsatec) ●
+Esteban Rodríguez-Guisado (AEMET)
+</p>
+</footer>
+
+</body>
+</html>

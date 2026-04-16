@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Evaluation - Results</title>
+
+<link rel="stylesheet" href="../style.css">
+<script src="../script.js"></script>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+
+<div class="logos">
+<img src="../assets/tragsatec.jpg">
+<img src="../assets/aemet_azul.png">
+</div>
+
+<div class="title">
+<h1>Downscaling for Climate Scenarios</h1>
+<p>Developed by Tragsatec for AEMET</p>
+</div>
+
+</header>
+
+<nav class="navbar">
+
+<a href="../index.html">Home</a>
+<a href="data.html">Data</a>
+<a href="methodology.html">Methodology</a>
+<a href="evaluation.html" class="active">Evaluation</a>
+<a href="downscaling.html">Downscaling</a>
+<a href="applications.html">Applications</a>
+<a href="information.html">Information</a>
+
+</nav>
+
+<div class="separator"></div>
+
+<!-- BREADCRUMBS -->
+
+<div class="breadcrumbs" id="breadcrumbs"></div>
+
+<script>
+window.onload = function(){
+setBreadcrumbs(`
+<a href="../index.html">Home</a> > <a href="../pages/evaluation.html">Evaluation</a> > <strong>Results</strong>
+`)
+}
+</script>
+
+<!-- PAGE CONTENT -->
+
+<div class="cardpage">
+
+<div class="homecard" onclick="location.href='eval_temp.html'">
+<img src="../assets/hot.png">
+<div class="homecard-text">
+<h2>TEMPERATURE</h2>
+<p>Access temperature evaluation</p>
+</div>
+</div>
+
+<div class="homecard" onclick="location.href='eval_prec.html'">
+<img src="../assets/rain.png">
+<div class="homecard-text">
+<h2>PRECIPITATION</h2>
+<p>Access precipitation evaluation</p>
+</div>
+</div>
+
+<div class="homecard" onclick="location.href='eval_wind.html'">
+<img src="../assets/wind.png">
+<div class="homecard-text">
+<h2>WIND SPEED</h2>
+<p>Access wind speed evaluation</p>
+</div>
+</div>
+
+<div class="homecard" onclick="location.href='eval_hum.html'">
+<img src="../assets/humidity-sensor.png">
+<div class="homecard-text">
+<h2>RELATIVE HUMIDITY</h2>
+<p>Access relative humidity evaluation</p>
+</div>
+</div>
+
+<div class="homecard" onclick="location.href='eval_rad.html'">
+<img src="../assets/solar-radiation.png">
+<div class="homecard-text">
+<h2>SHORT-WAVE SOLAR RADIATION DOWNWARDS</h2>
+<p>Access surface solar radiation evaluation</p>
+</div>
+</div>
+
+<button class="backbtn" onclick="history.back()">← Back</button>
+
+</div>
+
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+<p>
+María Ortega, Irene Rodríguez-Muñoz, Jesús Gutiérrez-Fernández (Tragsatec) ●
+Esteban Rodríguez-Guisado (AEMET)
+</p>
+</footer>
+
+</body>
+</html>

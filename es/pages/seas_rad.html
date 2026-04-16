@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Seasonal Forecasting - Radiation</title>
+
+<link rel="stylesheet" href="../style.css">
+<script src="../script.js"></script>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+
+<div class="logos">
+<img src="../assets/tragsatec.jpg">
+<img src="../assets/aemet_azul.png">
+</div>
+
+<div class="title">
+<h1>Downscaling for Climate Scenarios</h1>
+<p>Developed by Tragsatec for AEMET</p>
+</div>
+
+</header>
+
+<nav class="navbar">
+
+<a href="../index.html">Home</a>
+<a href="data.html">Data</a>
+<a href="methodology.html">Methodology</a>
+<a href="evaluation.html">Evaluation</a>
+<a href="downscaling.html">Downscaling</a>
+<a href="applications.html" class="active">Applications</a>
+<a href="information.html">Information</a>
+
+</nav>
+
+<div class="separator"></div>
+
+<!-- BREADCRUMBS -->
+
+<div class="breadcrumbs" id="breadcrumbs"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+setBreadcrumbs(`
+<a href="../index.html">Home</a> > <a href="../pages/applications.html">Applications</a> > <a href="../pages/seasonal.html">Seasonal Forecasting</a> > <a href="../pages/seas_results.html">Results</a> > <strong>Radiation</strong>
+`)
+});
+</script>
+
+<!-- PAGE CONTENT -->
+
+<div class="page text-mode">
+
+<div class="page-content text-card">
+
+<h2>SEASONAL FORECASTING - SHORT-WAVE RADIATION</h2>
+
+<h2>HINDCAST</h2>
+
+<!-- ===================== -->
+<!-- 1.1 ANOMALY -->
+<!-- ===================== -->
+<h3 style="text-align:center;">Anomaly</h3>
+
+<div class="img-center">
+  <img src="../figures/other/seasonal/radiation/hindcast/Boxplot_anomalias_LOO_1997_2015_ssrd_3m.png">
+</div>
+
+<div class="img-center">
+  <img src="../figures/other/seasonal/radiation/hindcast/Boxplot_anomalias_LOO_1997_2015_ssrd_5m.png">
+</div>
+
+<div class="viewer">
+
+<select id="anomYear">
+<option value="1997">1997</option>
+<option value="1998">1998</option>
+<option value="1999">1999</option>
+<option value="2000">2000</option>
+<option value="2001">2001</option>
+<option value="2002">2002</option>
+<option value="2003">2003</option>
+<option value="2004">2004</option>
+<option value="2005">2005</option>
+<option value="2006">2006</option>
+<option value="2007">2007</option>
+<option value="2008">2008</option>
+<option value="2009">2009</option>
+<option value="2010">2010</option>
+<option value="2011">2011</option>
+<option value="2012">2012</option>
+<option value="2013">2013</option>
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+</select>
+
+<select id="anomAgg">
+<option value="3m">3m</option>
+<option value="5m">5m</option>
+</select>
+
+</div>
+
+<div class="img-center">
+<img id="imgAnom"
+src="../figures/other/seasonal/radiation/hindcast/Anomaly_ecmwf-s51_1997-NDJ_ssrd_3m_DOWNSCALED.png">
+</div>
+
+
+<!-- ===================== -->
+<!-- 1.2 PROBABILITY -->
+<!-- ===================== -->
+<h3 style="text-align:center;">Probability</h3>
+
+<div class="img-center">
+  <img src="../figures/other/seasonal/radiation/hindcast/boxplot_LOO_lower_upper_ssrd_3m.png">
+</div>
+
+<div class="img-center">
+  <img src="../figures/other/seasonal/radiation/hindcast/boxplot_LOO_lower_upper_ssrd_5m.png">
+</div>
+
+<div class="viewer">
+
+<select id="probYear">
+<option value="1997">1997</option>
+<option value="1998">1998</option>
+<option value="1999">1999</option>
+<option value="2000">2000</option>
+<option value="2001">2001</option>
+<option value="2002">2002</option>
+<option value="2003">2003</option>
+<option value="2004">2004</option>
+<option value="2005">2005</option>
+<option value="2006">2006</option>
+<option value="2007">2007</option>
+<option value="2008">2008</option>
+<option value="2009">2009</option>
+<option value="2010">2010</option>
+<option value="2011">2011</option>
+<option value="2012">2012</option>
+<option value="2013">2013</option>
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+</select>
+
+<select id="probAgg">
+<option value="3m">3m</option>
+<option value="5m">5m</option>
+</select>
+
+</div>
+
+<div class="img-center">
+<img id="imgProb"
+src="../figures/other/seasonal/radiation/hindcast/ecmwf-s51_1997-NDJ_ssrd_3m_tercileProbs_DOWNSCALED_LOO.png">
+</div>
+
+
+<!-- ===================== -->
+<!-- 1.3 SCORES -->
+<!-- ===================== -->
+<h3 style="text-align:center;">Scores</h3>
+
+<div class="viewer">
+
+<select id="scoreType">
+<option value="AUC_dominant_gradient">AUC dominant gradient</option>
+<option value="AUC_lower">AUC lower</option>
+<option value="AUC_normal">AUC normal</option>
+<option value="AUC_upper">AUC upper</option>
+<option value="corr_pearson">Correlation Pearson</option>
+<option value="corr_spearman">Correlation Spearman</option>
+<option value="RPS">RPS</option>
+</select>
+
+<select id="scoreAgg">
+<option value="3m">3m</option>
+<option value="5m">5m</option>
+</select>
+
+</div>
+
+<div class="img-center">
+<img id="imgScore"
+src="../figures/other/seasonal/radiation/hindcast/AUC_dominant_gradient_ssrd_3m_NDJ.png">
+</div>
+
+
+<!-- ===================== -->
+<!-- 2 FORECAST -->
+<!-- ===================== -->
+<h2>FORECAST 2024-2025</h2>
+
+<div class="img-center">
+<img src="../figures/other/seasonal/radiation/forecast2024/Forecast_Anomaly_ecmwf-s51_NDJ_ssrd_3m.png">
+</div>
+
+<div class="img-center">
+<img src="../figures/other/seasonal/radiation/forecast2024/ecmwf-s51_FORECAST_NDJ_ssrd_3m_tercileDominant_2.png">
+</div>
+
+<div class="img-center">
+<img src="../figures/other/seasonal/radiation/forecast2024/Forecast_Anomaly_ecmwf-s51_NDJFM_ssrd_5m.png">
+</div>
+
+<div class="img-center">
+<img src="../figures/other/seasonal/radiation/forecast2024/ecmwf-s51_FORECAST_NDJFM_ssrd_5m_tercileDominant_2.png">
+</div>
+
+
+<h2>FORECAST 2025-2026</h2>
+
+<p style="text-align: center;">Coming soon!</p>
+
+<button class="backbtn" onclick="history.back()">← Back</button>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+<p>
+María Ortega, Irene Rodríguez-Muñoz, Jesús Gutiérrez-Fernández (Tragsatec) ●
+Esteban Rodríguez-Guisado (AEMET)
+</p>
+</footer>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+const variable = "radiation";
+const varName = "ssrd";
+
+// ANOMALY
+["anomYear","anomAgg"].forEach(id =>
+document.getElementById(id).addEventListener("change", () =>
+updateAnomaly(variable, varName)
+)
+);
+
+// PROBABILITY
+["probYear","probAgg"].forEach(id =>
+document.getElementById(id).addEventListener("change", () =>
+updateProbability(variable, varName)
+)
+);
+
+// SCORES
+["scoreType","scoreAgg"].forEach(id =>
+document.getElementById(id).addEventListener("change", () =>
+updateScores(variable, varName)
+)
+);
+
+// inicializar
+updateAnomaly(variable, varName);
+updateProbability(variable, varName);
+updateScores(variable, varName);
+
+});
+</script>
+
+</body>
+</html>

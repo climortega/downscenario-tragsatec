@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Water Reservoirs - Methods</title>
+
+<link rel="stylesheet" href="../style.css">
+<script src="../script.js"></script>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+
+<div class="logos">
+<img src="../assets/tragsatec.jpg">
+<img src="../assets/aemet_azul.png">
+</div>
+
+<div class="title">
+<h1>Downscaling for Climate Scenarios</h1>
+<p>Developed by Tragsatec for AEMET</p>
+</div>
+
+</header>
+
+<nav class="navbar">
+
+<a href="../index.html">Home</a>
+<a href="data.html">Data</a>
+<a href="methodology.html">Methodology</a>
+<a href="evaluation.html">Evaluation</a>
+<a href="downscaling.html">Downscaling</a>
+<a href="applications.html" class="active">Applications</a>
+<a href="information.html">Information</a>
+
+</nav>
+
+<div class="separator"></div>
+
+<!-- BREADCRUMBS -->
+
+<div class="breadcrumbs" id="breadcrumbs"></div>
+
+<script>
+window.onload = function(){
+setBreadcrumbs(`
+<a href="../index.html">Home</a> > <a href="../pages/applications.html">Applications</a> > <a href="../pages/reservoirs.html">Water Reservoirs</a> > <strong>Methods</strong>
+`)
+}
+</script>
+
+<!-- PAGE CONTENT -->
+
+<div class="page text-mode">
+
+<div class="page-content text-card">
+
+<h2>METHODS</h2>
+
+<p>The Iberian Peninsula is one of the Mediterranean regions most prone to prolonged droughts. These periods of low rainfall necessitate large water reserves for storage. In recent years, several climate change studies have identified the Iberian Peninsula as one of the regions on the planet experiencing the greatest decline in rainfall. Therefore, the results of this project have been applied, using previously obtained downscaled precipitation data (see Downscaling section), to explore changes in future rainfall patterns for the 1985-2020 period (November to March).</p>
+
+<p>To this end, correlation between precipitation in river basins (see Data section) and CERRA-Land was calculated. Then, the PLS (partial least squares regression) method was applied. PLS is a multiple linear regression method consisting of two parts:</p>
+
+<div class="img-center"><img src="../figures/other/reservoirs/velle.PNG"></div>
+
+<div class="img-center"><img src="../figures/other/reservoirs/cazalegas.PNG"></div>
+
+<div class="img-center"><img src="../figures/other/reservoirs/contreras.PNG"></div>
+
+<ol>
+<li><p><strong>Selection of precipitation predictors.</strong> A correlation study was performed between precipitation predicted by the model and actual reservoir inflow data, and reservoirs with average correlations greater than 0.7 were selected (127 reservoirs).</p>
+
+<div class="img-center"><img src="../figures/other/reservoirs/embalses107.PNG"></div></li>
+
+<li><p><strong>Training.</strong> It was performed using CERRA. A linear regression model was created from these 127 data points and applied to the previously regionalized data.</p>
+
+<div class="img-center"><img src="../figures/other/reservoirs/modelo_embalses.PNG"></div></li>
+</ol>
+
+<p>The results of this model were subsequently studied.</p>
+
+<button class="backbtn" onclick="history.back()">← Back</button>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+<p>
+María Ortega, Irene Rodríguez-Muñoz, Jesús Gutiérrez-Fernández (Tragsatec) ●
+Esteban Rodríguez-Guisado (AEMET)
+</p>
+</footer>
+
+</body>
+</html>

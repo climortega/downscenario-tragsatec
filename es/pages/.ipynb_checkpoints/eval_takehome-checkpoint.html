@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Evaluation - Methods</title>
+
+<link rel="stylesheet" href="../style.css">
+<script src="../script.js"></script>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+
+<div class="logos">
+<img src="../assets/tragsatec.jpg">
+<img src="../assets/aemet_azul.png">
+</div>
+
+<div class="title">
+<h1>Downscaling for Climate Scenarios</h1>
+<p>Developed by Tragsatec for AEMET</p>
+</div>
+
+</header>
+
+<nav class="navbar">
+
+<a href="../index.html">Home</a>
+<a href="data.html">Data</a>
+<a href="methodology.html">Methodology</a>
+<a href="evaluation.html" class="active">Evaluation</a>
+<a href="downscaling.html">Downscaling</a>
+<a href="applications.html">Applications</a>
+<a href="information.html">Information</a>
+
+</nav>
+
+<div class="separator"></div>
+
+<!-- BREADCRUMBS -->
+
+<div class="breadcrumbs" id="breadcrumbs"></div>
+
+<script>
+window.onload = function(){
+setBreadcrumbs(`
+<a href="../index.html">Home</a> > <a href="../pages/evaluation.html">Evaluation</a> > <strong>Methods</strong>
+`)
+}
+</script>
+
+<!-- PAGE CONTENT -->
+
+<div class="page text-mode">
+
+<div class="page-content text-card">
+
+<h2>METHODS</h2>
+
+<p>
+For the evaluation, observations from the AEMET network and different reanalysis products (ERA5, ERA5-Land, E-OBS, CERRA, CERRA-Land, and COSMO-REA6) and satellite data (CLARA-A3) were considered, with the aim of finding the reanalysis most similar to the available meteorological observations. For more information, see the Data section.</p>
+
+<p>Each variable has observational time series of varying completeness and consistency. Therefore, a sensitivity analysis was first performed in which, for each variable, the minimum station completeness (always greater than 50%) that, over a given period, yields the largest number of available stations was selected. This analysis was performed for a period after 1995 (the limiting factor for COSMO-REA6).</p>
+    
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            font-family: Arial, sans-serif;
+            margin: auto;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+
+    
+<table>
+    <thead>
+        <tr>
+            <th>Variables</th>
+            <th>Minimum Station Completeness</th>
+            <th>Best Possible Period</th>
+            <th>Number of Stations</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Temperature</td>
+            <td>80%</td>
+            <td>1995-2018</td>
+            <td>974</td>
+        </tr>
+        <tr>
+            <td>Precipitation</td>
+            <td>80%</td>
+            <td>1995-2018</td>
+            <td>1728</td>
+        </tr>
+        <tr>
+            <td>Wind Speed</td>
+            <td>50%</td>
+            <td>2007-2018</td>
+            <td>332</td>
+        </tr>
+        <tr>
+            <td>Relative Humidity</td>
+            <td>75%</td>
+            <td>2009-2018</td>
+            <td>610</td>
+        </tr>
+        <tr>
+            <td>Short-wave Surface Radiation</td>
+            <td>80%</td>
+            <td>2000-2020</td>
+            <td>66</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>To perform the evaluation, all datasets were compared with AEMET internal observation network, taking into account that wind speed and specific humidity data were not available from CERRA-Land and that only CERRA, CERRA-Land, and CLARA-A3 were used for radiation. This comparison was carried out using Python software pyGridEval, which returns a large number of statistical metrics that allow for comparison between datasets. You can access pyGridEval (Carlos Correa) in the following <a href="https://zenodo.org/records/17366241" target="_blank">link</a>.</p>
+
+<button class="backbtn" onclick="history.back()">← Back</button>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+<p>
+María Ortega, Irene Rodríguez-Muñoz, Jesús Gutiérrez-Fernández (Tragsatec) ●
+Esteban Rodríguez-Guisado (AEMET)
+</p>
+</footer>
+
+</body>
+</html>

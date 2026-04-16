@@ -23,19 +23,20 @@ html, body {
   margin-top: 20px;
 }
 
+
 .header{
-display:flex;
-align-items:center;
-justify-content:space-between;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 
-padding:15px 40px;
-background:white;
+  padding:15px 40px;
+  background:white;
 
-position:sticky;
-top:0;
-z-index:1000;
+  position:sticky;
+  top:0;
+  z-index:1000;
 
-box-shadow:0 2px 6px rgba(0,0,0,0.1);
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);
 }
 
 .logos img{
@@ -89,12 +90,12 @@ box-shadow:0 8px 18px rgba(0,0,0,0.15);
 }
 
 #home{
-display:grid;
-grid-template-columns:1fr;   /* una sola columna */
-justify-items:center;        /* centra los botones */
-gap:30px;
-max-width:600px;
-margin:auto;
+  max-width:1700px;
+  margin:auto;
+  padding:40px 30px;
+
+  /* resetear el grid heredado */
+  display:block;
 }
 
 img{
@@ -420,4 +421,66 @@ text-align: center;
   border:1px solid #ccc;
   font-size:14px;
   cursor:pointer;
+}
+
+
+/* ===== HOME NUEVO LAYOUT ===== */
+
+.home-layout{
+  display:grid;
+  grid-template-columns: 420px 1fr;
+  gap:80px;
+  align-items:start;
+}
+
+/* columna izquierda */
+.home-left{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+
+  max-width:380px; 
+}
+
+/* columna derecha (cards) */
+.home-right{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(320px, 380px));
+  gap:30px;
+}
+
+#home .homecard{
+  max-width:none;   /* rompe el límite de 500px */
+}
+
+.home-left .homecard{
+  width:100%;
+  max-width:420px;
+}
+
+.center-title{
+  text-align:center;
+}
+
+
+
+/* ===== LANGUAGE SWITCH ===== */
+
+.lang-switch{
+  position:absolute;
+  top:10px;
+  right:20px;
+}
+
+.lang-switch img{
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  cursor:pointer;
+  box-shadow:0 2px 6px rgba(0,0,0,0.2);
+  transition:0.2s;
+}
+
+.lang-switch img:hover{
+  transform:scale(1.1);
 }

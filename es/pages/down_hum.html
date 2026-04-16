@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Downscaling - Humidity</title>
+
+<link rel="stylesheet" href="../style.css">
+<script src="../script.js"></script>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+
+<div class="logos">
+<img src="../assets/tragsatec.jpg">
+<img src="../assets/aemet_azul.png">
+</div>
+
+<div class="title">
+<h1>Downscaling for Climate Scenarios</h1>
+<p>Developed by Tragsatec for AEMET</p>
+</div>
+
+</header>
+
+<nav class="navbar">
+
+<a href="../index.html">Home</a>
+<a href="data.html">Data</a>
+<a href="methodology.html">Methodology</a>
+<a href="evaluation.html">Evaluation</a>
+<a href="downscaling.html" class="active">Downscaling</a>
+<a href="applications.html">Applications</a>
+<a href="information.html">Information</a>
+
+</nav>
+
+<div class="separator"></div>
+
+<!-- BREADCRUMBS -->
+
+<div class="breadcrumbs" id="breadcrumbs"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+setBreadcrumbs(`
+<a href="../index.html">Home</a> > <a href="../pages/downscaling.html">Downscaling</a> > <a href="../pages/down_results.html">Results</a> > <strong>Humidity</strong>
+`)
+});
+</script>
+
+<!-- PAGE CONTENT -->
+
+<div class="page text-mode">
+
+<div class="page-content text-card">
+
+<h2>DOWNSCALING - RELATIVE HUMIDITY</h2>
+
+<h3 style="text-align:center;">Method Evaluation</h3>
+
+<div class="img-center">
+  <img src="../figures/downscaling/humidity/evaluation/EVALUATION_annualCycle_hurs_None_all_None.png">
+</div>
+
+<div class="img-center">
+  <img src="../figures/downscaling/humidity/evaluation/EVALUATION_correlationBoxplot_hurs_None_all_ANNUAL.png">
+</div>
+
+<div class="img-center">
+  <img src="../figures/downscaling/humidity/evaluation/EVALUATION_rmseBoxplot_hurs_None_all_ANNUAL.png">
+</div>
+
+<div class="img-center">
+  <img src="../figures/downscaling/humidity/evaluation/EVALUATION_varianceBoxplot_hurs_None_all_ANNUAL.png">
+</div>
+
+<h4 style="text-align:center;">Bias per Climdex</h4>
+
+<div class="viewer">
+<select id="climdexSelect1">
+<option value="HRm">HRm</option>
+<option value="p10">p10</option>
+<option value="p5">p5</option>
+<option value="p90">p90</option>
+<option value="p95">p95</option>
+</select>
+</div>
+
+<div class="img-center">
+<img id="imgClimdex"
+src="../figures/downscaling/humidity/evaluation/EVALUATION_biasClimdexBoxplot_hurs_HRm_all_ANNUAL.png">
+</div>
+
+<h4 style="text-align:center;">Maps</h4>
+
+<div class="viewer">
+
+<select id="typeSelect2">
+<option value="biasMap">biasMap</option>
+<option value="estMap">estMap</option>
+</select>
+
+<select id="climdexSelect2">
+<option value="HRm">HRm</option>
+<option value="p10">p10</option>
+<option value="p5">p5</option>
+<option value="p90">p90</option>
+<option value="p95">p95</option>
+</select>
+
+<select id="methodSelect2">
+<option value="DeepESD">DeepESD</option>
+<option value="MLR">MLR</option>
+<option value="QDM">QDM</option>
+<option value="RAW-BIL">RAW-BIL</option>
+<option value="XGB">XGB</option>
+</select>
+
+</div>
+
+<div class="img-center">
+<img id="imgMaps"
+src="../figures/downscaling/humidity/evaluation/EVALUATION_biasMap_hurs_HRm_DeepESD_ANNUAL.png">
+</div>
+
+<h3 style="text-align:center;">Model Evaluation</h3>
+
+<div class="viewer">
+
+<select id="typeSelect3">
+<option value="biasboxplot">biasboxplot</option>
+<option value="biaskde">biaskde</option>
+<option value="boxplot">boxplot</option>
+<option value="kde">kde</option>
+<option value="maps_bias">maps_bias</option>
+<option value="maps">maps</option>
+</select>
+
+<select id="climdexSelect3">
+<option value="HRm">HRm</option>
+<option value="p10">p10</option>
+<option value="p5">p5</option>
+<option value="p90">p90</option>
+<option value="p95">p95</option>
+</select>
+
+<select id="methodSelect3">
+<option value="DeepESD">DeepESD</option>
+<option value="MLR">MLR</option>
+<option value="QDM">QDM</option>
+<option value="RAW-BIL">RAW-BIL</option>
+<option value="XGB">XGB</option>
+</select>
+
+</div>
+
+<div class="img-center">
+<img id="imgModel"
+src="../figures/downscaling/humidity/model_evaluation/biasboxplot_hurs_HRm_DeepESD_ANNUAL.png">
+</div>
+
+<h3 style="text-align:center;">Projections</h3>
+
+<div class="viewer">
+
+<select id="typeSelect4">
+<option value="evolTube">evolTube</option>
+<option value="trendPreservation">trendPreservation</option>
+</select>
+
+<select id="climdexSelect4">
+<option value="HRm">HRm</option>
+<option value="p10">p10</option>
+<option value="p5">p5</option>
+<option value="p90">p90</option>
+<option value="p95">p95</option>
+</select>
+
+<select id="methodSelect4">
+<option value="DeepESD">DeepESD</option>
+<option value="MLR">MLR</option>
+<option value="QDM">QDM</option>
+<option value="RAW-BIL">RAW-BIL</option>
+<option value="XGB">XGB</option>
+</select>
+
+</div>
+
+<div class="img-center">
+<img id="imgProj1"
+src="../figures/downscaling/humidity/projections/PROJECTIONS_evolTube_hurs_HRm_DeepESD_ANNUAL.png">
+</div>
+
+<div class="viewer">
+
+<select id="typeSelect5">
+<option value="meanChangeMap">meanChangeMap</option>
+<option value="spreadChangeMap">spreadChangeMap</option>
+</select>
+
+<select id="climdexSelect5">
+<option value="HRm">HRm</option>
+<option value="p10">p10</option>
+<option value="p5">p5</option>
+<option value="p90">p90</option>
+<option value="p95">p95</option>
+</select>
+
+<select id="methodSelect5">
+<option value="DeepESD">DeepESD</option>
+<option value="MLR">MLR</option>
+<option value="QDM">QDM</option>
+<option value="RAW-BIL">RAW-BIL</option>
+<option value="XGB">XGB</option>
+</select>
+
+<select id="periodSelect5">
+<option value="2041-2070">2041-2070</option>
+<option value="2071-2100">2071-2100</option>
+</select>
+
+</div>
+
+<div class="img-center">
+<img id="imgProj2"
+src="../figures/downscaling/humidity/projections/PROJECTIONS_meanChangeMap_hurs_HRm_DeepESD-ssp585-2041-2070_ANNUAL.png">
+</div>
+
+<button class="backbtn" onclick="history.back()">← Back</button>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+<p>
+María Ortega, Irene Rodríguez-Muñoz, Jesús Gutiérrez-Fernández (Tragsatec) ●
+Esteban Rodríguez-Guisado (AEMET)
+</p>
+</footer>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+// =======================
+// VISOR 1 (NO TOCAR)
+// =======================
+document.getElementById("climdexSelect1")
+.addEventListener("change", () =>
+updateImageMulti({
+  selectIds:["climdexSelect1"],
+  imgId:"imgClimdex",
+  basePath:"../figures/downscaling/humidity/evaluation",
+  prefix:"EVALUATION_biasClimdexBoxplot_hurs",
+  suffix:"_all_ANNUAL"
+})
+);
+
+
+// =======================
+// VISOR 2 (MAPS)
+// =======================
+["typeSelect2","climdexSelect2","methodSelect2"].forEach(id =>
+document.getElementById(id).addEventListener("change", () =>
+  updateMaps("humidity","hurs")
+)
+);
+
+
+// =======================
+// MODEL
+// =======================
+["typeSelect3","climdexSelect3","methodSelect3"].forEach(id =>
+document.getElementById(id).addEventListener("change", () =>
+  updateModel("humidity","hurs")
+)
+);
+
+
+// =======================
+// PROJ 1
+// =======================
+["typeSelect4","climdexSelect4","methodSelect4"].forEach(id =>
+document.getElementById(id).addEventListener("change", () =>
+  updateProj1("humidity","hurs")
+)
+);
+
+
+// =======================
+// PROJ 2
+// =======================
+["typeSelect5","climdexSelect5","methodSelect5","periodSelect5"].forEach(id =>
+document.getElementById(id).addEventListener("change", () =>
+  updateProj2("humidity","hurs")
+)
+);
+
+});
+
+</script>
+
+</body>
+</html>

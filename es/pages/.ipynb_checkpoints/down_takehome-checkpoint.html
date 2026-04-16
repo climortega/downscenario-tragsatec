@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Downscaling - Methods</title>
+
+<link rel="stylesheet" href="../style.css">
+<script src="../script.js"></script>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+
+<div class="logos">
+<img src="../assets/tragsatec.jpg">
+<img src="../assets/aemet_azul.png">
+</div>
+
+<div class="title">
+<h1>Downscaling for Climate Scenarios</h1>
+<p>Developed by Tragsatec for AEMET</p>
+</div>
+
+</header>
+
+<nav class="navbar">
+
+<a href="../index.html">Home</a>
+<a href="data.html">Data</a>
+<a href="methodology.html">Methodology</a>
+<a href="evaluation.html">Evaluation</a>
+<a href="downscaling.html" class="active">Downscaling</a>
+<a href="applications.html">Applications</a>
+<a href="information.html">Information</a>
+
+</nav>
+
+<div class="separator"></div>
+
+<!-- BREADCRUMBS -->
+
+<div class="breadcrumbs" id="breadcrumbs"></div>
+
+<script>
+window.onload = function(){
+setBreadcrumbs(`
+<a href="../index.html">Home</a> > <a href="../pages/downscaling.html">Downscaling</a> > <strong>Methods</strong>
+`)
+}
+</script>
+
+<!-- PAGE CONTENT -->
+
+<div class="page text-mode">
+
+<div class="page-content text-card">
+
+<h2>METHODS</h2>
+
+<p>pyClim-SDM software (Hernanz et al., 2023) was used to perform the downscaling. pyClim-SDM is a suite of tools that allows users to generate high-resolution downscaled scenarios from global climate model outputs, evaluate and compare different statistical downscaling methods, visualize results and performance metrics for future projections, apply bias corrections, and generate derived climate indices. pyClim-SDM can be accessed at the following <a href="https://gitlab.aemet.es/aemc/scenarios/pyClim-SDM" target="_blank">link</a>.</p>
+
+<p>For this study, five methods were selected.</p>
+
+<ul>
+<li><p><strong>RAW-BIL (RAW + BILINEAR INTERPOLATION).</strong> This method directly uses the model and interpolates it to a finer grid by means of bilinear interpolation.</p></li>
+
+<li><p><strong>QDM (QUANTILE DELTA MAPPING).</strong> This bias correction method preserves the quantile change signal. It adjusts model historical distribution to the observed distribution (quantile-to-quantile mapping). For future projections, it applies model relative change to the observed quantiles.</p></li>
+
+<li><p><strong>MLR (MULTPLE LINEAR REGRESSION).</strong> This method learns a linear relationship between predictors and the observed local variable.</p></li>
+
+<li><p><strong>XGB (EXTREME GRADIENT BOOST).</strong> A machine learning method based on potential trees (gradient boosting). It builds many small decision trees; each tree corrects the errors of the previous one (boosting). Thus, the final ensemble learns nonlinear and complex relationships.</p></li>
+
+<li><p><strong>DeepESD.</strong> A statistical downscaling method for climate variables based on deep learning, specifically convolutional neural networks applied to perfect prognosis. A network is trained to learn the relationship between large-scale climate fields (predictors) and observed regional climate variables (predictands) using historical data, and then this trained model is applied to projections of global models to obtain downscaled versions. Thus, DeepESD uses convolutional neural networks to capture complex nonlinear relationships between large atmospheric patterns and regional CERRA data. It creates an ensemble of peninsular downscaled projections and reduces the biases of the original models over the historical period, allowing researchers to investigate whether neural networks can emulate regional physical models with comparable performance. Its main limitation is its use of perfect prognosis, which means that the model learns from observed data (CERRA) assuming that the learned relationships will remain valid for future climate scenarios, which may not be true. This method was developed by Baño-Medina et al., 2022 (<a href="https://doi.org/10.5194/gmd-15-6747-2022" target="_blank">link</a>) and has been given special attention due to its good performance and the interest in applying a deep learning methodology, especially to less studied variables.</p></li>
+</ul>
+
+<p>When implementing the pyClim-SDM software, the following methodology was followed:</p>
+
+<ol>
+<li><p><strong>Predictor selection.</strong> First, the most suitable predictors were selected for each variable. The starting point was the so-called "standard set", which uses the most common predictors for this type of methodology (psl, ua500,700,850, va500,700,850, and ta500,700,850). A gradient boosting methodology was then applied to run the initial steps of the software and create decision trees to identify which variables had the greatest impact on predicting a given predictand. This procedure is included in the software. The selected predictors are as follows.</p></li>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin: auto; /* 👈 centrado */
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <thead>
+        <tr>
+            <th>Variable</th>
+            <th>Predictors</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Temperature</td>
+            <td>psl, ua500,700,850, va500,700,850, ta500,700,850</td>
+        </tr>
+        <tr>
+            <td>Precipitation</td>
+            <td>K, TT, hur700, clt, vas, va850, ua850</td>
+        </tr>
+        <tr>
+            <td>Wind Speed</td>
+            <td>psl, ua500,700,850, va500,700,850, ta500,700,850</td>
+        </tr>
+        <tr>
+            <td>Relative Humidity</td>
+            <td>psl, ua500,700,850, va500,700,850, ta500,700,850, hur500,700,850, hus850</td>
+        </tr>
+        <tr>
+            <td>Short-wave Surface Radiation</td>
+            <td>psl, ua500,700,850, va500,700,850, ta500,700,850</td>
+        </tr>
+    </tbody>
+</table>
+    
+<li><p><strong>Software configuration.</strong> To run pyClim-SDM in the evaluation period (1985-2014), predictors were obtained for each variable from the ERA5 dataset. To run it in the historical period (1950-2014) and in future scenarios (2015-2100), predictors were obtained for each climate model. For more information, see the Data section. The predictand is always CERRA, which was obtained for each of the five variables. For more information on why CERRA is used, see the Evaluation section. Then, all five downscaling methods explained above will be applied to predictors and predictand, and so downscaled outputs will be obtained.</p></li>
+    
+<li><p><strong>Method evaluation.</strong> We ran pyClim-SDM under its evaluation configuration to carry out an evaluation for all five downscaling methods during the model evaluation period with the aim of studying which methods performed best and which might be of greater interest.</p></li>
+
+<li><p><strong>Model ensemble evaluation.</strong> Using the results of the previous step, a model ensemble evaluation was also carried out during model evaluation period by calculating various basic metrics.</p></li>
+
+<li><p><strong>Statistical downscaling of historical and projected data.</strong> Finally, the software was run on the historical period and future projections, and downscaled outputs were obtained.</p></li>
+</ol>
+
+<button class="backbtn" onclick="history.back()">← Back</button>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+<p>
+María Ortega, Irene Rodríguez-Muñoz, Jesús Gutiérrez-Fernández (Tragsatec) ●
+Esteban Rodríguez-Guisado (AEMET)
+</p>
+</footer>
+
+</body>
+</html>

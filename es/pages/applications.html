@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Further Applications</title>
+
+<link rel="stylesheet" href="../style.css">
+<script src="../script.js"></script>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+
+<div class="logos">
+<img src="../assets/tragsatec.jpg">
+<img src="../assets/aemet_azul.png">
+</div>
+
+<div class="title">
+<h1>Downscaling for Climate Scenarios</h1>
+<p>Developed by Tragsatec for AEMET</p>
+</div>
+
+</header>
+
+<nav class="navbar">
+
+<a href="../index.html">Home</a>
+<a href="data.html">Data</a>
+<a href="methodology.html">Methodology</a>
+<a href="evaluation.html">Evaluation</a>
+<a href="downscaling.html">Downscaling</a>
+<a href="applications.html" class="active">Applications</a>
+<a href="information.html">Information</a>
+
+</nav>
+
+<div class="separator"></div>
+
+<!-- BREADCRUMBS -->
+
+<div class="breadcrumbs" id="breadcrumbs"></div>
+
+<script>
+window.onload = function(){
+setBreadcrumbs(`
+<a href="../index.html">Home</a> > <strong>Applications</strong>
+`)
+}
+</script>
+
+<!-- PAGE CONTENT -->
+
+<div class="cardpage">
+
+<div class="homecard" onclick="location.href='seasonal.html'">
+<img src="../assets/atmospheric-conditions.png">
+<div class="homecard-text">
+<h2>SEASONAL FORECASTING</h2>
+<p>Deep-learning downscaling of seasonal forecasts</p>
+</div>
+</div>
+
+<div class="homecard" onclick="location.href='precipitation.html'">
+<img src="../assets/raining.png">
+<div class="homecard-text">
+<h2>PRECIPITATION EXTREMES</h2>
+<p>Precipitation extremes study</p>
+</div>
+</div>
+
+<div class="homecard" onclick="location.href='reservoirs.html'">
+<img src="../assets/water.png">
+<div class="homecard-text">
+<h2>WATER RESERVOIRS</h2>
+<p>Climate scenarios information for water reservoirs</p>
+</div>
+</div>
+
+<div class="homecard" onclick="location.href='aquacrop.html'">
+<img src="../assets/damage.png">
+<div class="homecard-text">
+<h2>CROP-WATER SIMULATIONS</h2>
+<p>Climate scenarios information for AquaCrop model</p>
+</div>
+</div>
+
+<button class="backbtn" onclick="history.back()">← Back</button>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+<p>
+María Ortega, Irene Rodríguez-Muñoz, Jesús Gutiérrez-Fernández (Tragsatec) ●
+Esteban Rodríguez-Guisado (AEMET)
+</p>
+</footer>
+
+</body>
+</html>

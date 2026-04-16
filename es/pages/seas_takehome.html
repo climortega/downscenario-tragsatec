@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Seasonal Forecasting - Take Home Message</title>
+
+<link rel="stylesheet" href="../style.css">
+<script src="../script.js"></script>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+
+<div class="logos">
+<img src="../assets/tragsatec.jpg">
+<img src="../assets/aemet_azul.png">
+</div>
+
+<div class="title">
+<h1>Downscaling for Climate Scenarios</h1>
+<p>Developed by Tragsatec for AEMET</p>
+</div>
+
+</header>
+
+<nav class="navbar">
+
+<a href="../index.html">Home</a>
+<a href="data.html">Data</a>
+<a href="methodology.html">Methodology</a>
+<a href="evaluation.html">Evaluation</a>
+<a href="downscaling.html">Downscaling</a>
+<a href="applications.html" class="active">Applications</a>
+<a href="information.html">Information</a>
+
+</nav>
+
+<div class="separator"></div>
+
+<!-- BREADCRUMBS -->
+
+<div class="breadcrumbs" id="breadcrumbs"></div>
+
+<script>
+window.onload = function(){
+setBreadcrumbs(`
+<a href="../index.html">Home</a> > <a href="../pages/applications.html">Applications</a> > <a href="../pages/seasonal.html">Seasonal Forecasting</a> > <strong>Take Home Message</strong>
+`)
+}
+</script>
+
+<!-- PAGE CONTENT -->
+
+<div class="page text-mode">
+
+<div class="page-content text-card">
+
+<h2>TAKE HOME MESSAGE</h2>
+
+<ul>
+<li><p><strong>DeepESD downscaling method</strong> has been successfully applied to generate downscaled hindcasts, using the precipitation model (DeepESDpr) for this variable and the temperature model (DeepESDtas) for the others.</p></li>
+
+<li><p>Downscaled hindcasts have been verified by evaluating extended winters (NDJFM, 3- and 5-month aggregations) from 1997 to 2016.</p></li>
+
+<li><p>Temperature and wind show good Spearman correlation values.</p></li>
+
+<li><p>Promising AUC and RPS skill indicators have been obtained for <strong>temperature</strong>.</p></li>
+
+<li><p>Some predictive capacity has been achieved for <strong>wind</strong> and also, although less, for <strong>relative humidity</strong>.</p></li>
+
+<li><p>Skill indicators could be improved using <strong>specific models for each variable</strong>.</p></li>
+
+<li><p>Differences between <strong>aggregations</strong> depend on the variable.</p></li>
+
+<li><p>These findings should be considered when studying downscaled forecasts for both 2024 and 2025.</p></li>
+</ul>
+
+<button class="backbtn" onclick="history.back()">← Back</button>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+<p>
+María Ortega, Irene Rodríguez-Muñoz, Jesús Gutiérrez-Fernández (Tragsatec) ●
+Esteban Rodríguez-Guisado (AEMET)
+</p>
+</footer>
+
+</body>
+</html>
