@@ -4,10 +4,10 @@
 <head>
 
 <meta charset="UTF-8">
-<title>Methodology</title>
+<title>Metodología</title>
 
-<link rel="stylesheet" href="../style.css">
-<script src="../script.js"></script>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../script.js"></script>
 
 </head>
 
@@ -16,27 +16,33 @@
 <!-- HEADER -->
 <header class="header">
 
+<div class="lang-switch">
+  <a href="../../pages/methodology.html">
+    <img src="../../assets/flag_uk.png" alt="English">
+  </a>
+</div>
+
 <div class="logos">
-<img src="../assets/tragsatec.jpg">
-<img src="../assets/aemet_azul.png">
+<img src="../../assets/tragsatec.jpg">
+<img src="../../assets/aemet_azul.png">
 </div>
 
 <div class="title">
-<h1>Downscaling for Climate Scenarios</h1>
-<p>Developed by Tragsatec for AEMET</p>
+<h1>Regionalización de Escenarios Climáticos</h1>
+<p>Desarrollado por Tragsatec para AEMET</p>
 </div>
 
 </header>
 
 <nav class="navbar">
 
-<a href="../index.html">Home</a>
-<a href="data.html">Data</a>
-<a href="methodology.html" class="active">Methodology</a>
-<a href="evaluation.html">Evaluation</a>
-<a href="downscaling.html">Downscaling</a>
-<a href="applications.html">Applications</a>
-<a href="information.html">Information</a>
+<a href="../index.html">Inicio</a>
+<a href="data.html">Datos</a>
+<a href="methodology.html" class="active">Metodología</a>
+<a href="evaluation.html">Evaluación</a>
+<a href="downscaling.html">Regionalización</a>
+<a href="applications.html">Aplicaciones</a>
+<a href="information.html">Información</a>
 
 </nav>
 
@@ -49,7 +55,7 @@
 <script>
 window.onload = function(){
 setBreadcrumbs(`
-<a href="../index.html">Home</a> > <strong>Methodology</strong>
+<a href="../index.html">Inicio</a> > <strong>Metodología</strong>
 `)
 }
 </script>
@@ -60,22 +66,22 @@ setBreadcrumbs(`
 
 <div class="page-content text-card">
 
-<h2>METHODOLOGY</h2>
+<h2>METODOLOGÍA</h2>
 
-<p>The <strong>main objective</strong> of this work is to perform a statistical downscaling of as many climate variables as possible for available climate change scenarios outputs and for the Iberian Peninsula.</p>
+<p>El <strong>principal objetivo</strong> de este trabajo es llevar a cabo una regionalización estadística de tantas variables climáticas como sea posible para los escenarios de cambio climático disponibles en la península ibérica.</p>
 
-<p><strong>Statistical downscaling</strong> is a technique that allows obtaining climate information with high spatial resolution from the outputs of global climate models, which typically have very low spatial resolution, by establishing statistical relationships between large-scale model variables and local observations. However, when applying this type of methodology, a large number of problems arise, especially with available meteorological observations, whose time series are often very incomplete for the least studied variables. Because of this, most downscaling products have been developed for variables with a greater number of available observations, such as temperature or precipitation, creating a gap in the literature regarding information for variables such as wind or humidity. When beginning a downscaling project of this nature, it is essential to determine which databases are available to the user, whether they have sufficient temporal coverage to guarantee a sound climatological study of the variables, and whether all variables are adequately covered. If not, other climate products can be used for downscaling, such as a reanalysis that closely resembles the available observations and has a sufficiently high resolution to provide detailed data for these variables. Furthermore, a large number of statistical downscaling methods exist; in this work, the significant potential of novel deep learning methods such as DeepESD has been considered.</p>
+<p>La <strong>regionalización estadística</strong> es una técnica que permite obtener información climática con alta resolución espacial para las salidas de los modelos climáticos globales, que suelen tener muy baja resolución espacial, mediante el establecimiento de relaciones estadísticas entre las variables de larga escala de los modelos y observaciones locales. Sin embargo, al aplicar este tipo de metodología surge una gran cantidad de problemas, especialmente debido a las pocas observaciones meteorológicas disponibles para las variables menos estudiadas, que generalmente cuentan con series temporales incompletas. Por ello, la mayoría de productos regionalizados se han desarrollado para variables con el mayor número posible de observaciones, como la temperatura o la precipitación, lo cual crea un vacío en la literatura científica en cuanto a la información disponible para variables como el viento o la humedad. Al comenzar un proyecto de regionalización de esta naturaleza, es necesario determinar qué bases de datos se encuentran disponibles para el usuario, si cuentan con suficiente cobertura temporal para garantizar un estudio robusto de las variables y si todas las variables se encuentran cubiertas adecuadamente. Si no, pueden utilizarse otros productos climáticas para la regionalización; por ejemplo, un reanálisis que se parezca a las observaciones disponibles y que cuente con una resolución lo suficientemente alta como para proporcionar dato de detalle para estas variables Además, existe una gran cantidad de métodos de regionalización estadística; en este trabajo, se ha considerado especialmente el potencial de métodos novedosos de aprendizaje profundo, como DeepESD.</p>
 
-<p>The methodology of this work has been divided into the following sections:</p>
+<p>La metodología de este trabajo se ha divido en los siguientes pasos:</p>
 
 <ol>
-<li><p><strong>Study of essential climate variables.</strong> Essential climate variables are a set of variables defined by the Global Climate Observing System (GCOS) that are considered fundamental for describing the Earth's climate system because (1) they are relevant for climate characterization, (2) they can be measured with enough precision, and (3) they can be observed continuously on a global scale. The GCOS considers more than 50 essential climate variables. In this study, we have considered (1) the need to study a limited number of them, due to time and manpower constraints, (2) the need for these variables to still be sufficient for a minimal description of the climate system, and (3) the interest in variables for which information is very limited due to the challenges of meteorological observation. Therefore, five variables have been chosen: air temperature and solar radiation provide the minimum possible information about the Earth's energy balance; wind provides the minimum possible information about atmospheric dynamics; and precipitation and air humidity describe the minimum possible information about the hydrological cycle. More information about these variables can be found in the Data section.</p>
+<li><p><strong>Estudio de variables climáticas esenciales.</strong> Las variables climáticas esenciales son un conjunto de variables definidas por el Sistema Mundial de Observación del Clima (GCOS) que se consideran fundamentales para la descripción del sistema climático de la Tierra porque (1) son relevantes para la caracterización climática, (2) pueden medirse con suficiente precisión y (3) pueden observarse de forma continua a escala global. El GCOS considera más de 50 variables climáticas esenciales. En este estudio, hemos tenido en cuenta (1) la necesidad de estudiar un número limitado de ellas debido a restricciones temporales y de personal, (2) la necesidad de que estas variables aun así sean suficientes para describir de forma mínima el sistema climático y (2) el interés en variables para las que la información sea muy limitada debido a los retos de la observación meteorológica. Por tanto, se han escogido cinco variables: la temperatura del aire y la radiación solar proporciona la mínima información posible sobre el balance de energía de la Tierra; el viento proporciona la mínima información posible acerca de la dinámica atmosférica; y la precipitación y la humedad del aire describen la mínima información posible sobre el ciclo hidrológico. Para más información, ver la sección de Datos.</p>
 <div class="img-center"><img src="../figures/methodology/gcos.PNG"></div></li>
-<li><p><strong>Evaluation of observations against reanalysis.</strong> Of these five variables, wind speed, relative humidity, and short-wave radiation have significantly less complete observational time series than temperature and precipitation. Therefore, downscaling based solely on observations would be inadequate. It was decided to perform the downscaling using the very high-resolution reanalysis that most closely resembles and best matches the available observations. To this end, an evaluation of several high-resolution climate reanalysis datasets was conducted. For more information, see the Evaluation section.</p></li>
-<li><p><strong>Selection of the most suitable high-resolution reanalysis.</strong> Following the evaluation, the reanalysis that yielded the best results against observations was selected. For the Iberian Peninsula during the considered time period and for the variables of interest, the results returned that CERRA is the reanalysis most similar to AEMET network meteorological observations, and therefore the dataset with which the downscaling will be performed. For more information, see the Evaluation section.</p></li>
-<li><p><strong>Selection of the most appropriate downscaling method.</strong> In this work, a large number of methods were considered (RAW-BIL, QDM, MLR, XGB, DeepESD). Although downscaling was performed for all of them, more attention was paid to DeepESD, a method that yielded the best results and was of greater interest due to its novelty as a deep learning methodology, still under development, for which little information is yet available. For more information, see the Downscaling section.</p></li>
-<li><p><strong>Downscaling.</strong> Finally, statistical downscaling for the five variables was carried out using different methods and based on a climate ensemble of global models and the high-resolution CERRA reanalysis. This yielded a large number of indices of interest for the historical period and for the SSP5-8.5 emissions scenario, chosen because it provides the strongest climate change signal and therefore the clearest comparison for a first approximation. For more information, see the Downscaling section.</p></li>
-<li><p><strong>Application to other methodologies and products.</strong> Additionally, a preliminary study has been conducted on applying this downscaling method to other fields of study, such as seasonal forecasting, reservoir projections, and crop modeling. Other results obtained during the course of this work that may also be of interest have been included. For more information, please see the Further Applications section.</p></li>
+<li><p><strong>Evaluación de observaciones contra reanálisis.</strong> De estas cinco variables, la velocidad del viento, la humedad relativa y la radiación de onda corta tienen series temporales observacionales significativamente menos completas que la temperatura y la precipitación. Por tanto, una regionalización basada solamente en observaciones resultaría inadecuada. Se decidió realizar la regionalización utilizando el reanálisis de muy alta resolución que se más se acercara a las observaciones disponibles. Para ello, se llevó a cabo una evaluación de múltiples bases de datos de reanálisis climáticos de alta resolución. Para más información, ver la sección de Evaluación.
+<li><p><strong>Selección del reanálisis de alta resolución más adecuado.</strong> Tras la evaluación, se seleccionó el reanálisis que devolvió los mejores resultados contra observaciones. Para la península ibérica durante el periodo temporal considerado y para las variables de interés, los resultados mostraron que CERRA es el reanálisis más parecido a las observaciones meteorológicas de la red de AEMET y, por tanto, la base de datos con la que se llevará a cabo la regionalización. Para más información, ver la sección de Evaluación.</p></li>
+<li><p><strong>Selección del método de regionalización más adecuado.</strong> En este trabajo se consideró un gran número de métodos (RAW-BIL, QDM, MLR, XGB, DeepESD). Aunque la regionalización se ha llevado a cabo para todos ellos, se prestó más atención a DeepESD, el método que devolvió los mejores resultados y que presentaba mayor interés debido a su novedad como metodología de aprendizaje profundo, todavía en desarrollao, para la cual hay poca información disponible. Para más información, ver la sección de Regionalización.
+<li><p><strong>Regionalización.</strong> Por último se llevó a cabo la regionalización estadística de las cinco variables a través de diferentes métodos y en base a un conjunto climático de modelos globales y el reanálisis de alta resolucióN CERRA. Esta resultó en una gran cantidad de índices de interés para el periodo histórico y para el escenario de emisiones SSP5-8.5, escogido debido a que proporciona la mayor señal de cambio climático y por tanto la comparación más clara para una primera aproximación. Para más información, ver la sección de Regionalización.</p></li>
+<li><p><strong>Aplicación a otras metodologías y productos.</strong> Además, se ha llevado a cabo un estudio preliminar basado en aplicar este método de regionalización a otros campos como la predicción estacional, las proyecciones de embalses y la modelización de cultivos. También se han incluidos otros resultados obtenidos durante el desarrollo del trabajo que pueden resultar de utilidad. Para más información, ver la sección de Otras Aplicaciones.</p></li>
 </ol>
 
 <button class="backbtn" onclick="history.back()">← Back</button>
