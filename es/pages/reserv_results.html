@@ -4,10 +4,10 @@
 <head>
 
 <meta charset="UTF-8">
-<title>Water Reservoirs - Results</title>
+<title>Aportaciones a Embalses - Resultados</title>
 
-<link rel="stylesheet" href="../style.css">
-<script src="../script.js"></script>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../script.js"></script>
 
 </head>
 
@@ -16,27 +16,33 @@
 <!-- HEADER -->
 <header class="header">
 
+<div class="lang-switch">
+  <a href="../../pages/reserv_results.html">
+    <img src="../../assets/flag_uk.png" alt="English">
+  </a>
+</div>
+
 <div class="logos">
-<img src="../assets/tragsatec.jpg">
-<img src="../assets/aemet_azul.png">
+<img src="../../assets/tragsatec.jpg">
+<img src="../../assets/aemet_azul.png">
 </div>
 
 <div class="title">
-<h1>Downscaling for Climate Scenarios</h1>
-<p>Developed by Tragsatec for AEMET</p>
+<h1>Regionalización de Escenarios Climáticos</h1>
+<p>Desarrollado por Tragsatec para AEMET</p>
 </div>
 
 </header>
 
 <nav class="navbar">
 
-<a href="../index.html">Home</a>
-<a href="data.html">Data</a>
-<a href="methodology.html">Methodology</a>
-<a href="evaluation.html">Evaluation</a>
-<a href="downscaling.html">Downscaling</a>
-<a href="applications.html" class="active">Applications</a>
-<a href="information.html">Information</a>
+<a href="../index.html">Inicio</a>
+<a href="data.html">Datos</a>
+<a href="methodology.html">Metodología</a>
+<a href="evaluation.html">Evaluación</a>
+<a href="downscaling.html">Regionalización</a>
+<a href="applications.html" class="active">Aplicaciones</a>
+<a href="information.html">Información</a>
 
 </nav>
 
@@ -49,7 +55,7 @@
 <script>
 window.onload = function(){
 setBreadcrumbs(`
-<a href="../index.html">Home</a> > <a href="../pages/applications.html">Applications</a> > <a href="../pages/reservoirs.html">Water Reservoirs</a> > <strong>Results</strong>
+<a href="../index.html">Inicio</a> > <a href="../pages/applications.html">Aplicaciones</a> > <a href="../pages/reservoirs.html">Embalses</a> > <strong>Resultados</strong>
 `)
 }
 </script>
@@ -60,25 +66,25 @@ setBreadcrumbs(`
 
 <div class="page-content text-card">
 
-<h2>WATER RESERVOIRS - RESULTS</h2>
+<h2>RESULTADOS</h2>
 
-<p>First, a comparative study of observed contribution data and those obtained from the CERRA-Land reanalysis was carried out. Results show good correlation (always greater than 0.9) and no significant differences.</p>
+<p>Primero se llevó a cabo un estudio comparativo de los datos observados de aportaciones y aquellos obtenidos del reanálisis CERRA-Land. Los resultados muestran una buena correlación (siempre mayor que 0.9) sin diferencias significativas.</p>
 
 <div class="img-center"><img src="../figures/other/reservoirs/reserv1.PNG"></div>
 
-<p>Subsequently, downscaled CMIP6 models using different downscaling methods were validated against CERRA-Land contribution data. Mean values of all datasets for the 1981-2010 study period are very similar.</p>
+<p>Después, los modelos CMIP6 regionalizados utilizando distintos métodos de regionalización se validaron contra los datos de aportaciones de CERRA-Land. Los valores medios de todas las bases de datos para el periodo de estudio 1981-2010 son muy similares entre sí.</p>
 
 <div class="img-center"><img src="../figures/other/reservoirs/reserv2.PNG"></div>
 
-<p>After verifying the good results of the validation period, the function obtained with CERRA-Land is applied to precipitation data from CMIP6 models.</p>
+<p>Tras verificar los buenos resultados del periodo de validación, la función obtenida con CERRA-Land se aplicó a los datos de precipitación de los modelos CMIP6.</p>
 
 <div class="img-center"><img src="../figures/other/reservoirs/reserv3.PNG"></div>
 
-<p>In general terms, no clear trend is observed regarding a hypothetical decrease in contributions in the future climate. CERRA-Land describes more pronounced oscillations in contributions than the models.</p>
+<p>En términos generales no se observa una tendencia clara en cuanto a un hipotético declive de las contribuciones en el clima futuro. CERRA-Land describe oscilaciones más pronunciadas que los modelos.</p>
 
 <div class="img-center"><img src="../figures/other/reservoirs/reserv4.PNG"></div>
 
-<p>In areas of the southwest, a decrease in contributions is observed; in the northwest, an increase is seen, especially in areas near Galicia. DeepESD shows the greatest increases in areas of the northwest of the Iberian Peninsula. QDM, RAW, and XGB show the greatest decreases in contributions in the south.</p>
+<p>En áreas del suroeste, se observa un descenso de las contribuciones; en el noroeste, se ve un incremento, especialmente en las áreas cerca de Galicia. DeepESD muestra los mayores incrementos en regiones del noroeste de la península ibérica. QDM, RAW y XGB muestran el mayor descenso de las contribuciones en el sur peninsular.</p>
 
 <div class="img-center"><img src="../figures/other/reservoirs/reserv5.PNG"></div>
 
@@ -88,11 +94,11 @@ setBreadcrumbs(`
 
 <div class="img-center"><img src="../figures/other/reservoirs/reserv8.PNG"></div>
 
-<p>Extreme values (p5-p95) show that overall there are no significant changes, although a slight decrease in extreme p95 values is observed at the end of the 21st century according to the SSP5-8.5 scenario.</p>
+<p>El estudio de los valores extremos (p5-p95) muestra que no hay cambios significativos, aunque se observa un leve aumento de los valores extremos del percentil 95 al final del siglo XXI según el escenario SSP5-8.5.</p>
 
 <div class="img-center"><img src="../figures/other/reservoirs/reserv10.PNG"></div>
 
-<button class="backbtn" onclick="history.back()">← Back</button>
+<button class="backbtn" onclick="history.back()">← Atrás</button>
 
 </div>
 

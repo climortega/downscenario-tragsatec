@@ -4,10 +4,10 @@
 <head>
 
 <meta charset="UTF-8">
-<title>What's Next?</title>
+<title>Proyectos Futuros</title>
 
-<link rel="stylesheet" href="../style.css">
-<script src="../script.js"></script>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../script.js"></script>
 
 </head>
 
@@ -16,27 +16,33 @@
 <!-- HEADER -->
 <header class="header">
 
+<div class="lang-switch">
+  <a href="../../pages/whats_next.html">
+    <img src="../../assets/flag_uk.png" alt="English">
+  </a>
+</div>
+
 <div class="logos">
-<img src="../assets/tragsatec.jpg">
-<img src="../assets/aemet_azul.png">
+<img src="../../assets/tragsatec.jpg">
+<img src="../../assets/aemet_azul.png">
 </div>
 
 <div class="title">
-<h1>Downscaling for Climate Scenarios</h1>
-<p>Developed by Tragsatec for AEMET</p>
+<h1>Regionalización de Escenarios Climáticos</h1>
+<p>Desarrollado por Tragsatec para AEMET</p>
 </div>
 
 </header>
 
 <nav class="navbar">
 
-<a href="../index.html">Home</a>
-<a href="data.html">Data</a>
-<a href="methodology.html">Methodology</a>
-<a href="evaluation.html">Evaluation</a>
-<a href="downscaling.html">Downscaling</a>
-<a href="applications.html">Applications</a>
-<a href="information.html" class="active">Information</a>
+<a href="../index.html">Inicio</a>
+<a href="data.html">Datos</a>
+<a href="methodology.html">Metodología</a>
+<a href="evaluation.html">Evaluación</a>
+<a href="downscaling.html">Regionalización</a>
+<a href="applications.html">Aplicaciones</a>
+<a href="information.html" class="active">Información</a>
 
 </nav>
 
@@ -49,7 +55,7 @@
 <script>
 window.onload = function(){
 setBreadcrumbs(`
-<a href="../index.html">Home</a> > <a href="../pages/information.html">Information</a> > <strong>What's Next?</strong>
+<a href="../index.html">Inicio</a> > <a href="../pages/information.html">Información</a> > <strong>Proyectos Futuros</strong>
 `)
 }
 </script>
@@ -61,45 +67,45 @@ setBreadcrumbs(`
 <div class="page-content">
 
 
-<h2 class="center-text">What's Next?</h2>
+<h2 class="center-text">Proyectos Futuros</h2>
 
 <div class="cardpage">
 
 <div class="homecard static-card wide top-icon">
-<img src="../assets/programming.png">
+<img src="../../assets/programming.png">
 <div class="homecard-text">
-<h2>DEEPER STUDY OF DOWNSCALING METHODOLOGIES</h2>
-<p>Downscaling methodologies used in this project warrant further investigation, as some offered by pyClim-SDM software, such as analogue methods, have not been employed, while others have yielded inconclusive results. DeepESD, in particular, is a source of great interest to researchers. Given the good results obtained for temperature and precipitation with their respective models (DeepESDtas and DeepESDpr), it is possible that developing models for wind, humidity, and radiation (variables to which the temperature model has been applied due to time constraints) could also return better conclusions. However, internal evaluations have concluded that adding other predictors (such as the predicting variable itself) does not significantly improve the flawed calculations, so perhaps changing the model would not help either. In any case, further research into downscaling methods, their application to other emission scenarios, and the generation of results for dissemination to the general public are necessary and could not be carried out in this project due to lack of time, so they would be of great interest for future work.</p>
+<h2>ESTUDIO DE METODOLOGÍAS DE REGIONALIZACIÓN</h2>
+<p>Las metodologías de regionalización utilizadas en este proyecto necesitan una investigación más profunda, ya que no se han utilizado algunas que ofrece el software pyClim-SDM, como los métodos de análogos, mientras que otras han devuelto resultados poco concluyentes. En particular, DeepESD es fuente de gran interés para los investigadores. Dados los buenos resultados obtenidos para la temperatura y la precipitación con sus respectivos modelos (DeepESDtas y DeepESDpr), es posible que el desarrollo de modelos para el viento, la humedad y la radiación (variables para las que se ha aplicado el modelo de temperatura debido a limitaciones de tiempo) pueda conducir a mejores conclusiones. Sin embargo, evaluaciones internas han devuelto que añadir otros predictores (como la propia variable que se predice) no mejora de forma significativa los cálculos erróneos, por lo que quizá cambiar el modelo tampoco aportaría mejoras. En cualquier caso, es necesario profundizar en la investigación de los métodos de regionalización, su aplicación a otros escenarios de emisiones y la generación de resultados para la divulgación al público general, lo que no pudo ser llevado a cabo en este proyecto debido a la falta de tiempo y por tanto sería de gran interés como trabajo futuro.</p>
 </div>
 </div>
 
 <div class="homecard static-card wide top-icon">
-<img src="../assets/rain(1).png">
+<img src="../../assets/rain(1).png">
 <div class="homecard-text">
-<h2>FURTHER INVESTIGATION OF EXTREME PRECIPITATION EVENTS</h2>
-<p>Extreme precipitation events are of great importance to the general population of the Iberian Peninsula due to several phenomena that have affected people in recent years and their increased intensity as a consequence of climate change. Furthermore, the rise in droughts could also impact the population in other ways, such as water scarcity. Therefore, further study of these phenomena is needed, and downscaled datasets allow for a more detailed investigation than previously possible.</p>
+<h2>INVESTIGACIÓN DE EVENTOS EXTREMOS DE PRECIPITACIÓN</h2>
+<p>Los eventos de precipitación extrema son de gran importancia para la población general de la península ibérica debido a que múltiples fenómenos han afectado a sus habitantes en los años recientes y a la mayor intensidad de estos como consecuencia del cambio climático. Además, el aumento de sequías también podría afectar a la población de otras formas, como por ejemplo la escasez de agua. Por tanto, se necesita profundizar el estudio de estos fenómenos, y las bases de datos regionalizadas nos permiten una investigación más detallada de lo que era posible anteriormente.</p>
 </div>
 </div>
 
 <div class="homecard static-card wide top-icon">
-<img src="../assets/wind-turbine.png">
+<img src="../../assets/wind-turbine.png">
 <div class="homecard-text">
-<h2>COMPLEMENTARY WIND STUDIES</h2>
-<p>Due to time constraints, this study did not include a more in-depth analysis of the wind variable. However, wind is of particular interest in terms of downscaling, as airflows depend heavily on the orographic and detailed characteristics of the terrain, leading to the generation of characteristic regional winds, many of which are very intense. Future work aims to develop a detailed downscaling of wind patterns and a thorough study of its extremes (both intense phenomena and low-wind droughts), and its application to fields of interest such as renewable energy generation.</p>
+<h2>ESTUDIOS COMPLEMENTARIOS DE VIENTO</h2>
+<p>Debido a limitaciones de tiempo, no se pudo incluir un análisis en profundidad de la variable viento en este estudio. Sin embargo, el viento resulta de interés particular en términos de regionalización, ya que los flujos de viento dependen en gran medida de las características orográficas y de detalle del terreno, lo cual genera vientos regionales característicos, muchos de los cuales son muy intensos. Podría desarrollarse un trabajo futuro versado en una regionalización de los patrones de viento y un estudio pormenorizado de sus extremos (tanto fenómenos intensos como sequías de bajo viento), y su aplicación a campos de interés como la generación de energía renovable.</p>
 </div>
 </div>
 
 <div class="homecard static-card wide top-icon">
-<img src="../assets/wheat.png">
+<img src="../../assets/wheat.png">
 <div class="homecard-text">
-<h2>IMPLEMENTATION OF AQUACROP WITH CURRENT DOWNSCALED CLIMATE SCENARIOS</h2>
-<p>AquaCrop crop model was intended to be run using downscaled results obtained in this project. However, due to time constraints, it has been programmed to run with downscaled atmospheric data from AdapteCCa (CMIP5 project, and therefore slightly older than the data currently being generated). In the future, work will continue with AquaCrop to obtain up-to-date, high-quality, and very high-resolution crop data, which is of great interest to the general public, through deep learning methods. The workflow will also be generalized to provide this data for a wide range of crops and different emission scenarios.</p>
+<h2>AQUACROP CON ESCENARIOS CLIMÁTICOS REGIONALIZADOS DE ÚLTIMA GENERACIÓN</h2>
+<p>En este proyecto se pretendía correr el modelo AquaCrop de cultivos mediante los resultados regionalizados obtenidos previamente. Sin embargo, debido a limitaciones de tiempo, AquaCrop se programó para que corriera con datos atmosféricos regionalizados procedentes de AdapteCCa (proyecto CMIP6, y por tanto ligeramente anteriores a los datos que se generan en la actualidad). En el futuro, el trabajo continuará con AquaCrop con el objetivo de obtener datos de cultivos actuales, de alta calidad y de muy alta resolución, lo cual resulta de gran interés al público general, a través de métodos de aprendizaje profundo. Además, el flujo de trabajo se generalizará para producir estos datos para un amplio rango de cultivos y diferentes escenarios de emisiones.</p>
 </div>
 </div>
 
 </div>
 
-<button class="backbtn" onclick="history.back()">← Back</button>
+<button class="backbtn" onclick="history.back()">← Atrás</button>
 
 </div>
 </div>

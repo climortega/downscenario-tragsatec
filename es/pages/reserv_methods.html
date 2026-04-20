@@ -4,10 +4,10 @@
 <head>
 
 <meta charset="UTF-8">
-<title>Water Reservoirs - Methods</title>
+<title>Aportaciones a Embalses - Métodos</title>
 
-<link rel="stylesheet" href="../style.css">
-<script src="../script.js"></script>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../script.js"></script>
 
 </head>
 
@@ -16,27 +16,33 @@
 <!-- HEADER -->
 <header class="header">
 
+<div class="lang-switch">
+  <a href="../../pages/reserv_methods.html">
+    <img src="../../assets/flag_uk.png" alt="English">
+  </a>
+</div>
+
 <div class="logos">
-<img src="../assets/tragsatec.jpg">
-<img src="../assets/aemet_azul.png">
+<img src="../../assets/tragsatec.jpg">
+<img src="../../assets/aemet_azul.png">
 </div>
 
 <div class="title">
-<h1>Downscaling for Climate Scenarios</h1>
-<p>Developed by Tragsatec for AEMET</p>
+<h1>Regionalización de Escenarios Climáticos</h1>
+<p>Desarrollado por Tragsatec para AEMET</p>
 </div>
 
 </header>
 
 <nav class="navbar">
 
-<a href="../index.html">Home</a>
-<a href="data.html">Data</a>
-<a href="methodology.html">Methodology</a>
-<a href="evaluation.html">Evaluation</a>
-<a href="downscaling.html">Downscaling</a>
-<a href="applications.html" class="active">Applications</a>
-<a href="information.html">Information</a>
+<a href="../index.html">Inicio</a>
+<a href="data.html">Datos</a>
+<a href="methodology.html">Metodología</a>
+<a href="evaluation.html">Evaluación</a>
+<a href="downscaling.html">Regionalización</a>
+<a href="applications.html" class="active">Aplicaciones</a>
+<a href="information.html">Información</a>
 
 </nav>
 
@@ -49,7 +55,7 @@
 <script>
 window.onload = function(){
 setBreadcrumbs(`
-<a href="../index.html">Home</a> > <a href="../pages/applications.html">Applications</a> > <a href="../pages/reservoirs.html">Water Reservoirs</a> > <strong>Methods</strong>
+<a href="../index.html">Inicio</a> > <a href="../pages/applications.html">Aplicaciones</a> > <a href="../pages/reservoirs.html">Embalses</a> > <strong>Métodos</strong>
 `)
 }
 </script>
@@ -60,11 +66,11 @@ setBreadcrumbs(`
 
 <div class="page-content text-card">
 
-<h2>METHODS</h2>
+<h2>MÉTODOS</h2>
 
-<p>The Iberian Peninsula is one of the Mediterranean regions most prone to prolonged droughts. These periods of low rainfall necessitate large water reserves for storage. In recent years, several climate change studies have identified the Iberian Peninsula as one of the regions on the planet experiencing the greatest decline in rainfall. Therefore, the results of this project have been applied, using previously obtained downscaled precipitation data (see Downscaling section), to explore changes in future rainfall patterns for the 1985-2020 period (November to March).</p>
+<p>La península ibérica es una de las regiones mediterráneas más propensas a sequías prolongadas. Estos periodos de baja precipitación necesitan grandes reservas de agua en almacenamiento. En los últimos años, múltiples estudios de cambio climático han identificado a la península ibérica como una de las regiones en el planeta que experimenta el mayor descenso de precipitaciones. Por tanto, los resultados del proyecto se han aplicado, utilizado los datos regionalizados de precipitación previamente obtenidos (ver la sección de Regionalización), a la exploración de cambios en los patrones futuros de precipitación respecto al periodo 1985-2020 (de noviembre a marzo).</p>
 
-<p>To this end, correlation between precipitation in river basins (see Data section) and CERRA-Land was calculated. Then, the PLS (partial least squares regression) method was applied. PLS is a multiple linear regression method consisting of two parts:</p>
+<p>Para ello, se ha calculado la correlación de la precipitación en las cuencas de los ríos (ver sección de Datos) y CERRA-Land. Después, se aplicó el método PLS (regresión de mínimos cuadrados parciales). PLS es un método de regresión lineal múltiple que se aplica en dos pasos:</p>
 
 <div class="img-center"><img src="../figures/other/reservoirs/velle.PNG"></div>
 
@@ -73,18 +79,18 @@ setBreadcrumbs(`
 <div class="img-center"><img src="../figures/other/reservoirs/contreras.PNG"></div>
 
 <ol>
-<li><p><strong>Selection of precipitation predictors.</strong> A correlation study was performed between precipitation predicted by the model and actual reservoir inflow data, and reservoirs with average correlations greater than 0.7 were selected (127 reservoirs).</p>
+<li><p><strong>Selección de los predictores de precipitación.</strong> Se llevó a cabo un estudio de correlación entre la precipitación predicha por el modelo y datos de aportaciones a embalses, y se seleccionaron los embalses con correlaciones medias superiores a 0.7 (127 embalses).</p>
 
 <div class="img-center"><img src="../figures/other/reservoirs/embalses107.PNG"></div></li>
 
-<li><p><strong>Training.</strong> It was performed using CERRA-Land. A linear regression model was created from these 127 data points and applied to the previously regionalized data.</p>
+<li><p><strong>Entrenamiento.</strong> Se llevó a cabo utilizando CERRA-Land. Se creó un modelo de regresión lineal a partir de estos 127 puntos y se aplicó a los escenarios previamente regionalizados.</p>
 
 <div class="img-center"><img src="../figures/other/reservoirs/modelo_embalses.PNG"></div></li>
 </ol>
 
-<p>The results of this model were subsequently studied.</p>
+<p>Por último, se estudiaron los resultados de este modelo.</p>
 
-<button class="backbtn" onclick="history.back()">← Back</button>
+<button class="backbtn" onclick="history.back()">← Atrás</button>
 
 </div>
 

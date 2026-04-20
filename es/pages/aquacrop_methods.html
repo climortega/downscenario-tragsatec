@@ -4,10 +4,10 @@
 <head>
 
 <meta charset="UTF-8">
-<title>AquaCrop - Methods</title>
+<title>AquaCrop - Métodos</title>
 
-<link rel="stylesheet" href="../style.css">
-<script src="../script.js"></script>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../script.js"></script>
 
 </head>
 
@@ -16,27 +16,33 @@
 <!-- HEADER -->
 <header class="header">
 
+<div class="lang-switch">
+  <a href="../../pages/aquacrop_methods.html">
+    <img src="../../assets/flag_uk.png" alt="English">
+  </a>
+</div>
+
 <div class="logos">
-<img src="../assets/tragsatec.jpg">
-<img src="../assets/aemet_azul.png">
+<img src="../../assets/tragsatec.jpg">
+<img src="../../assets/aemet_azul.png">
 </div>
 
 <div class="title">
-<h1>Downscaling for Climate Scenarios</h1>
-<p>Developed by Tragsatec for AEMET</p>
+<h1>Regionalización de Escenarios Climáticos</h1>
+<p>Desarrollado por Tragsatec para AEMET</p>
 </div>
 
 </header>
 
 <nav class="navbar">
 
-<a href="../index.html">Home</a>
-<a href="data.html">Data</a>
-<a href="methodology.html">Methodology</a>
-<a href="evaluation.html">Evaluation</a>
-<a href="downscaling.html">Downscaling</a>
-<a href="applications.html" class="active">Applications</a>
-<a href="information.html">Information</a>
+<a href="../index.html">Inicio</a>
+<a href="data.html">Datos</a>
+<a href="methodology.html">Metodología</a>
+<a href="evaluation.html">Evaluación</a>
+<a href="downscaling.html">Regionalización</a>
+<a href="applications.html" class="active">Aplicaciones</a>
+<a href="information.html">Información</a>
 
 </nav>
 
@@ -49,7 +55,7 @@
 <script>
 window.onload = function(){
 setBreadcrumbs(`
-<a href="../index.html">Home</a> > <a href="../pages/applications.html">Applications</a> > <a href="../pages/aquacrop.html">AquaCrop</a> > <strong>Methods</strong>
+<a href="../index.html">Inicio</a> > <a href="../pages/applications.html">Aplicaciones</a> > <a href="../pages/aquacrop.html">AquaCrop</a> > <strong>Métodos</strong>
 `)
 }
 </script>
@@ -60,13 +66,13 @@ setBreadcrumbs(`
 
 <div class="page-content text-card">
 
-<h2>METHODS</h2>
+<h2>MÉTODOS</h2>
 
-<p>Given the potential impact of climate changes on the Iberian Peninsula for crop development and maintenance, the aim was to apply downscaled data to a crop model. AquaCrop (<a href="https://www.fao.org/aquacrop" target="_blank">link</a>) is a model developed by the Food and Agriculture Organization (FAO) to simulate how crops answer to available soil water and estimate their yield (production) under different conditions. It is an agronomic model that relates soil water, crop growth, and final production, based on the idea that crop production depends primarily on how much water the plant transpires (and not just on total rainfall). To this end, AquaCrop models several processes, such as soil water balance, crop development, plant transpiration, water stress (drought), biomass production, and final yield. This allows for an evaluation of future droughts impacts, irrigation optimization, water efficiency study, and agricultural scenarios comparison. Furthermore, it is simpler than other complex agronomic models, requires less data, is designed for water-scarce conditions, and is quite robust for many crops such as wheat and rice. However, it does not model nutrients like nitrogen in detail, simplifies some physiological processes, and may require local calibration.</p>
+<p>Dado el impacto potencial de los cambios en el clima de la península ibérica para el desarrollo y el mantenimiento de los cultivos, el objetivo de esta sección consistía en aplicar los datos regionalizacios a un modelo de cultivos. AquaCrop (<a href="https://www.fao.org/aquacrop" target="_blank">link</a>) es un modelo desarrollado por la Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO) para simular cómo responden los cultivos al agua disponible en el suelo y estimar su rendimiento (producción) bajo diferentes condiciones. Se trata de un modelo agronómico que relaciona el agua del suelo, el crecimiento del cultivo y la producción final basándose en que la producción del cultivo depende sobre todo de cuánta agua la planta transpira (y no solo en la precipitación total). Para ello, AquaCrop modela múltiples procesos como el equilibrio suelo-agua, el desarrollo del cultivo, la transpiración de la planta, el estrés hídrico (sequía), la producción de biomasa y la producción final. Esto permite evaluar el impacto futuro de las sequías, optimizar la irrigación, estudiar la eficiencia hídrica y comparar entre escenarios agrícolas. Además, es más simple que otros modelos agronómicos complejos, requiere menos datos, está diseñado para condiciones de escasez de agua y es bastante robusto para múltiples cultivos como el trigo o el arroz. Sin embargo, no modela nutrientes como el nitrógeno en detalle, simplifica algunos procesos fisiológicos y puede requerir calibración local.</p>
 
-<p>To improve the detailed modeling of some areas, AquaCrop was intended to be run with downscaled data developed for this project. For a first approximation, however, CMIP5 data from AdapteCCa web (see Data section) were used, along with soil information from the Agrarian Technological Institute of Castile and León (ITACYL) and internal crop data from AEMET for Castile and León. AquaCrop software was run for the historical period (1950-2005) to compare results with a previous run by AEMET using its own seasonal forecast data supplemented with observations. Then, it was also run for future projections of RCP8.5 emissions scenario (2006-2100). This has been carried out for wheat and barley, and perhaps olives, and for Valladolid area.</p>
+<p>Para mejorar la modelización detallada de algunas áreas, se pretendía correr AquaCrop con los datos regionalizados procedentes de este proyecto. Sin embargo, para una primera aproximación se utilizaron datos CMIP5 de la web de AdapteCCa (ver la sección de Datos), junto con información de suelo procedente del Instituto Tecnológico Agrario de Castilla y León (ITACYL) y datos internos de cultivo de AEMET para Castilla y León. El software AquaCrop se corrió para el periodo histórico (1950-2005) con el objetivo de comparar los resultados con resultados previos de AEMET que utilizaban sus propios datos de pronósticos suplementados con observaciones. Después, se corrió también para las proyecciones futuras del escenario de emisiones RCP8.5 (2006-2100). Esto se ha llevado a cabo para el trigo y la cebada, y quizá para los olivos, en el área de Valladolid.</p>
 
-<button class="backbtn" onclick="history.back()">← Back</button>
+<button class="backbtn" onclick="history.back()">← Atrás</button>
 
 </div>
 

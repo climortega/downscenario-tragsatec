@@ -4,10 +4,10 @@
 <head>
 
 <meta charset="UTF-8">
-<title>Precipitation Extremes - Results</title>
+<title>Extremos de Precipitación - Resultados</title>
 
-<link rel="stylesheet" href="../style.css">
-<script src="../script.js"></script>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../script.js"></script>
 
 </head>
 
@@ -16,27 +16,33 @@
 <!-- HEADER -->
 <header class="header">
 
+<div class="lang-switch">
+  <a href="../../pages/preci_results.html">
+    <img src="../../assets/flag_uk.png" alt="English">
+  </a>
+</div>
+
 <div class="logos">
-<img src="../assets/tragsatec.jpg">
-<img src="../assets/aemet_azul.png">
+<img src="../../assets/tragsatec.jpg">
+<img src="../../assets/aemet_azul.png">
 </div>
 
 <div class="title">
-<h1>Downscaling for Climate Scenarios</h1>
-<p>Developed by Tragsatec for AEMET</p>
+<h1>Regionalización de Escenarios Climáticos</h1>
+<p>Desarrollado por Tragsatec para AEMET</p>
 </div>
 
 </header>
 
 <nav class="navbar">
 
-<a href="../index.html">Home</a>
-<a href="data.html">Data</a>
-<a href="methodology.html">Methodology</a>
-<a href="evaluation.html">Evaluation</a>
-<a href="downscaling.html">Downscaling</a>
-<a href="applications.html" class="active">Applications</a>
-<a href="information.html">Information</a>
+<a href="../index.html">Inicio</a>
+<a href="data.html">Datos</a>
+<a href="methodology.html">Metodología</a>
+<a href="evaluation.html">Evaluación</a>
+<a href="downscaling.html">Regionalización</a>
+<a href="applications.html" class="active">Aplicaciones</a>
+<a href="information.html">Información</a>
 
 </nav>
 
@@ -49,7 +55,7 @@
 <script>
 window.onload = function(){
 setBreadcrumbs(`
-<a href="../index.html">Home</a> > <a href="../pages/applications.html">Applications</a> > <a href="../pages/precipitation.html">Precipitation Extremes</a> > <strong>Results</strong>
+<a href="../index.html">Inicio</a> > <a href="../pages/applications.html">Aplicaciones</a> > <a href="../pages/precipitation.html">Precipitación</a> > <strong>Resultados</strong>
 `)
 }
 </script>
@@ -60,35 +66,35 @@ setBreadcrumbs(`
 
 <div class="page-content text-card">
 
-<h2>PRECIPITATION EXTREMES - RESULTS</h2>
+<h2>RESULTADOS</h2>
 
-<p>Studying the distribution of hourly precipitation curves reveals that all reanalysis overestimates values, particularly ERA5 and ERA5-Land. COSMO-REA6 fits the distribution curve better. Although some discrepancies exist between reanalysis and observations, these decrease with increasing accumulation, especially for COSMO-REA6 and CERRA.</p>
+<p>Al estudiar las curvas de distribución de la precipitación horaria se observa que todos los reanálisis sobrestiman los valores, particularmente ERA5 y ERA5-Land. COSMO-REA6 se ajusta mejor a la curva de distribución. Aunque existen algunas discrepancias entre reanálisis y observaciones, estas disminuyen al incrementarse la acumulación, sobre todo para COSMO-REA6 y CERRA.</p>
 
 <div class="img-center"><img src="../figures/other/precipitation/extremos1.PNG"></div>
 
-<p>Regarding the 95th percentile (extreme precipitation values), COSMO-REA6 is the reanalysis that least underestimates hourly precipitation. ERA5 and ERA5-Land underestimate extreme values more (around 38%). CERRA also underestimates values across all accumulations, but not as much as ERA5 and ERA5-Land.</p>
+<p>En cuanto al percentil 95 (valores extremos de precipitación), COSMO-REA6 es el reanálisis que menos subestima la precipitación horaria. ERA5 y ERA5-Land subestiman más los valores extremos (alrededor del 38%). CERRA también subestima valores de acumulación, pero no tanto como ERA5 y ERA5-Land.</p>
 
 <div class="img-center"><img src="../figures/other/precipitation/extremos2.PNG"></div>
 
-<p>In the Mediterranean region, the highest values are found in Catalonia, Valencia, and the Andalusian Mediterranean coast. Among the reanalyses, we also find significant differences in the most extreme precipitation values. For example, ERA5 and ERA5-Land did not observe high 95th percentile values in areas of Valencia, while COSMO-REA6 showed values closest to the observational data. However, all agreed on high 95th percentile values in areas of Catalonia and the Andalusian Mediterranean coast.</p>
+<p>En la región mediterránea, los valores más altos se encuentran en Cataluña, Valencia y la costa mediterránea andaluza. Entre los reanálisis también encontramos diferencias significativas en los valores más extremos de precipitación. Por ejemplo, ERA5 y ERA5-Land no observan los altores valores de percentil 95 encontrados en áreas de Valencia, mientras que COSMO-REA6 muestra valores más cercanos a los datos observacionales. Sin embargo, todos concuerdan en que los valores más altos de percentiles 95 se encuentran en Cataluña y la costa mediterránea de Andalucía.</p>
 
 <div class="img-center"><img src="../figures/other/precipitation/extremos3.PNG"></div>
 
-<p>To illustrate these results, two episodes of extreme rainfall that occurred on the Mediterranean coast of the Iberian Peninsula have been selected.</p>
+<p>Para ilustrar estos resultados se han seleccionado dos episodios de precipitación torrencial ocurridos en la costa mediterránea de la península ibérica.</p>
 
-<p>Between October 20 and 25, 2000, an episode of extreme rainfall affected large areas of the Spanish Mediterranean coast, particularly the Valencian Community. Reanalysis shows significant differences in the intensity and extent of rainfall during this period, with CERRA showing the highest intensity. It is followed by COSMO-REA6, where the accumulated rainfall is greater in Andalusia. ERA5 and ERA5-Land underestimate rainfall but show maximum amounts in areas of the Valencian Community.</p>
+<p>Entre el 20 y el 25 de octubre del 2000, un episodio de precipitación extrema afectó a amplias áreas de la costa mediterránea española, particularmente la Comunidad Valenciana. El reanálisis muestra diferencias significativa en la intensidad y la extensión de la lluvia durante este periodo, siendo CERRA el que muestra la mayor intensidad. Le sigue COSMO-REA6, donde la precipitación acumulada es mayor que en Andalucía. ERA5 y ERA5-Land subestiman la precipitación pero modelan la máxima acumulación en áreas de la Comunidad Valenciana.</p>
 
 <div class="img-center"><img src="../figures/other/precipitation/extremos4.PNG"></div>
 
-<p>On the other hand, between October 28 and November 2, 2024 (especially October 29), a historic episode of torrential rainfall occurred, affecting the entire Spanish Mediterranean region. Comparing daily observational data from October 29, 2024 from AEMET stations to reanalysis product values reveals a significant underestimation of the reanalysis data, particularly those from ERA5 and ERA5-Land. CERRA displays the results closest to the observations.</p>
+<p>Por otro lado, entre el 28 de octubre y el 2 de noviembre de 2024 (especialmente el 29 de octubre), se produjo un episodio histórico de precipitación torrencial que afectó a toda la región mediterránea española. Al comparar los datos diarios observacionales del 29 de octubre de 2025 de las estaciones de AEMET con los valores de los productos de reanálisis se observa una subestimación significativa por parte del reanálisis, particularmente de ERA5 y ERA5-Land. CERRA muestra los resultados más cercanos a las observaciones.</p>
 
 <div class="img-center"><img src="../figures/other/precipitation/extremos5.PNG"></div>
 
-<p>Heaviest rainfall was recorded in areas near Valencia (700 mm in Turís). All reanalysis models underestimate precipitation. CERRA presents the spatial distribution of rainfall closest to observational data, while ERA5 and ERA5-Land do not accurately reproduce the precipitation recorded in the central Iberian Peninsula.</p>
+<p>La precipitación más intensa se registró en áreas cercana a Valencia (700 mm en Turís). Todos los reanálisis subestiman la precipitación. CERRA presenta la distribución espacial de la lluvia más cercana a los datos observacionales, mientras que ERA5 y ERA5-Land no reproducen adecuadamente aquella registrada en la península ibérica central.</p>
 
 <div class="img-center"><img src="../figures/other/precipitation/extremos6.PNG"></div>
 
-<button class="backbtn" onclick="history.back()">← Back</button>
+<button class="backbtn" onclick="history.back()">← Atrás</button>
 
 </div>
 

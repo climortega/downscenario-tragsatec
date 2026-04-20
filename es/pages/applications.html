@@ -4,10 +4,10 @@
 <head>
 
 <meta charset="UTF-8">
-<title>Further Applications</title>
+<title>Otras Aplicaciones</title>
 
-<link rel="stylesheet" href="../style.css">
-<script src="../script.js"></script>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../script.js"></script>
 
 </head>
 
@@ -16,27 +16,33 @@
 <!-- HEADER -->
 <header class="header">
 
+<div class="lang-switch">
+  <a href="../../pages/applications.html">
+    <img src="../../assets/flag_uk.png" alt="English">
+  </a>
+</div>
+
 <div class="logos">
-<img src="../assets/tragsatec.jpg">
-<img src="../assets/aemet_azul.png">
+<img src="../../assets/tragsatec.jpg">
+<img src="../../assets/aemet_azul.png">
 </div>
 
 <div class="title">
-<h1>Downscaling for Climate Scenarios</h1>
-<p>Developed by Tragsatec for AEMET</p>
+<h1>Regionalización de Escenarios Climáticos</h1>
+<p>Desarrollado por Tragsatec para AEMET</p>
 </div>
 
 </header>
 
 <nav class="navbar">
 
-<a href="../index.html">Home</a>
-<a href="data.html">Data</a>
-<a href="methodology.html">Methodology</a>
-<a href="evaluation.html">Evaluation</a>
-<a href="downscaling.html">Downscaling</a>
-<a href="applications.html" class="active">Applications</a>
-<a href="information.html">Information</a>
+<a href="../index.html">Inicio</a>
+<a href="data.html">Datos</a>
+<a href="methodology.html">Metodología</a>
+<a href="evaluation.html">Evaluación</a>
+<a href="downscaling.html">Regionalización</a>
+<a href="applications.html" class="active">Aplicaciones</a>
+<a href="information.html">Información</a>
 
 </nav>
 
@@ -49,7 +55,7 @@
 <script>
 window.onload = function(){
 setBreadcrumbs(`
-<a href="../index.html">Home</a> > <strong>Applications</strong>
+<a href="../index.html">Home</a> > <strong>Aplicaciones</strong>
 `)
 }
 </script>
@@ -59,38 +65,38 @@ setBreadcrumbs(`
 <div class="cardpage">
 
 <div class="homecard" onclick="location.href='seasonal.html'">
-<img src="../assets/atmospheric-conditions.png">
+<img src="../../assets/atmospheric-conditions.png">
 <div class="homecard-text">
-<h2>SEASONAL FORECASTING</h2>
-<p>Deep-learning downscaling of seasonal forecasts</p>
+<h2>PREDICCIÓN ESTACIONAL</h2>
+<p>Predicción estacional regionalizada mediante aprendizaje profundo</p>
 </div>
 </div>
 
 <div class="homecard" onclick="location.href='precipitation.html'">
-<img src="../assets/raining.png">
+<img src="../../assets/raining.png">
 <div class="homecard-text">
-<h2>PRECIPITATION EXTREMES</h2>
-<p>Precipitation extremes study</p>
+<h2>EXTREMOS DE PRECIPITACIÓN</h2>
+<p>Estudio de eventos torrenciales de precipitación</p>
 </div>
 </div>
 
 <div class="homecard" onclick="location.href='reservoirs.html'">
-<img src="../assets/water.png">
+<img src="../../assets/water.png">
 <div class="homecard-text">
-<h2>WATER RESERVOIRS</h2>
-<p>Climate scenarios information for water reservoirs</p>
+<h2>APORTACIONES A EMBALSES</h2>
+<p>Escenarios climáticos regionalizados aplicados a aportaciones a embalses</p>
 </div>
 </div>
 
 <div class="homecard" onclick="location.href='aquacrop.html'">
-<img src="../assets/damage.png">
+<img src="../../assets/damage.png">
 <div class="homecard-text">
-<h2>CROP-WATER SIMULATIONS</h2>
-<p>Climate scenarios information for AquaCrop model</p>
+<h2>SIMULACIONES DE RIEGO DE CULTIVOS</h2>
+<p>Escenarios climáticos regionalizados aplicados al modelo AquaCrop</p>
 </div>
 </div>
 
-<button class="backbtn" onclick="history.back()">← Back</button>
+<button class="backbtn" onclick="history.back()">← Atrás</button>
 
 </div>
 

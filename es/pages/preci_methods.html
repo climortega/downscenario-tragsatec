@@ -4,10 +4,10 @@
 <head>
 
 <meta charset="UTF-8">
-<title>Precipitation Extremes - Methods</title>
+<title>Extremos de Precipitación - Métodos</title>
 
-<link rel="stylesheet" href="../style.css">
-<script src="../script.js"></script>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../script.js"></script>
 
 </head>
 
@@ -16,27 +16,33 @@
 <!-- HEADER -->
 <header class="header">
 
+<div class="lang-switch">
+  <a href="../../pages/preci_methods.html">
+    <img src="../../assets/flag_uk.png" alt="English">
+  </a>
+</div>
+
 <div class="logos">
-<img src="../assets/tragsatec.jpg">
-<img src="../assets/aemet_azul.png">
+<img src="../../assets/tragsatec.jpg">
+<img src="../../assets/aemet_azul.png">
 </div>
 
 <div class="title">
-<h1>Downscaling for Climate Scenarios</h1>
-<p>Developed by Tragsatec for AEMET</p>
+<h1>Regionalización de Escenarios Climáticos</h1>
+<p>Desarrollado por Tragsatec para AEMET</p>
 </div>
 
 </header>
 
 <nav class="navbar">
 
-<a href="../index.html">Home</a>
-<a href="data.html">Data</a>
-<a href="methodology.html">Methodology</a>
-<a href="evaluation.html">Evaluation</a>
-<a href="downscaling.html">Downscaling</a>
-<a href="applications.html" class="active">Applications</a>
-<a href="information.html">Information</a>
+<a href="../index.html">Inicio</a>
+<a href="data.html">Datos</a>
+<a href="methodology.html">Metodología</a>
+<a href="evaluation.html">Evaluación</a>
+<a href="downscaling.html">Regionalización</a>
+<a href="applications.html" class="active">Aplicaciones</a>
+<a href="information.html">Información</a>
 
 </nav>
 
@@ -49,7 +55,7 @@
 <script>
 window.onload = function(){
 setBreadcrumbs(`
-<a href="../index.html">Home</a> > <a href="../pages/applications.html">Applications</a> > <a href="../pages/precipitation.html">Precipitation Extremes</a> > <strong>Methods</strong>
+<a href="../index.html">Inicio</a> > <a href="../pages/applications.html">Aplicaciones</a> > <a href="../pages/precipitation.html">Precipitación</a> > <strong>Métodos</strong>
 `)
 }
 </script>
@@ -60,15 +66,15 @@ setBreadcrumbs(`
 
 <div class="page-content text-card">
 
-<h2>METHODS</h2>
+<h2>MÉTODOS</h2>
 
-<p>As an extension of the Evaluation section, an evaluation of hourly precipitation data from several high-resolution reanalysis products based on the AEMET observation station network has been carried out. This is of particular interest for extreme precipitation events, since the Mediterranean region is one of the areas in Europe with the highest precipitation intensity, which is primarily from convective precipitation. These types of events are often associated with cut-off lows or DANAS (isolated high-altitude depressions) in areas near the western Mediterranean due to the interaction with the relatively high temperatures of the Mediterranean, which favor the development of deep convection. Although the number of studies examining these events from a climatic perspective has increased in recent years, many works use reanalysis data, especially low-resolution and daily data.</p>
+<p>Para ampliar la sección de Evaluación se llevó a cabo una evaluación de precipitación horaria procedente de diversos productos de reanálisis de alta resolución basada en la red observacional de AEMET. Esto resulta de particular interés para los eventos extremos de precipitación, puesto que la región mediterránea es una de las áreas de Europa con la mayor intensidad de precipitación, sobre todo precipitación convectiva. Estos eventos suelen asociarse con las gotas frías o danas (depresiones aisladas en niveles altos) en áreas cercanas al Mediterráneo occidental debido a la interacción con las relativamente altas temperaturas del Mediterráneo, que favorecen el desarrollo de convección profunda. Aunque el número de estudios que examinan estos eventos a partir de una perspectiva climática ha aumentado en los últimos años, muchos trabajos utilizan reanálisis, especialmente datos diarios y con baja resolución.</p>
 
-<p>This study used hourly observational precipitation data from the AEMET internal network, with at least 50% of station data available for areas of the Spanish Mediterranean, as well as hourly reanalysis data from various products (ERA5, ERA5-Land, CERRA, and COSMO-REA6). Comparative metrics were applied across all datasets, specifically p90, p95, and a distribution density analysis. Finally, specific cases of particular interest were examined. For more information about the data and methodology, see Data and Evaluation sections.</p>
+<p>Este estudio utilizó datos observacionales de precipitación horaria de la red interna de AEMET con al menos el 50% de los datos disponibles en una estación determinada para áreas del Mediterráneo español, así como datos horarios de diversos reanálisis (ERA5, ERA5-Land, CERRA y COSMO-REA6). Se aplicaron métricas comparativas a todas las bases de datos, especialmente percentiles 90 y 95 y un análisis de distribución de la densidad. Por último, se examinaron casos específicos de particular interés. Para más información acerca de los datos y de la metodología, ver las secciones de Datos y de Evaluación.</p>
 
 <div class="img-center"><img src="../figures/other/precipitation/stations_preciextrem.PNG"></div>
 
-<button class="backbtn" onclick="history.back()">← Back</button>
+<button class="backbtn" onclick="history.back()">← Atrás</button>
 
 </div>
 
