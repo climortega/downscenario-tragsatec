@@ -4,10 +4,10 @@
 <head>
 
 <meta charset="UTF-8">
-<title>Downscaling - Take Home Message</title>
+<title>Regionalización - Conclusiones</title>
 
-<link rel="stylesheet" href="../style.css">
-<script src="../script.js"></script>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../script.js"></script>
 
 </head>
 
@@ -16,27 +16,33 @@
 <!-- HEADER -->
 <header class="header">
 
+<div class="lang-switch">
+  <a href="../../pages/down_takehome.html">
+    <img src="../../assets/flag_uk.png" alt="English">
+  </a>
+</div>
+
 <div class="logos">
-<img src="../assets/tragsatec.jpg">
-<img src="../assets/aemet_azul.png">
+<img src="../../assets/tragsatec.jpg">
+<img src="../../assets/aemet_azul.png">
 </div>
 
 <div class="title">
-<h1>Downscaling for Climate Scenarios</h1>
-<p>Developed by Tragsatec for AEMET</p>
+<h1>Regionalización de Escenarios Climáticos</h1>
+<p>Desarrollado por Tragsatec para AEMET</p>
 </div>
 
 </header>
 
 <nav class="navbar">
 
-<a href="../index.html">Home</a>
-<a href="data.html">Data</a>
-<a href="methodology.html">Methodology</a>
-<a href="evaluation.html">Evaluation</a>
-<a href="downscaling.html" class="active">Downscaling</a>
-<a href="applications.html">Applications</a>
-<a href="information.html">Information</a>
+<a href="../index.html">Inicio</a>
+<a href="data.html">Datos</a>
+<a href="methodology.html">Metodología</a>
+<a href="evaluation.html">Evaluación</a>
+<a href="downscaling.html" class="active">Regionalización</a>
+<a href="applications.html">Aplicaciones</a>
+<a href="information.html">Información</a>
 
 </nav>
 
@@ -49,7 +55,7 @@
 <script>
 window.onload = function(){
 setBreadcrumbs(`
-<a href="../index.html">Home</a> > <a href="../pages/downscaling.html">Downscaling</a> > <strong>Take Home Message</strong>
+<a href="../index.html">Inicio</a> > <a href="../pages/downscaling.html">Regionalización</a> > <strong>Conclusiones</strong>
 `)
 }
 </script>
@@ -60,23 +66,23 @@ setBreadcrumbs(`
 
 <div class="page-content text-card">
 
-<h2>TAKE HOME MESSAGE</h2>
+<h2>CONCLUSIONES</h2>
 
 <ul>
-<li><p>Of all downscaling methods, <strong>QDM</strong> and <strong>DeepESD</strong> yield the best results for most variables; in some cases, XGB also performs well. DeepESD is particularly interesting due to its deep learning methodology, which is rarely applied to variables such as wind or humidity.</p></li>
+<li><p>Entre todos los métodos de regionalización, <strong>QDM</strong> y <strong>DeepESD</strong> devuelven los mejores resultados para la mayoría de variables; en algunos casos, XGB también se comporta bien. DeepESD resulta particularmente interesante debido a su metodología de aprendizaje profundo, que se ha aplicado raramente para algunas variables como el viento o la humedad.</p></li>
 
-<li><p><strong>Model performance</strong> is highly dependent on each variable. Therefore, using a large ensemble of 11 members is advisable to obtain the most comprehensive information possible.</p></li>
+<li><p>El <strong>desempeño del modelo</strong> depende de cada variable. Por tanto, es recomendable utilizar un conjunto extenso de 11 miembros para obtener la información más exhaustiva posible.</p></li>
 
-<li><p>DeepESD provides good downscaling results for temperature, precipitation, and mean ranges.</p></li>
+<li><p>DeepESD devuelve buenos resultados de regionalización para la temperatura, la precipitación y los rangos medios.</p></li>
 
-<li><p>DeepESD also presents some problems for certain variables, mainly in radiation trends and some long-term wind and relative humidity indices.</p></li>
+<li><p>DeepESD también presenta algunos problemas para ciertas variables, principalmente en las tendencias de la radiación y en algunos índices de viento y de humedad relativa a largo plazo.</p></li>
 
-<li><p>Its main <strong>limitation</strong> is the use of a temperature model (DeepESDtas) for humidity, radiation, and wind. Developing a specific model for each variable could improve these results.</p></li>
+<li><p>Su principal <strong>limitación</strong> consiste en el uso de un modelo de temperatura (DeepESDtas) para la humedad, la radiación y el viento. El desarrollo de un modelo específico para cada variable podría mejorar estos resultados.</p></li>
 
-<li><p>While long-term trends present challenges, short-term trends appear to perform much better. Therefore, this methodology could be applied to other fields, such as <strong>seasonal forecasting</strong> downscaling.</p></li>
+<li><p>Aunque algunas tendencias a largo plazo presentan desafíos, las tendencias a corto plazo parecen tener buen desempeño. Por tanto, esta metodología podría aplicarse a otros campos como, por ejemplo, la regionalización de <strong>pronósticos estacionales</strong>.</p></li>
 </ul>
 
-<button class="backbtn" onclick="history.back()">← Back</button>
+<button class="backbtn" onclick="history.back()">← Atrás</button>
 
 </div>
 

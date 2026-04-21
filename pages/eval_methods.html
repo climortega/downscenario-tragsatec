@@ -16,6 +16,12 @@
 <!-- HEADER -->
 <header class="header">
 
+<div class="lang-switch">
+  <a href="../es/pages/eval_methods.html">
+    <img src="../assets/flag_spain.png" alt="Español">
+  </a>
+</div>
+
 <div class="logos">
 <img src="../assets/tragsatec.jpg">
 <img src="../assets/aemet_azul.png">
@@ -128,7 +134,27 @@ For the evaluation, observations from the AEMET network and different reanalysis
     </tbody>
 </table>
 
-<p>To perform the evaluation, all datasets were compared with AEMET internal observation network, taking into account that wind speed and specific humidity data were not available from CERRA-Land and that only CERRA, CERRA-Land, and CLARA-A3 were used for radiation. This comparison was carried out using Python software pyGridEval, which returns a large number of statistical metrics that allow for comparison between datasets. You can access pyGridEval (Carlos Correa) in the following <a href="https://zenodo.org/records/17366241" target="_blank">link</a>.</p>
+<p>To perform the evaluation, all datasets were compared with AEMET internal observation network, taking into account that wind speed and relative humidity data were not available from CERRA-Land and that only CERRA, CERRA-Land, and CLARA-A3 were used for radiation. This comparison was carried out using Python software pyGridEval, which returns a large number of statistical metrics that allow for comparison between datasets. You can access pyGridEval (Carlos Correa) in the following <a href="https://zenodo.org/records/17366241" target="_blank">link</a>.</p>
+
+<p>The following list describes all studied metrics:</p>
+
+<ul>
+<li><p>Correlation. Indicates the linear relationship between two variables, with 1 being the value that shows a perfect positive relationship.</p></li>
+<li><p>K-S (Kolmogorov-Smirnov) test. A statistical test that compares two distributions. Stat is the maximum difference between cumulative distribution functions. p-value is the probability of observing these differences if both distributions were equal, with a small p-value indicating that distributions are different.</p></li>
+<li><p>Kurtosis. Measures the shape of a frequency distribution. High kurtosis implies a greater number of values that are widely dispersed and far from its center.</p></li>
+<li><p>Mean absolute error.</p></li>
+<li><p>10th, 90th, and 95th percentiles.</p></li>
+<li><p>Root mean square error. Penalizes larger errors.</p></li>
+<li><p>Statistical skewness of the distribution (skew).</p></li>
+<li><p>Standard deviation (std). Measures the dispersion of the dataset.</p></li>
+<li><p>Variance. Similar to the standard deviation, but on a quadratic scale.</p></li>
+<li><p>Wasserstein distance. Measures the distance between two distributions as the "cost" of transforming one into the other. Very useful when distributions are not Gaussian, as it is sensitive to shape, position, and dispersion.</p></li>
+<li><p>Number of wet days. Calculated only for precipitation.</p></li>
+<li><p>SEEPS (Stable Equitable Error in Probability Space) Skill Score. Evaluates categorical predictions, takes local climatology into account, and penalizes errors according to their severity. A value of 0 indicates perfect performance. Calculated only for precipitation.</p></li>
+<li><p>Bias. Difference between model measurement and observed measurement. Calculated for different metrics.</p></li>
+<li><p>Relative bias. Bias relative to the observed value, which allows for comparing errors on different scales. Calculated only for precipitation.</p></li>
+<li><p>Multiplicative bias. Indicates whether the model does not adequately scale values. It is only calculated for precipitation.</p></li>
+</ul>
 
 <button class="backbtn" onclick="history.back()">← Back</button>
 

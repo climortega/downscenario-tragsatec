@@ -4,10 +4,10 @@
 <head>
 
 <meta charset="UTF-8">
-<title>Evaluation - Methods</title>
+<title>Evaluación - Métodos</title>
 
-<link rel="stylesheet" href="../style.css">
-<script src="../script.js"></script>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../script.js"></script>
 
 </head>
 
@@ -16,27 +16,33 @@
 <!-- HEADER -->
 <header class="header">
 
+<div class="lang-switch">
+  <a href="../../pages/eval_methods.html">
+    <img src="../../assets/flag_uk.png" alt="English">
+  </a>
+</div>
+
 <div class="logos">
-<img src="../assets/tragsatec.jpg">
-<img src="../assets/aemet_azul.png">
+<img src="../../assets/tragsatec.jpg">
+<img src="../../assets/aemet_azul.png">
 </div>
 
 <div class="title">
-<h1>Downscaling for Climate Scenarios</h1>
-<p>Developed by Tragsatec for AEMET</p>
+<h1>Regionalización de Escenarios Climáticos</h1>
+<p>Desarrollado por Tragsatec para AEMET</p>
 </div>
 
 </header>
 
 <nav class="navbar">
 
-<a href="../index.html">Home</a>
-<a href="data.html">Data</a>
-<a href="methodology.html">Methodology</a>
-<a href="evaluation.html" class="active">Evaluation</a>
-<a href="downscaling.html">Downscaling</a>
-<a href="applications.html">Applications</a>
-<a href="information.html">Information</a>
+<a href="../index.html">Inicio</a>
+<a href="data.html">Datos</a>
+<a href="methodology.html">Metodología</a>
+<a href="evaluation.html" class="active">Evaluación</a>
+<a href="downscaling.html">Regionalización</a>
+<a href="applications.html">Aplicaciones</a>
+<a href="information.html">Información</a>
 
 </nav>
 
@@ -49,7 +55,7 @@
 <script>
 window.onload = function(){
 setBreadcrumbs(`
-<a href="../index.html">Home</a> > <a href="../pages/evaluation.html">Evaluation</a> > <strong>Methods</strong>
+<a href="../index.html">Inicio</a> > <a href="../pages/evaluation.html">Evaluación</a> > <strong>Métodos</strong>
 `)
 }
 </script>
@@ -60,12 +66,11 @@ setBreadcrumbs(`
 
 <div class="page-content text-card">
 
-<h2>METHODS</h2>
+<h2>MÉTODOS</h2>
 
-<p>
-For the evaluation, observations from the AEMET network and different reanalysis products (ERA5, ERA5-Land, E-OBS, CERRA, CERRA-Land, and COSMO-REA6) and satellite data (CLARA-A3) were considered, with the aim of finding the reanalysis most similar to the available meteorological observations. For more information, see the Data section.</p>
+<p>Para la obtuvieron se consideraron las observaciones de la red de AEMET y diferentes productos de reanálisis (ERA5, ERA5-Land, E-OBS, CERRA, CERRA-Land y COSMO-REA6) y satelitales (CLARA-A3) con el objetivo de encontrar el reanálisis más cercano a las observaciones meteorológicas disponibles. Para más información, ver la sección de Datos.</p>
 
-<p>Each variable has observational time series of varying completeness and consistency. Therefore, a sensitivity analysis was first performed in which, for each variable, the minimum station completeness (always greater than 50%) that, over a given period, yields the largest number of available stations was selected. This analysis was performed for a period after 1995 (the limiting factor for COSMO-REA6).</p>
+<p>Cada variable tiene una serie temporal observacional con diferente completitud y consistencia. Por tanto, primero se llevó a cabo un análisis de sensibilidad en el que, para cada variable, se seleccionara la mínima completitud de las estaciones (siempre mayor que el 50% de los datos) que, sobre un periodo determinado, resultara en el mayor número de estaciones disponibles. Este análisis se llevó a cabo para un periodo posterior a 1995 (el factor limitante de COSMO-REA6).</p>
     
     <style>
         table {
@@ -89,38 +94,38 @@ For the evaluation, observations from the AEMET network and different reanalysis
     <thead>
         <tr>
             <th>Variables</th>
-            <th>Minimum Station Completeness</th>
-            <th>Best Possible Period</th>
-            <th>Number of Stations</th>
+            <th>Completitud mínima de las estaciones</th>
+            <th>Mejor periodo posible</th>
+            <th>Número de estaciones</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>Temperature</td>
+            <td>Temperatura</td>
             <td>80%</td>
             <td>1995-2018</td>
             <td>974</td>
         </tr>
         <tr>
-            <td>Precipitation</td>
+            <td>Precipitación</td>
             <td>80%</td>
             <td>1995-2018</td>
             <td>1728</td>
         </tr>
         <tr>
-            <td>Wind Speed</td>
+            <td>Velocidad del viento</td>
             <td>50%</td>
             <td>2007-2018</td>
             <td>332</td>
         </tr>
         <tr>
-            <td>Relative Humidity</td>
+            <td>Humedad relativa</td>
             <td>75%</td>
             <td>2009-2018</td>
             <td>610</td>
         </tr>
         <tr>
-            <td>Short-wave Surface Radiation</td>
+            <td>Radiación superficial de onda corta</td>
             <td>80%</td>
             <td>2000-2020</td>
             <td>66</td>
@@ -128,9 +133,29 @@ For the evaluation, observations from the AEMET network and different reanalysis
     </tbody>
 </table>
 
-<p>To perform the evaluation, all datasets were compared with AEMET internal observation network, taking into account that wind speed and specific humidity data were not available from CERRA-Land and that only CERRA, CERRA-Land, and CLARA-A3 were used for radiation. This comparison was carried out using Python software pyGridEval, which returns a large number of statistical metrics that allow for comparison between datasets. You can access pyGridEval (Carlos Correa) in the following <a href="https://zenodo.org/records/17366241" target="_blank">link</a>.</p>
+<p>Para llevar a cabo la evaluación, todas las bases de datos se compararon con la red observacional interna de AEMET, teniendo en cuenta que CERRA-Land no cuenta con datos disponibles para la velocidad del viento y la humedad relativa y que solo se utilizaron CERRA, CERRA-Land y CLARA-A3 para la radiación. Esta comparación se realizó a través del software de Python pyGridEval, que devuelve un extenso número de métricas estadísticas que permiten comparar las bases de datos. pyGridEval (Carlos Correa) se encuentra disponible en el siguiente <a href="https://zenodo.org/records/17366241" target="_blank">link</a>.</p>
 
-<button class="backbtn" onclick="history.back()">← Back</button>
+<p>La siguiente lista describe las métricas estudiadas:</p>
+
+<ul>
+<li><p>Correlación. Medida que indica la relación lineal entre dos variables, siendo 1 el valor que muestra una relación positiva perfecta.</p></li>
+<li><p>Prueba K-S (Kolmogorov-Snirnov). Prueba estadística que comparar dos distribuciones. El estadística es la máxima diferencia entre las funciones de distribución acumulada. El valor p es la probabilidad de observar esas diferencias si ambas distribuciones fueran iguales, siendo una p pequeña el indicador de que las distribuciones son distintas.</p></li>
+<li><p>Curtosis. Mide la forma de su distribución de frecuencias. Una curtosis grande implica un mayor número de valores de la variable muy dispersos y muy lejos del centro de la misma.</p></li>
+<li><p>Error absoluto medio.</p></li>
+<li><p>Percentiles 10, 90 y 95.</p></li>
+<li><p>Raíz del error cuadrático medio. Penaliza los errores más grandes.</p></li>
+<li><p>Asimetría estadística de la distribución.</p></li>
+<li><p>Desviación estándar (std). Mide la dispersión del conjunto de datos.</p></li>
+<li><p>Varianza. Similar a la desviación estándar, pero en escala cuadrática.</p></li>
+<li><p>Distancia de Wasserstein. Mide la distancia entre dos distribuciones como el "coste" de transformar una en otra. Muy útil cuando las distribuciones no son gaussianas, pues es sensible a la forma, la posición y la dispersión.</p></li>
+<li><p>Número de días húmedos. Solo se calcula para la precipitación.</p></li>
+<li><p>Métrica de rendimiento SEEPS (Stable Equitable Error in Probability Space). Evalúa predicciones categóricas, tiene en cuenta la climatología local y penaliza errores según su gravedad. Un valor de 0 indica un desempeño perfecto. Solo se calcula para la precipitación.</p></li>
+<li><p>Sesgo. Diferencia entre la medida del modelo y la observada. Se calcula para diferentes métricas.</p></li>
+<li><p>Sesgo relativo. Sesgo relativo respecto al valor observado, lo cual permite comparar errores en distintas escalas. Solo se calcula para la precipitación.</p></li>
+<li><p>Sesgo multiplicativo. Indica si el modelo no escala adecuadamente los valores. Solo se calcula para la precipitación.</p></li>
+</ul>
+
+<button class="backbtn" onclick="history.back()">← Atrás</button>
 
 </div>
 

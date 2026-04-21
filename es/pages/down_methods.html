@@ -4,10 +4,10 @@
 <head>
 
 <meta charset="UTF-8">
-<title>Downscaling - Methods</title>
+<title>Regionalización - Métodos</title>
 
-<link rel="stylesheet" href="../style.css">
-<script src="../script.js"></script>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../script.js"></script>
 
 </head>
 
@@ -16,27 +16,33 @@
 <!-- HEADER -->
 <header class="header">
 
+<div class="lang-switch">
+  <a href="../../pages/down_methods.html">
+    <img src="../../assets/flag_uk.png" alt="English">
+  </a>
+</div>
+
 <div class="logos">
-<img src="../assets/tragsatec.jpg">
-<img src="../assets/aemet_azul.png">
+<img src="../../assets/tragsatec.jpg">
+<img src="../../assets/aemet_azul.png">
 </div>
 
 <div class="title">
-<h1>Downscaling for Climate Scenarios</h1>
-<p>Developed by Tragsatec for AEMET</p>
+<h1>Regionalización de Escenarios Climáticos</h1>
+<p>Desarrollado por Tragsatec para AEMET</p>
 </div>
 
 </header>
 
 <nav class="navbar">
 
-<a href="../index.html">Home</a>
-<a href="data.html">Data</a>
-<a href="methodology.html">Methodology</a>
-<a href="evaluation.html">Evaluation</a>
-<a href="downscaling.html" class="active">Downscaling</a>
-<a href="applications.html">Applications</a>
-<a href="information.html">Information</a>
+<a href="../index.html">Inicio</a>
+<a href="data.html">Datos</a>
+<a href="methodology.html">Metodología</a>
+<a href="evaluation.html">Evaluación</a>
+<a href="downscaling.html" class="active">Regionalización</a>
+<a href="applications.html">Aplicaciones</a>
+<a href="information.html">Información</a>
 
 </nav>
 
@@ -49,7 +55,7 @@
 <script>
 window.onload = function(){
 setBreadcrumbs(`
-<a href="../index.html">Home</a> > <a href="../pages/downscaling.html">Downscaling</a> > <strong>Methods</strong>
+<a href="../index.html">Inicio</a> > <a href="../pages/downscaling.html">Regionalización</a> > <strong>Métodos</strong>
 `)
 }
 </script>
@@ -60,28 +66,28 @@ setBreadcrumbs(`
 
 <div class="page-content text-card">
 
-<h2>METHODS</h2>
+<h2>MÉTODOS</h2>
 
-<p>pyClim-SDM software (Hernanz et al., 2023) was used to perform the downscaling. pyClim-SDM is a suite of tools that allows users to generate high-resolution downscaled scenarios from global climate model outputs, evaluate and compare different statistical downscaling methods, visualize results and performance metrics for future projections, apply bias corrections, and generate derived climate indices. pyClim-SDM can be accessed at the following <a href="https://gitlab.aemet.es/aemc/scenarios/pyClim-SDM" target="_blank">link</a>.</p>
+<p>Se utilizó el software pyClim-SDM (Hernanz et al., 2023) para llevar a cabo la regionalización. pyClim-SDM es un conjunto de herramientas que permite a los usuarios generar escenarios regionalizados de alta resolución a partir de la salidas de los modelos climáticos globales, evaluar y comparar diferentes métodos de regionalización estadística, visualizar los resultados y las métricas de desempeño para las proyecciones futuras, aplicar correcciones de sesgos y generar índices climáticos derivados. pyClim-SDM se encuentra disponible en el siguiente <a href="https://gitlab.aemet.es/aemc/scenarios/pyClim-SDM" target="_blank">link</a>.</p>
 
-<p>For this study, five methods were selected.</p>
+<p>Para este estudio se seleccionaron cinco métodos.</p>
 
 <ul>
-<li><p><strong>RAW-BIL (RAW + BILINEAR INTERPOLATION).</strong> This method directly uses the model and interpolates it to a finer grid by means of bilinear interpolation.</p></li>
+<li><p><strong>RAW-BIL (RAW + INTERPOLACIÓN BILINEAL).</strong> Este método usa directamente el modelo y lo interpola a una malla más fina mediante una interpolación bilineal.</p></li>
 
-<li><p><strong>QDM (QUANTILE DELTA MAPPING).</strong> This bias correction method preserves the quantile change signal. It adjusts model historical distribution to the observed distribution (quantile-to-quantile mapping). For future projections, it applies model relative change to the observed quantiles.</p></li>
+<li><p><strong>QDM (MAPEO DELTA DE CUANTILES).</strong> Este método de corrección de sesgos preserva la señal de cambio de cuantil. Ajusta la distribución del modelo histórico a la distribución observada (mapeo cuantil a cuantil). Para las proyecciones futuras, el método aplica el modelo de cambio relativo a los cuantiles observados.</p></li>
 
-<li><p><strong>MLR (MULTPLE LINEAR REGRESSION).</strong> This method learns a linear relationship between predictors and the observed local variable.</p></li>
+<li><p><strong>MLR (REGRESIÓN LINEAL MÚLTIPLE).</strong> Este método aprende una relación lineal entre los predictores y la variable local observada.</p></li>
 
-<li><p><strong>XGB (EXTREME GRADIENT BOOST).</strong> A machine learning method based on potential trees (gradient boosting). It builds many small decision trees; each tree corrects the errors of the previous one (boosting). Thus, the final ensemble learns nonlinear and complex relationships.</p></li>
+<li><p><strong>XGB (POTENTIACIÓN EXTREMA DE GRADIENTES).</strong> Un método de aprendizaje automático basado en árboles potenciales (potenciación de gradientes). Construye muchos árboles de decisiones pequeños; cada árbol corrige los errores del anterior (potenciación). Así, el conjunto final aprende relaciones no lineales y complejas.</p></li>
 
-<li><p><strong>DeepESD.</strong> A statistical downscaling method for climate variables based on deep learning, specifically convolutional neural networks applied to perfect prognosis. A network is trained to learn the relationship between large-scale climate fields (predictors) and observed regional climate variables (predictands) using historical data, and then this trained model is applied to projections of global models to obtain downscaled versions. Thus, DeepESD uses convolutional neural networks to capture complex nonlinear relationships between large atmospheric patterns and regional CERRA data. It creates an ensemble of peninsular downscaled projections and reduces the biases of the original models over the historical period, allowing researchers to investigate whether neural networks can emulate regional physical models with comparable performance. Its main limitation is its use of perfect prognosis, which means that the model learns from observed data (CERRA) assuming that the learned relationships will remain valid for future climate scenarios, which may not be true. This method was developed by Baño-Medina et al., 2022 (<a href="https://doi.org/10.5194/gmd-15-6747-2022" target="_blank">link</a>) and has been given special attention due to its good performance and the interest in applying a deep learning methodology, especially to less studied variables.</p></li>
+<li><p><strong>DeepESD.</strong> Un método de regionalización estadística basado en aprendizaje profundo, especialmente en redes neuronales convolucionales aplicadas a un pronóstico perfecto. Se entrena una red para que aprenda las relaciones entre los campos climáticos de larga escala (predictores) y las variables climáticas regionales observadas (predictandos) utilizando datos históricos; después, este modelo entrenado se aplica a las proyecciones de los modelos globales para obtener versiones regionalizadas. Así, DeepESD usa redes neuronales convolucionales para capturar relaciones no lineales y complejas entre los patrones atmosféricos globales y los datos regionales de CERRA. El método crea un conjunto de proyecciones peninsulares regionalizadas y reduce los sesgos de los modelos originales sobre el periodo histórico, lo cual permite a los investigadores estudiar si las redes neuronales pueden emular modelos físicos regionales con un desempeño comparable. Su principal limitación es el uso del pronóstico perfecto, que significa que el modelo aprende de los datos observados (CERRA) asumiendo que las relaciones aprendidas permanecerán válidas para los escenarios climáticos futuros, lo cual podría no ser verdad. Este método fue desarrollado por Baño-Medina et al., 2022 (<a href="https://doi.org/10.5194/gmd-15-6747-2022" target="_blank">link</a>) y se le ha prestado especial atención debido a su buen desempeño y al interés en aplicar una metodología de aprendizaje profundo, especialmente a aquellas variables menos estudiadas.</p></li>
 </ul>
 
-<p>When implementing the pyClim-SDM software, the following methodology was followed:</p>
+<p>Al implementar el software pyClim-SDM se siguió esta metodología:</p>
 
 <ol>
-<li><p><strong>Predictor selection.</strong> First, the most suitable predictors were selected for each variable. The starting point was the so-called "standard set", which uses the most common predictors for this type of methodology (psl, ua500,700,850, va500,700,850, and ta500,700,850). A gradient boosting methodology was then applied to run the initial steps of the software and create decision trees to identify which variables had the greatest impact on predicting a given predictand. This procedure is included in the software. The selected predictors are as follows.</p></li>
+<li><p><strong>Selección de predictores.</strong> En primero lugar se seleccionaron los predictores más adecuados para cada variable. Se comenzó con el llamado "conjunto estándar", que utiliza los predictores más comunes para este tipo de metodología (psl, ua500,700,850, va500,700,850, y ta500,700,850). Se aplicó una metodología de potenciación de gradientes para correr los primeros pasos del software y así crear árboles de decisión para identificar qué variables tenían un mayor impacto a la hora de predecir un predictando dado. Este procedimiento se encuentra incluido en el software. Se seleccionaron los siguientes predictores.</p>
 
     <style>
         body {
@@ -135,17 +141,27 @@ setBreadcrumbs(`
         </tr>
     </tbody>
 </table>
-    
-<li><p><strong>Software configuration.</strong> To run pyClim-SDM in the evaluation period (1985-2014), predictors were obtained for each variable from the ERA5 dataset. To run it in the historical period (1950-2014) and in future scenarios (2015-2100), predictors were obtained for each climate model. For more information, see the Data section. The predictand is always CERRA, which was obtained for each of the five variables. For more information on why CERRA is used, see the Evaluation section. Then, all five downscaling methods explained above will be applied to predictors and predictand, and so downscaled outputs will be obtained.</p></li>
-    
-<li><p><strong>Method evaluation.</strong> We ran pyClim-SDM under its evaluation configuration to carry out an evaluation for all five downscaling methods during the model evaluation period with the aim of studying which methods performed best and which might be of greater interest.</p></li>
 
-<li><p><strong>Model ensemble evaluation.</strong> Using the results of the previous step, a model ensemble evaluation was also carried out during model evaluation period by calculating various basic metrics.</p></li>
+<p>Nótese que ua denota la componente u del viento a diferentes alturas; va, la componente v a diferentes alturas; ta, la temperatura a diferentes alturas; hur, la humedad relativa a diferentes alturas; hus850, la humedad específica a 850 hPa; psl, la presión a nivel del mar; clt, la cubierta de nubes; K, el índice K, que mide la probabilidad de tormentas teniendo en cuenta temperatura y humedad en distintos niveles de la atmósfera; y TT, el índice Total Totals, que evalúa la inestabilidad combinando gradiente térmico y humedad.</p></li>
+    
+<li><p><strong>Configuración del software.</strong> Para correr pyClim-SDM en el periodo de evaluación (1985-2014), se obtuvieron los predictores para cada variables de la base de datos ERA5. Para correrlo en el periodo histórico (1950-2014) y los escenarios futuros (2015-2100), se obtuvieron los predictores de cada modelo climático. Para más información, ver la sección de Datos. El predictando siempre es CERRA, el cual fue obtenido para las cinco variables. Para más información acerca de por qué se utiliza CERRA, ver la sección de Evaluación. Después, los cinco métodos de regionalización explicados anteriormente se aplicarán a los predictores y al predictando, y así se obtendrán las salidas regionalizadas.</p></li>
 
-<li><p><strong>Statistical downscaling of historical and projected data.</strong> Finally, the software was run on the historical period and future projections, and downscaled outputs were obtained.</p></li>
+<li><p><strong>Evaluación de los métodos.</strong> Se ejecutó pyClim-SDM bajo su configuración de evaluación para llevar a cabo una evaluación de los cinco métodos de regionalización durante el periodo de evaluación del modelo con el objetivo de estudiar qué métodos se comportan mejor y cuáles pueden ser de mayor interés. Así, se estudiaron sus ciclos anuales, correlaciones, raíces del error cuadrático medio y varianzas, así como el sesgo para cada índice climático (climdex). Cada variable cuenta con distintos climdex. En este trabajo se estudiaron los siguientes:</p></li>
+
+<ul>
+<li><p>Para la temperatura, percentiles 5 y 95 (p5 y p95), percentiles derivados de temperatura (proporción de días en los que la temperatura está por debajo de un percentiles determinado) 5 y 95 (T5p y T95p), mínimo (Tn), media (Tm) y máximo (Tx).</p></li>
+<li><p>Para la precipitación, los percentiles 95 y 99 (p95 y p99), media (Pm), precipitación total en días húmedos (PRCPTOT), número de días en los que la precipitación es mayor de 1 mm (R01), percentil derivado de precipitación (suma de días en los que la precipitación está por encima de un determinado percentil) 95 (R95p) y la precipitación media por día lluvioso (índice simple de intensidad diaria, SDII).</p></li>
+<li><p>Para la velocidad del viento, los percentiles 95 y 99 (p95 y p95), media (SFCWINDm) y máximo (SFCWINDx).</p></li>
+<li><p>Para la humedad relativa, media (HRm) y los percentiles 5, 10, 90 y 95 (p5, p10, p90, p95).</p></li>
+<li><p>Para la radiación de onda corta, los percentiles 10 y 90 (p10 y p90), media (RSDSm), mínimo (RSDSn) y máximo (RSDSx).</p></li>
+</ul>
+
+<li><p><strong>Evaluación del conjunto de modelos.</strong> Utilizando los resultados del paso previo, se llevó a cabo una evaluación del ensemble de modelos en el periodo de evaluación de los modelos mediante el cálculo de métricas básicas. Estas consistieron en unos boxplots, mapas y la estimación de densidad de kernel (KDE, aplicación del suavizado de kernel para la estimación de la densidad de probabilidad) y sus sesgos.</p></li>
+
+<li><p><strong>Regionalización estadística de datos históricos y proyectados.</strong> Por último, el software se ejecutó para el periodo histórico y las proyecciones futuras, y se obtuvieron las salidas regionalizadas.</p></li>
 </ol>
 
-<button class="backbtn" onclick="history.back()">← Back</button>
+<button class="backbtn" onclick="history.back()">← Atrás</button>
 
 </div>
 

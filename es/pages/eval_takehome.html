@@ -4,10 +4,10 @@
 <head>
 
 <meta charset="UTF-8">
-<title>Evaluation - Take Home Message</title>
+<title>Evaluación - Conclusiones</title>
 
-<link rel="stylesheet" href="../style.css">
-<script src="../script.js"></script>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../script.js"></script>
 
 </head>
 
@@ -16,27 +16,33 @@
 <!-- HEADER -->
 <header class="header">
 
+<div class="lang-switch">
+  <a href="../../pages/eval_takehome.html">
+    <img src="../../assets/flag_uk.png" alt="English">
+  </a>
+</div>
+
 <div class="logos">
-<img src="../assets/tragsatec.jpg">
-<img src="../assets/aemet_azul.png">
+<img src="../../assets/tragsatec.jpg">
+<img src="../../assets/aemet_azul.png">
 </div>
 
 <div class="title">
-<h1>Downscaling for Climate Scenarios</h1>
-<p>Developed by Tragsatec for AEMET</p>
+<h1>Regionalización de Escenarios Climáticos</h1>
+<p>Desarrollado por Tragsatec para AEMET</p>
 </div>
 
 </header>
 
 <nav class="navbar">
 
-<a href="../index.html">Home</a>
-<a href="data.html">Data</a>
-<a href="methodology.html">Methodology</a>
-<a href="evaluation.html" class="active">Evaluation</a>
-<a href="downscaling.html">Downscaling</a>
-<a href="applications.html">Applications</a>
-<a href="information.html">Information</a>
+<a href="../index.html">Inicio</a>
+<a href="data.html">Datos</a>
+<a href="methodology.html">Metodología</a>
+<a href="evaluation.html" class="active">Evaluación</a>
+<a href="downscaling.html">Regionalización</a>
+<a href="applications.html">Aplicaciones</a>
+<a href="information.html">Información</a>
 
 </nav>
 
@@ -49,7 +55,7 @@
 <script>
 window.onload = function(){
 setBreadcrumbs(`
-<a href="../index.html">Home</a> > <a href="../pages/evaluation.html">Evaluation</a> > <strong>Take Home Message</strong>
+<a href="../index.html">Inicio</a> > <a href="../pages/evaluation.html">Evaluación</a> > <strong>Conclusiones</strong>
 `)
 }
 </script>
@@ -60,23 +66,23 @@ setBreadcrumbs(`
 
 <div class="page-content text-card">
 
-<h2>TAKE HOME MESSAGE</h2>
+<h2>CONCLUSIONES</h2>
 
 <ul>
-<li><p>All datasets accurately simulate <strong>temperature</strong>, although CERRA is usually the closest for most statistical metrics.</p></li>
+<li><p>Todas las bases de datos simulan adecuadamente la <strong>temperatura</strong>, aunque CERRA suele ser el más cercano para la mayoría de métricas estadísticas.</p></li>
 
-<li><p>Seasonal <strong>precipitation</strong> cycles are accurately reproduced, with CERRA and CERRA-Land performing best. These reanalyses also accurately reproduce annual monthly precipitation. COSMO-REA6 and E-OBS underestimate precipitation, while ERA5 and ERA5-Land overestimate it.</p></li>
+<li><p>Los ciclos estacionales de la <strong>precipitación</strong> se reproducen adecuadamente, con CERRA y CERRA-Land siendo lo que mejor se comportan. Estos reanálisis también reproducen adecuadamente la precipitación mensual. COSMO-REA6 y E-OBS subestiman la precipitación, mientras que ERA5 y ERA5-Land la sobrestiman.</p></li>
 
-<li><p>There are several problems with <strong>wind</strong> simulation. Most reanalyses show differences in the annual cycle, high bias, and low correlation. CERRA and COSMO-REA6 return low bias, good correlation, and considerable similarity for the cycles, while ERA5 and ERA5-Land show great difficulty simulating wind speed in mountainous and orographically complex areas. E-OBS returns low bias and good correlation, but does not improve the results.</p></li>
+<li><p>Existen múltiples problemas con la simulación del <strong>viento</strong>. La mayoría de reanálisis muestran diferencias en el ciclo anual, alto sesgo y baja correlación. CERRA y COSMO-REA6 devuelven bajo sesgo, buena correlación y ciclos bastante similares, mientras que ERA5 y ERA5-Land muestran una gran dificultad para simular la velocidad del viento en áreas montañosas de orografía compleja. E-OBS devuelve bajo sesgo y buena correlación, pero no mejora los resultados.</p></li>
 
-<li><p>The annual cycle of relative <strong>humidity</strong> is adequately simulated, with CERRA returning the best results. CERRA produces the best performance across all metrics. ERA5 and ERA5-Land return low error and good correlation with observations, but have worse bias values, as they tend to underestimate humidity in some regions. COSMO-REA6 shows poor performance across all metrics. E-OBS performs well, returning low bias and error and high correlations.</p></li>
+<li><p>El ciclo anual de la <strong>humedad</strong> relativa se simula adecuadamente, siendo CERRA el que devuelve los mejores resultados. CERRA cuenta con el mejor desempeño entre todas las métricas. ERA5 y ERA5-Land devuelven bajo error y buena corrrelación con las observaciones, pero cuentan con peores valores de sesgo, ya que tienden a subestimar la humedad en algunas regiones. COSMO-REA6 muestra un pobre desempeño en todas las métricas. E-OBS se comporta bien, devolviendo bajo sesgo y error y alta correlación.</p></li>
 
-<li><p>Both CERRA and CERRA-Land adequately simulate <strong>radiation</strong> observations, as does CLARA-A3 satellite, which is always the closest. However, this variable has very few meteorological stations, which can introduce bias.</p></li>
+<li><p>Tanto CERRA como CERRA-Land simulan adecuadamente las observaciones de <strong>radiación</strong>, al igual que el satélite CLARA-A3, que es siempre el más cercano. No obstante, esta variable cuenta con muy pocas estaciones meteorológicas, lo que puede introducir sesgo.</p></li>
 
-<li><p><strong>CERRA</strong> (and CERRA-Land, although it is not available for all variables) provides the closest agreement with AEMET observations for the five studied variables and is therefore the reanalysis chosen for statistical downscaling. The only exception is radiation, for which CLARA-A3 is the best dataset; however, since all perform very well, CERRA was chosen for data consistency.</p></li>
+<li><p><strong>CERRA</strong> (y CERRA-Land, aunque no se encuentra disponible para todas las variables) proporciona el acuerdo más cercano con las observaciones de AEMET para las cinco variables estudiadas y es, por tanto, el reanálisis escogido para llevar a cabo la regionalización estadística. La única excepción es la radiación, para la que CLARA-A3 es la mejor base de datos; no obstante, como todas se comportan adecuadamente, se ha escogido CERRA para mantener la consistencia entre variables.</p></li>
 </ul>
 
-<button class="backbtn" onclick="history.back()">← Back</button>
+<button class="backbtn" onclick="history.back()">← Atrás</button>
 
 </div>
 

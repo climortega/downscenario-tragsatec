@@ -16,6 +16,12 @@
 <!-- HEADER -->
 <header class="header">
 
+<div class="lang-switch">
+  <a href="../es/pages/down_methods.html">
+    <img src="../assets/flag_spain.png" alt="Español">
+  </a>
+</div>
+
 <div class="logos">
 <img src="../assets/tragsatec.jpg">
 <img src="../assets/aemet_azul.png">
@@ -78,10 +84,10 @@ setBreadcrumbs(`
 <li><p><strong>DeepESD.</strong> A statistical downscaling method for climate variables based on deep learning, specifically convolutional neural networks applied to perfect prognosis. A network is trained to learn the relationship between large-scale climate fields (predictors) and observed regional climate variables (predictands) using historical data, and then this trained model is applied to projections of global models to obtain downscaled versions. Thus, DeepESD uses convolutional neural networks to capture complex nonlinear relationships between large atmospheric patterns and regional CERRA data. It creates an ensemble of peninsular downscaled projections and reduces the biases of the original models over the historical period, allowing researchers to investigate whether neural networks can emulate regional physical models with comparable performance. Its main limitation is its use of perfect prognosis, which means that the model learns from observed data (CERRA) assuming that the learned relationships will remain valid for future climate scenarios, which may not be true. This method was developed by Baño-Medina et al., 2022 (<a href="https://doi.org/10.5194/gmd-15-6747-2022" target="_blank">link</a>) and has been given special attention due to its good performance and the interest in applying a deep learning methodology, especially to less studied variables.</p></li>
 </ul>
 
-<p>When implementing the pyClim-SDM software, the following methodology was followed:</p>
+<p>When implementing the pyClim-SDM software, this methodology was followed:</p>
 
 <ol>
-<li><p><strong>Predictor selection.</strong> First, the most suitable predictors were selected for each variable. The starting point was the so-called "standard set", which uses the most common predictors for this type of methodology (psl, ua500,700,850, va500,700,850, and ta500,700,850). A gradient boosting methodology was then applied to run the initial steps of the software and create decision trees to identify which variables had the greatest impact on predicting a given predictand. This procedure is included in the software. The selected predictors are as follows.</p></li>
+<li><p><strong>Predictor selection.</strong> First, the most suitable predictors were selected for each variable. The starting point was the so-called "standard set", which uses the most common predictors for this type of methodology (psl, ua500,700,850, va500,700,850, and ta500,700,850). A gradient boosting methodology was then applied to run the initial steps of the software and create decision trees to identify which variables had the greatest impact on predicting a given predictand. This procedure is included in the software. The selected predictors are as follows.</p>
 
     <style>
         body {
@@ -135,12 +141,22 @@ setBreadcrumbs(`
         </tr>
     </tbody>
 </table>
+
+<p>Note that ua denotes u component of the wind at different heights; va, v component at different heights; ta, temperature at different heights; hur, relative humidity at different heights; hus850, specific humidity at 850 hPa; psl, pressure at sea level; clt, cloud cover; K, the K index, which measures the probability of storms taking into account temperature and humidity at different levels of the atmosphere; and TT, the Total Totals index, which assesses instability by combining temperature gradient and humidity.</p></li>
     
 <li><p><strong>Software configuration.</strong> To run pyClim-SDM in the evaluation period (1985-2014), predictors were obtained for each variable from the ERA5 dataset. To run it in the historical period (1950-2014) and in future scenarios (2015-2100), predictors were obtained for each climate model. For more information, see the Data section. The predictand is always CERRA, which was obtained for each of the five variables. For more information on why CERRA is used, see the Evaluation section. Then, all five downscaling methods explained above will be applied to predictors and predictand, and so downscaled outputs will be obtained.</p></li>
     
-<li><p><strong>Method evaluation.</strong> We ran pyClim-SDM under its evaluation configuration to carry out an evaluation for all five downscaling methods during the model evaluation period with the aim of studying which methods performed best and which might be of greater interest.</p></li>
+<li><p><strong>Method evaluation.</strong> We ran pyClim-SDM under its evaluation configuration to carry out an evaluation for all five downscaling methods during the model evaluation period with the aim of studying which methods performed best and which might be of greater interest. Thus, their annual cycles, correlations, root mean square error, and variances were studied, as well as the bias for each climate index (climdex). Each variable has different climdex. In this work, the following were studied:</p></li>
 
-<li><p><strong>Model ensemble evaluation.</strong> Using the results of the previous step, a model ensemble evaluation was also carried out during model evaluation period by calculating various basic metrics.</p></li>
+<ul>
+<li><p>For temperature, 5th and 95th percentiles (p5 and p95), derived temperature percentiles (proportion of days on which the temperature is below a given percentile) 5th and 95th (T5p and T95p), minimum (Tn), mean (Tm), and maximum (Tx).</p></li>
+<li><p>For precipitation, 95th and 99th percentiles (p95 and p99), mean (Pm), total precipitation on wet days (PRCPTOT), number of days on which precipitation is greater than 1 mm (R01), derived precipitation percentile (sum of days on which precipitation is above a given percentile) 95th (R95p), and mean precipitation per rainy day (simple daily intensity index, SDII).</p></li>
+<li><p>For wind speed, 95th and 99 (p95 and p95), mean (SFCWINDm), and maximum (SFCWINDx).</p></li>
+<li><p>For relative humidity, mean (HRm) and the 5th, 10th, 90th, and 95th percentiles (p5, p10, p90, p95).</p></li>
+<li><p>For short-wave radiation, 10th and 90th percentiles (p10 and p90), mean (RSDSm), minimum (RSDSn), and maximum (RSDSx).</p></li>
+</ul>
+
+<li><p><strong>Model ensemble evaluation.</strong> Using the results of the previous step, a model ensemble evaluation was also carried out during model evaluation period by calculating various basic metrics. These consisted of boxplots, maps, and kernel density estimations (KDE, application of kernel smoothing for probability density estimation) and its biases.</p></li>
 
 <li><p><strong>Statistical downscaling of historical and projected data.</strong> Finally, the software was run on the historical period and future projections, and downscaled outputs were obtained.</p></li>
 </ol>

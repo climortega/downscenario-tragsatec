@@ -4,10 +4,10 @@
 <head>
 
 <meta charset="UTF-8">
-<title>Downscaling - Results</title>
+<title>Regionalización - Resultados</title>
 
-<link rel="stylesheet" href="../style.css">
-<script src="../script.js"></script>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../script.js"></script>
 
 </head>
 
@@ -16,27 +16,33 @@
 <!-- HEADER -->
 <header class="header">
 
+<div class="lang-switch">
+  <a href="../../pages/down_results.html">
+    <img src="../../assets/flag_uk.png" alt="English">
+  </a>
+</div>
+
 <div class="logos">
-<img src="../assets/tragsatec.jpg">
-<img src="../assets/aemet_azul.png">
+<img src="../../assets/tragsatec.jpg">
+<img src="../../assets/aemet_azul.png">
 </div>
 
 <div class="title">
-<h1>Downscaling for Climate Scenarios</h1>
-<p>Developed by Tragsatec for AEMET</p>
+<h1>Regionalización de Escenarios Climáticos</h1>
+<p>Desarrollado por Tragsatec para AEMET</p>
 </div>
 
 </header>
 
 <nav class="navbar">
 
-<a href="../index.html">Home</a>
-<a href="data.html">Data</a>
-<a href="methodology.html">Methodology</a>
-<a href="evaluation.html">Evaluation</a>
-<a href="downscaling.html" class="active">Downscaling</a>
-<a href="applications.html">Applications</a>
-<a href="information.html">Information</a>
+<a href="../index.html">Inicio</a>
+<a href="data.html">Datos</a>
+<a href="methodology.html">Metodología</a>
+<a href="evaluation.html">Evaluación</a>
+<a href="downscaling.html" class="active">Regionalización</a>
+<a href="applications.html">Aplicaciones</a>
+<a href="information.html">Información</a>
 
 </nav>
 
@@ -49,7 +55,7 @@
 <script>
 window.onload = function(){
 setBreadcrumbs(`
-<a href="../index.html">Home</a> > <a href="../pages/downscaling.html">Downscaling</a> > <strong>Results</strong>
+<a href="../index.html">Inicio</a> > <a href="../pages/downscaling.html">Regionalización</a> > <strong>Resultados</strong>
 `)
 }
 </script>
@@ -59,46 +65,46 @@ setBreadcrumbs(`
 <div class="cardpage">
 
 <div class="homecard" onclick="location.href='down_temp.html'">
-<img src="../assets/hot.png">
+<img src="../../assets/hot.png">
 <div class="homecard-text">
-<h2>TEMPERATURE</h2>
-<p>Access temperature downscaling</p>
+<h2>TEMPERATURA</h2>
+<p>Regionalización de la temperatura</p>
 </div>
 </div>
 
 <div class="homecard" onclick="location.href='down_prec.html'">
-<img src="../assets/rain.png">
+<img src="../../assets/rain.png">
 <div class="homecard-text">
-<h2>PRECIPITATION</h2>
-<p>Access precipitation downscaling</p>
+<h2>PRECIPITACIÓN</h2>
+<p>Regionalización de la precipitación</p>
 </div>
 </div>
 
 <div class="homecard" onclick="location.href='down_wind.html'">
-<img src="../assets/wind.png">
+<img src="../../assets/wind.png">
 <div class="homecard-text">
-<h2>WIND SPEED</h2>
-<p>Access wind speed downscaling</p>
+<h2>VELOCIDAD DEL VIENTO</h2>
+<p>Regionalización del viento</p>
 </div>
 </div>
 
 <div class="homecard" onclick="location.href='down_hum.html'">
-<img src="../assets/humidity-sensor.png">
+<img src="../../assets/humidity-sensor.png">
 <div class="homecard-text">
-<h2>RELATIVE HUMIDITY</h2>
-<p>Access relative humidity downscaling</p>
+<h2>HUMEDAD RELATIVA</h2>
+<p>Regionalización de la humedad</p>
 </div>
 </div>
 
 <div class="homecard" onclick="location.href='down_rad.html'">
-<img src="../assets/solar-radiation.png">
+<img src="../../assets/solar-radiation.png">
 <div class="homecard-text">
-<h2>SHORT-WAVE SOLAR RADIATION DOWNWARDS</h2>
-<p>Access surface solar radiation downscaling</p>
+<h2>RADIACIÓN SOLAR DE ONDA CORTA ENTRANTE</h2>
+<p>Regionalización de la radiación</p>
 </div>
 </div>
 
-<button class="backbtn" onclick="history.back()">← Back</button>
+<button class="backbtn" onclick="history.back()">← Atrás</button>
 
 </div>
 

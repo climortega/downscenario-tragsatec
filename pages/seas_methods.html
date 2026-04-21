@@ -16,6 +16,12 @@
 <!-- HEADER -->
 <header class="header">
 
+<div class="lang-switch">
+  <a href="../es/pages/seas_methods.html">
+    <img src="../assets/flag_spain.png" alt="Español">
+  </a>
+</div>
+
 <div class="logos">
 <img src="../assets/tragsatec.jpg">
 <img src="../assets/aemet_azul.png">
@@ -75,7 +81,7 @@ setBreadcrumbs(`
 
 <li><p><strong>Calculation of year-on-year tercile probabilities.</strong></p></li>
     
-<li><p><strong>Calculation of scores.</strong> The following scores were used. <strong>Spearman's rank correlation coefficient</strong> measures model ability to reproduce interannual variability; other correlations were also calculated. <strong>Area under the receiver operating characteristic (ROC) curve (AUC)</strong> measures how well the model assigns higher probabilities when the predicted tercile actually occurs and evaluates each category individually; an AUC greater than 0.5 indicates predictive ability, while an AUC of 1 indicates perfect discrimination. <strong>Ranked probability score (RPS)</strong> assesses forecast quality for ordered categories (lower, normal, and upper terciles), compares the predicted cumulative distribution with the observed distribution, and penalizes both category errors and probability assignment errors; an RPS of 0 indicates a perfect forecast.</p></li>
+<li><p><strong>Calculation of scores.</strong> The following scores were used. <strong>Spearman's rank correlation coefficient</strong> measures model ability to reproduce interannual variability; other correlations were also calculated (<strong>Pearson</strong>, which is the measure of linear dependence between two quantitative random variables). <strong>Area under the receiver operating characteristic (ROC) curve (AUC)</strong> measures how well the model assigns higher probabilities when the predicted tercile actually occurs and evaluates each category individually; an AUC greater than 0.5 indicates predictive ability, while an AUC of 1 indicates perfect discrimination. <strong>Ranked probability score (RPS)</strong> assesses forecast quality for ordered categories (lower, normal, and upper terciles), compares the predicted cumulative distribution with the observed distribution, and penalizes both category errors and probability assignment errors; an RPS of 0 indicates a perfect forecast.</p></li>
 </ol>
  
 <p>Once downscaled hindcasts were verified, model forecasts for two years (2024 and 2025) were also downscaled and evaluated by calculating anomalies and tercilial probability.</p>
