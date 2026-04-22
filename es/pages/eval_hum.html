@@ -4,10 +4,10 @@
 <head>
 
 <meta charset="UTF-8">
-<title>Evaluation - Humidity</title>
+<title>Evaluación - Humedad</title>
 
-<link rel="stylesheet" href="../style.css">
-<script src="../script.js"></script>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../script.js"></script>
 
 </head>
 
@@ -16,27 +16,33 @@
 <!-- HEADER -->
 <header class="header">
 
+<div class="lang-switch">
+  <a href="../../pages/eval_hum.html">
+    <img src="../../assets/flag_uk.png" alt="English">
+  </a>
+</div>
+
 <div class="logos">
-<img src="../assets/tragsatec.jpg">
-<img src="../assets/aemet_azul.png">
+<img src="../../assets/tragsatec.jpg">
+<img src="../../assets/aemet_azul.png">
 </div>
 
 <div class="title">
-<h1>Downscaling for Climate Scenarios</h1>
-<p>Developed by Tragsatec for AEMET</p>
+<h1>Regionalización de Escenarios Climáticos</h1>
+<p>Desarrollado por Tragsatec para AEMET</p>
 </div>
 
 </header>
 
 <nav class="navbar">
 
-<a href="../index.html">Home</a>
-<a href="data.html">Data</a>
-<a href="methodology.html">Methodology</a>
-<a href="evaluation.html" class="active">Evaluation</a>
-<a href="downscaling.html">Downscaling</a>
-<a href="applications.html">Applications</a>
-<a href="information.html">Information</a>
+<a href="../index.html">Inicio</a>
+<a href="data.html">Datos</a>
+<a href="methodology.html">Metodología</a>
+<a href="evaluation.html" class="active">Evaluación</a>
+<a href="downscaling.html">Regionalización</a>
+<a href="applications.html">Aplicaciones</a>
+<a href="information.html">Información</a>
 
 </nav>
 
@@ -49,7 +55,7 @@
 <script>
 document.addEventListener("DOMContentLoaded", function(){
 setBreadcrumbs(`
-<a href="../index.html">Home</a> > <a href="../pages/evaluation.html">Evaluation</a> > <a href="../pages/eval_results.html">Results</a> > <strong>Humidity</strong>
+<a href="../index.html">Inicio</a> > <a href="../pages/evaluation.html">Evaluación</a> > <a href="../pages/eval_results.html">Resultados</a> > <strong>Humedad</strong>
 `)
 });
 </script>
@@ -60,7 +66,7 @@ setBreadcrumbs(`
 
 <div class="page-content text-card">
 
-<h2>EVALUATION - RELATIVE HUMIDITY</h2>
+<h2>EVALUACIÓN - HUMEDAD RELATIVA</h2>
 
 <!-- ===== IMÁGENES FIJAS ===== -->
 
@@ -74,25 +80,25 @@ setBreadcrumbs(`
 
 <!-- ===== VISOR MAPS ===== -->
 
-<h3 style="text-align:center;">Maps Viewer</h3>
+<h3 style="text-align:center;">Visor de Mapas</h3>
 
 <div class="viewer">
 
 <select id="statSelect">
-<option value="correlation">Correlation</option>
-<option value="ks_test_p">KS test p</option>
-<option value="ks_test_stat">KS test stat</option>
-<option value="kurtosis_bias">Kurtosis bias</option>
-<option value="mean_absolute_error">Mean Absolute Error</option>
-<option value="mean_bias">Mean Bias</option>
-<option value="p10_bias">P10 Bias</option>
-<option value="p90_bias">P90 Bias</option>
-<option value="p95_bias">P95 Bias</option>
+<option value="correlation">Correlación</option>
+<option value="ks_test_p">Prueba K-S p-value</option>
+<option value="ks_test_stat">Prueba K-S stat</option>
+<option value="kurtosis_bias">Sesgo de Curtosis</option>
+<option value="mean_absolute_error">Error Absoluto Medio</option>
+<option value="mean_bias">Sesgo Medio</option>
+<option value="p10_bias">Sesgo p10</option>
+<option value="p90_bias">Sesgo p90</option>
+<option value="p95_bias">Sesgo p95</option>
 <option value="rmse">RMSE</option>
-<option value="skew_bias">Skew Bias</option>
-<option value="std_bias">Std Bias</option>
-<option value="variance_bias">Variance Bias</option>
-<option value="wasserstein_distance">Wasserstein Distance</option>
+<option value="skew_bias">Sesgo Asimetría</option>
+<option value="std_bias">Sesgo Desviación Estándar</option>
+<option value="variance_bias">Sesgo Varianza</option>
+<option value="wasserstein_distance">Distancia de Wasserstein</option>
 </select>
 
 <select id="datasetSelect">
@@ -111,26 +117,26 @@ setBreadcrumbs(`
 
 <!-- ===== VISOR GRIDS ===== -->
 
-<h3 style="text-align:center;">Grids Comparison</h3>
+<h3 style="text-align:center;">Comparación de Bases de Datos</h3>
 
 <div class="viewer">
 
 <select id="gridStatSelect">
-<option value="annual_cycle">Annual Cycle</option>
-<option value="Correlation">Correlation</option>
-<option value="KS_test_p">KS test p</option>
-<option value="KS_test_stat">KS test stat</option>
-<option value="Kurtosis_Bias">Kurtosis bias</option>
-<option value="Mean_Absolute_Error">Mean Absolute Error</option>
-<option value="Mean_Bias">Mean Bias</option>
-<option value="P10_Bias">P10 Bias</option>
-<option value="P90_Bias">P90 Bias</option>
-<option value="P95_Bias">P95 Bias</option>
-<option value="RMSE">RMSE</option>
-<option value="Skew_Bias">Skew Bias</option>
-<option value="Std_Bias">Std Bias</option>
-<option value="Variance_Bias">Variance Bias</option>
-<option value="Wasserstein_Distance">Wasserstein Distance</option>
+<option value="annual_cycle">Ciclo Anual</option>
+<option value="correlation">Correlación</option>
+<option value="ks_test_p">Prueba K-S p-value</option>
+<option value="ks_test_stat">Prueba K-S stat</option>
+<option value="kurtosis_bias">Sesgo de Curtosis</option>
+<option value="mean_absolute_error">Error Absoluto Medio</option>
+<option value="mean_bias">Sesgo Medio</option>
+<option value="p10_bias">Sesgo p10</option>
+<option value="p90_bias">Sesgo p90</option>
+<option value="p95_bias">Sesgo p95</option>
+<option value="rmse">RMSE</option>
+<option value="skew_bias">Sesgo Asimetría</option>
+<option value="std_bias">Sesgo Desviación Estándar</option>
+<option value="variance_bias">Sesgo Varianza</option>
+<option value="wasserstein_distance">Distancia de Wasserstein</option>
 </select>
 
 </div>
@@ -139,7 +145,7 @@ setBreadcrumbs(`
   <img id="gridImage" src="../figures/evaluation/humidity/humidity_annual_cycle_grids_comparison.png">
 </div>
 
-<button class="backbtn" onclick="history.back()">← Back</button>
+<button class="backbtn" onclick="history.back()">← Atrás</button>
 
 </div>
 
