@@ -4,10 +4,10 @@
 <head>
 
 <meta charset="UTF-8">
-<title>Downscaling - Radiation</title>
+<title>Regionalización - Radiación</title>
 
-<link rel="stylesheet" href="../style.css">
-<script src="../script.js"></script>
+<link rel="stylesheet" href="../../style.css">
+<script src="../../script.js"></script>
 
 </head>
 
@@ -16,27 +16,33 @@
 <!-- HEADER -->
 <header class="header">
 
+<div class="lang-switch">
+  <a href="../../pages/down_rad.html">
+    <img src="../../assets/flag_uk.png" alt="English">
+  </a>
+</div>
+
 <div class="logos">
-<img src="../assets/tragsatec.jpg">
-<img src="../assets/aemet_azul.png">
+<img src="../../assets/tragsatec.jpg">
+<img src="../../assets/aemet_azul.png">
 </div>
 
 <div class="title">
-<h1>Downscaling for Climate Scenarios</h1>
-<p>Developed by Tragsatec for AEMET</p>
+<h1>Regionalización de Escenarios Climáticos</h1>
+<p>Desarrollado por Tragsatec para AEMET</p>
 </div>
 
 </header>
 
 <nav class="navbar">
 
-<a href="../index.html">Home</a>
-<a href="data.html">Data</a>
-<a href="methodology.html">Methodology</a>
-<a href="evaluation.html">Evaluation</a>
-<a href="downscaling.html" class="active">Downscaling</a>
-<a href="applications.html">Applications</a>
-<a href="information.html">Information</a>
+<a href="../index.html">Inicio</a>
+<a href="data.html">Datos</a>
+<a href="methodology.html">Metodología</a>
+<a href="evaluation.html">Evaluación</a>
+<a href="downscaling.html" class="active">Regionalización</a>
+<a href="applications.html">Aplicaciones</a>
+<a href="information.html">Información</a>
 
 </nav>
 
@@ -49,7 +55,7 @@
 <script>
 document.addEventListener("DOMContentLoaded", function(){
 setBreadcrumbs(`
-<a href="../index.html">Home</a> > <a href="../pages/downscaling.html">Downscaling</a> > <a href="../pages/down_results.html">Results</a> > <strong>Radiation</strong>
+<a href="../index.html">Inicio</a> > <a href="../pages/downscaling.html">Regionalización</a> > <a href="../pages/down_results.html">Resultados</a> > <strong>Radiación</strong>
 `)
 });
 </script>
@@ -60,9 +66,9 @@ setBreadcrumbs(`
 
 <div class="page-content text-card">
 
-<h2>DOWNSCALING - SHORT-WAVE RADIATION</h2>
+<h2>REGIONALIZACIÓN - RADIACIÓN DE ONDA CORTA</h2>
 
-<h3 style="text-align:center;">Method Evaluation</h3>
+<h3 style="text-align:center;">Evaluación de Métodos</h3>
 
 <div class="img-center">
   <img src="../figures/downscaling/radiation/evaluation/EVALUATION_annualCycle_rsds_None_all_None.png">
@@ -80,7 +86,7 @@ setBreadcrumbs(`
   <img src="../figures/downscaling/radiation/evaluation/EVALUATION_varianceBoxplot_rsds_None_all_ANNUAL.png">
 </div>
 
-<h4 style="text-align:center;">Bias per Climdex</h4>
+<h4 style="text-align:center;">Sesgo por Climdex</h4>
 
 <div class="viewer">
 <select id="climdexSelect1">
@@ -97,7 +103,7 @@ setBreadcrumbs(`
 src="../figures/downscaling/radiation/evaluation/EVALUATION_biasClimdexBoxplot_rsds_p10_all_ANNUAL.png">
 </div>
 
-<h4 style="text-align:center;">Maps</h4>
+<h4 style="text-align:center;">Mapas</h4>
 
 <div class="viewer">
 
@@ -129,17 +135,17 @@ src="../figures/downscaling/radiation/evaluation/EVALUATION_biasClimdexBoxplot_r
 src="../figures/downscaling/radiation/evaluation/EVALUATION_biasMap_rsds_p10_DeepESD_ANNUAL.png">
 </div>
 
-<h3 style="text-align:center;">Model Evaluation</h3>
+<h3 style="text-align:center;">Evaluación de Modelos</h3>
 
 <div class="viewer">
 
 <select id="typeSelect3">
-<option value="biasboxplot">biasboxplot</option>
-<option value="biaskde">biaskde</option>
-<option value="boxplot">boxplot</option>
-<option value="kde">kde</option>
-<option value="maps_bias">maps_bias</option>
-<option value="maps">maps</option>
+<option value="biasboxplot">Sesgo Boxplot</option>
+<option value="biaskde">Sesgo KDE</option>
+<option value="boxplot">Boxplot</option>
+<option value="kde">KDE</option>
+<option value="maps_bias">Sesgo Mapas</option>
+<option value="maps">Mapas</option>
 </select>
 
 <select id="climdexSelect3">
@@ -165,7 +171,7 @@ src="../figures/downscaling/radiation/evaluation/EVALUATION_biasMap_rsds_p10_Dee
 src="../figures/downscaling/radiation/model_evaluation/biasboxplot_rsds_p10_DeepESD_ANNUAL.png">
 </div>
 
-<h3 style="text-align:center;">Projections</h3>
+<h3 style="text-align:center;">Proyecciones</h3>
 
 <div class="viewer">
 
@@ -232,7 +238,7 @@ src="../figures/downscaling/radiation/projections/PROJECTIONS_evolTube_rsds_p10_
 src="../figures/downscaling/radiation/projections/PROJECTIONS_meanChangeMap_rsds_p10_DeepESD-ssp585-2041-2070_ANNUAL.png">
 </div>
 
-<button class="backbtn" onclick="history.back()">← Back</button>
+<button class="backbtn" onclick="history.back()">← Atrás</button>
 
 </div>
 
